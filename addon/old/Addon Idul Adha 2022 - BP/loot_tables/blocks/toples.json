@@ -1,0 +1,15 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "aerell:toples",
+          "weight": 1,
+          "count": 1
+        }
+      ]
+    }
+  ]
+}

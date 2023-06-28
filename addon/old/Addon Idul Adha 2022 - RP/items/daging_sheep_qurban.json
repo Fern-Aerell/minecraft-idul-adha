@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "aerell:daging_sheep_qurban",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "daging_sheep_qurban",
+      "minecraft:use_animation": "eat",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

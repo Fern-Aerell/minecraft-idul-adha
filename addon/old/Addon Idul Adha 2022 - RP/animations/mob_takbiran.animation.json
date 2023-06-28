@@ -1,0 +1,66 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.mob_takbiran.api": {
+			"animation_length": 67.08333,
+			"bones": {
+				"torch": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.2083": [0, 0, 0],
+						"67.0833": [0, 0, 0]
+					},
+					"position": [0, 0, 0]
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "api",
+					"locator": "api"
+				}
+			}
+		},
+		"animation.mob_takbiran.takbiran": {
+			"animation_length": 67.08333,
+			"bones": {
+				"rightArm": {
+					"rotation": {
+						"0.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3333": {
+							"post": [7.5, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"67.0833": {
+							"post": [7.5, 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"torch": {
+					"rotation": {
+						"0.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.25": {
+							"post": [5, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"67.0833": {
+							"post": [5, 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "takbiran"
+				}
+			}
+		}
+	}
+}

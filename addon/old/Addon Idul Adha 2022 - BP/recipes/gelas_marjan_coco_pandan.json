@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "aerell:gelas_marjan_coco_pandan"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "XA"
+    ],
+    "key": {
+      "X": {
+        "item": "aerell:gelas"
+      },
+      "A": {
+        "item": "aerell:marjan_coco_pandan_block"
+      }
+    },
+    "result": [
+      {"item": "aerell:gelas_marjan_coco_pandan"},
+      {"item": "aerell:marjan_coco_pandan_block", "data": 0}
+    ]
+  }
+}

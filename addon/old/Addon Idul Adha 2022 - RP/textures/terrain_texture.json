@@ -1,0 +1,158 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "gantungan": {
+      "textures": [
+        "textures/blocks/gantungan"
+      ]
+    },
+    "sajadah_merah": {
+      "textures": [
+        "textures/blocks/sajadah_merah"
+      ]
+    },
+    "sajadah_hijau": {
+      "textures": [
+        "textures/blocks/sajadah_hijau"
+      ]
+    },
+    "sajadah_biru": {
+      "textures": [
+        "textures/blocks/sajadah_biru"
+      ]
+    },
+    "radio_kok_kayu": {
+      "textures": [
+        "textures/blocks/radio_kok_kayu"
+      ]
+    },
+    "khongguan": {
+      "textures": [
+        "textures/blocks/khongguan"
+      ]
+    },
+    "toples": {
+      "textures": [
+        "textures/blocks/toples"
+      ]
+    },
+    "toples_astor": {
+      "textures": [
+        "textures/blocks/toples_astor"
+      ]
+    },
+    "mic": {
+      "textures": [
+        "textures/blocks/mic"
+      ]
+    },
+    "bedug": {
+      "textures": [
+        "textures/blocks/bedug"
+      ]
+    },
+    "toa_mesjid": {
+      "textures": [
+        "textures/blocks/toa_mesjid"
+      ]
+    },
+    "kolak_block": {
+      "textures": [
+        "textures/blocks/kolak"
+      ]
+    },
+    "bubur_kacang_ijo_block": {
+      "textures": [
+        "textures/blocks/bubur_kacang_ijo"
+      ]
+    },
+    "es_buah_block": {
+      "textures": [
+        "textures/blocks/es_buah"
+      ]
+    },
+    "es_kelapa_block": {
+      "textures": [
+        "textures/blocks/es_kelapa"
+      ]
+    },
+    "keran": {
+      "textures": [
+        "textures/blocks/keran"
+      ]
+    },
+    "gelas_block": {
+      "textures": [
+        "textures/blocks/gelas"
+      ]
+    },
+    "gelas_marjan_coco_pandan_block": {
+      "textures": [
+        "textures/blocks/gelas_coco_pandan"
+      ]
+    },
+    "gelas_marjan_melon_block": {
+      "textures": [
+        "textures/blocks/gelas_melon"
+      ]
+    },
+    "gelas_marjan_moca_block": {
+      "textures": [
+        "textures/blocks/gelas_moca"
+      ]
+    },
+    "marjan_coco_pandan_block": {
+      "textures": [
+        "textures/blocks/marjan_coco_pandan"
+      ]
+    },
+    "marjan_melon_block": {
+      "textures": [
+        "textures/blocks/marjan_melon"
+      ]
+    },
+    "marjan_moca_block": {
+      "textures": [
+        "textures/blocks/marjan_moca"
+      ]
+    },
+    "al_quran_mesjid": {
+      "textures": [
+        "textures/blocks/al_quran_mesjid"
+      ]
+    },
+    "sambal_ati_goreng_block": {
+      "textures": [
+        "textures/items/sambal_ati_goreng"
+      ]
+    },
+    "semur_daging_block": {
+      "textures": [
+        "textures/blocks/semur_daging_block"
+      ]
+    },
+    "opor_ayam_block": {
+      "textures": [
+        "textures/blocks/opor_ayam_block"
+      ]
+    },
+    "lontong_sayur_block": {
+      "textures": [
+        "textures/blocks/lontong_sayur_block"
+      ]
+    },
+    "sayur_lodeh_block": {
+      "textures": [
+        "textures/blocks/sayur_lodeh_block"
+      ]
+    },
+    "rendang_block": {
+      "textures": [
+        "textures/blocks/rendang_block"
+      ]
+    }
+  }
+}

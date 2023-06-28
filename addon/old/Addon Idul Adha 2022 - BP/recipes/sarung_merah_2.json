@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "aerell:sarung_merah_2"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "X"
+    ],
+    "key": {
+      "X": {
+        "item": "aerell:sarung_merah_b"
+      }
+    },
+    "result": {
+      "item": "aerell:sarung_merah"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.es_buah",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "es_buah",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-2, 0, -2], "size": [4, 7, 4], "uv": [0, 0]},
+						{"origin": [-5.20776, 4.33523, 1.40603], "size": [1, 1, 2], "pivot": [0, 0, 0], "rotation": [0, -20, 40], "uv": [0, 11]},
+						{"origin": [-4.27154, 5.11942, -2.47334], "size": [1, 1, 1], "pivot": [0, 0, 0], "rotation": [0, 25, 40], "uv": [8, 11]},
+						{"origin": [-2.01613, 5.65173, -3.87933], "size": [1, 1, 1], "pivot": [0, 0, 0], "rotation": [0, 48, 40], "uv": [0, 0]},
+						{"origin": [-4.4, 5.28869, -0.56158], "size": [1, 1, 1], "pivot": [0, 0, 0], "rotation": [0, 17.5, 40], "uv": [4, 11]},
+						{"origin": [-4.90151, 4.83237, -3.07346], "size": [1, 1, 1], "pivot": [0, 0, 0], "rotation": [10, 25, 40], "uv": [0, 2]},
+						{"origin": [-2, 7, -2.5], "size": [4, 0.5, 0.5], "uv": [8, 16]},
+						{"origin": [-2, 7, 2], "size": [4, 0.5, 0.5], "uv": [8, 16]},
+						{"origin": [2, 7, -2.5], "size": [0.5, 0.5, 5], "uv": [6, 11]},
+						{"origin": [-2.5, 7, -2.5], "size": [0.5, 0.5, 5], "uv": [6, 11]}
+					]
+				}
+			]
+		}
+	]
+}

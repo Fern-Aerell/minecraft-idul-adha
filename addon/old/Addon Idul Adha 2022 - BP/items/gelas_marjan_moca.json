@@ -1,0 +1,56 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "aerell:gelas_marjan_moca",
+            "category": "Equipment"
+        },
+        "components": {
+            "minecraft:use_duration": 1.5,
+            "minecraft:food": {
+                "nutrition": 5,
+                "saturation_modifier": "low",
+                "can_always_eat": true,
+                "on_consume": {
+                    "event": "on_consume",
+                    "target": "self"
+                }
+            },
+            "minecraft:use_animation": "drink",
+            "minecraft:icon": {
+                "texture": "gelas_marjan_moca"
+            },
+            "minecraft:block_placer": {
+                "block": "aerell:gelas_marjan_moca_block"
+            },
+            "minecraft:display_name": {
+              "value": "Gelas\n§eMarjan moca"
+            },
+            "minecraft:render_offsets": {
+                "main_hand": {
+                  "first_person": {
+                    "scale": [
+                      0.0085,
+                      0.0085,
+                      0.0085
+                    ]
+                  },
+                  "third_person": {
+                    "position": [
+                        0.0085,
+                        0.80,
+                        -0.0085
+                    ],
+                    "scale": [
+                      0.02,
+                      0.02,
+                      0.02
+                    ]
+                  }
+                }
+            }
+        },
+        "events": {
+        }
+    }
+}

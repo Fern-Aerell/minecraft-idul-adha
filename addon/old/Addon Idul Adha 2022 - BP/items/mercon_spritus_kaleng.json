@@ -1,0 +1,87 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "aerell:mercon_spritus_kaleng",
+      "category": "equipment"
+    },
+    "components": {
+      "minecraft:icon": {
+        "texture": "mercon_spritus_kaleng"
+      },
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.mercon"
+      },
+      "minecraft:display_name": {
+        "value": "Mercon Spirtus\n§eNembak kaleng"
+      },
+      "minecraft:on_use": {
+        "on_use": {
+          "event": "shot",
+          "target": "self"
+        }
+      },
+      "minecraft:cooldown": {
+        "category": "ender_pearl",
+        "duration": 3
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:durability": {
+        "max_durability": 1500,
+        "damage_chance": {
+          "min": 5,
+          "max": 10
+        }
+      },
+      "minecraft:render_offsets": {
+        "main_hand": {
+          "first_person": {
+            "position": [ 1, 1, 1 ],
+            "rotation": [ 1, 1, 1 ],
+            "scale": [ 0, 0, 0 ]
+          },
+          "third_person": {
+            "position": [ 1, 1, 1 ],
+            "rotation": [ 1, 1, 1 ],
+            "scale": [ 0, 0, 0 ]
+          }
+        },
+        "off_hand": {
+          "first_person": {
+            "position": [ 1, 1, 1 ],
+            "rotation": [ 1, 1, 1 ],
+            "scale": [ 0, 0, 0 ]
+          },
+          "third_person": {
+            "position": [ 1, 1, 1 ],
+            "rotation": [ 1, 1, 1 ],
+            "scale": [ 0, 0, 0 ]
+          }
+        }
+      }
+    },
+    "events": {
+      "shot": {
+        "damage": {
+            "type": "durability",
+            "amount": 15,
+            "target": "self"
+        },
+        "run_command": {
+          "command": [
+            "playanimation @p animation.player.mercon.spritus.fire"
+          ]
+        },
+        "shoot": {
+          "projectile": "aerell:kaleng",
+          "launch_power": 2,
+          "angle_offset": 0
+        },
+        "transform_item": {
+          "transform": "aerell:mercon_spritus"
+        }
+      }
+    }
+  }
+}

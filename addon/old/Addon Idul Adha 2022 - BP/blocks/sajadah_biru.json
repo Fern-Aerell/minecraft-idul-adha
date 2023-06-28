@@ -1,0 +1,274 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "aerell:sajadah_biru",
+      "properties": {
+        "block:anim": [
+          0, // Animasi stop
+          1, // Animasi duduk
+          2, // doa sambil duduk
+          3, // sholat subuh
+          4, // sholat magrib
+          5 // sholat empat
+        ],
+        "block:rotasi": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    },
+    "components": {
+      "minecraft:loot": "loot_tables/blocks/sajadah_biru.json",
+      "minecraft:destroy_time": 1.0,
+      "minecraft:map_color": "#134faa",
+      "minecraft:explosion_resistance": 0.7,
+      "minecraft:block_light_absorption": 0,
+      "minecraft:on_player_placing": {
+        "event": "rotasi_block"
+      },
+      "minecraft:on_interact": {
+        "event": "aerell:animation_duduk"
+      },
+      "minecraft:creative_category": {
+				"group": "itemGroup.name.ramadhan",
+				"category": "construction"
+			},
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "sajadah_biru",
+          "render_method": "blend"
+        }
+      },
+      "minecraft:geometry": "geometry.sajadah",
+      "minecraft:pick_collision": {
+        "origin": [
+          -8.0,
+          0,
+          -8.0
+        ],
+        "size": [
+          16,
+          0.1,
+          16
+        ]
+      },
+      "minecraft:entity_collision": {
+        "origin": [
+          -8.0,
+          0,
+          -8.0
+        ],
+        "size": [
+          16,
+          0.1,
+          16
+        ]
+      },
+      "minecraft:ticking": {
+        "looping": false,
+        "range": [
+          0,
+          0
+        ],
+        "on_tick": {
+          "event": "sajadah"
+        }
+      },
+      "minecraft:breathability": "air",
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "allowed_faces": ["up"]
+          }
+        ]
+      }
+    },
+    "permutations": [
+      {
+        "condition": "query.block_property('block:rotasi') == 2",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            -90,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('block:rotasi') == 3",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            90,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('block:rotasi') == 4",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('block:rotasi') == 5",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            -180,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('block:anim') == 0",
+			  "components": {
+				  "minecraft:on_interact": {
+					  "event": "aerell:animation_stop"
+				  }
+			  }
+      },
+      {
+        "condition": "query.block_property('block:anim') == 1",
+			  "components": {
+				  "minecraft:on_interact": {
+					  "event": "aerell:animation_duduk"
+				  }
+			  }
+      },
+      {
+        "condition": "query.block_property('block:anim') == 2",
+			  "components": {
+				  "minecraft:on_interact": {
+					  "event": "aerell:animation_doa_sambil_duduk"
+				  }
+			  }
+      },
+      {
+        "condition": "query.block_property('block:anim') == 3",
+			  "components": {
+				  "minecraft:on_interact": {
+					  "event": "aerell:animation_sholat_2_rakaat"
+				  }
+			  }
+      },
+      {
+        "condition": "query.block_property('block:anim') == 4",
+			  "components": {
+				  "minecraft:on_interact": {
+					  "event": "aerell:animation_sholat_3_rakaat"
+				  }
+			  }
+      },
+      {
+        "condition": "query.block_property('block:anim') == 5",
+			  "components": {
+				  "minecraft:on_interact": {
+					  "event": "aerell:animation_sholat_4_rakaat"
+				  }
+			  }
+      }
+    ],
+    "events": {
+      "rotasi_block": {
+        "set_block_property": {
+          "block:rotasi": "query.cardinal_facing_2d"
+        }
+      },
+      "sajadah": {
+        "run_command": {
+          "command": [
+            "summon aerell:sajadah_pak_ustad"
+          ]
+        }
+      },
+      "aerell:animation_stop": {
+        "set_block_property": {
+          "block:anim": 1
+        },
+        "run_command": {
+          "command": [
+            "effect @p clear",
+            "playanimation @p animation.player.stop",
+            "title @p actionbar Selesai"
+          ]
+        }
+      },
+      "aerell:animation_duduk": {
+        "set_block_property": {
+          "block:anim": 2
+        },
+        "run_command": {
+          "command": [
+            "effect @p clear",
+            "effect @p slowness 999 6 true",
+            "playanimation @p animation.player.duduk",
+            "title @p actionbar Duduk"
+          ]
+        }
+      },
+      "aerell:animation_doa_sambil_duduk": {
+        "set_block_property": {
+          "block:anim": 3
+        },
+        "run_command": {
+          "command": [
+            "effect @p clear",
+            "effect @p slowness 3 6 true",
+            "playanimation @p animation.player.doa_duduk",
+            "title @p actionbar Doa sambil duduk"
+          ]
+        }
+      },
+      "aerell:animation_sholat_2_rakaat": {
+        "set_block_property": {
+          "block:anim": 4
+        },
+        "run_command": {
+          "command": [
+            "effect @p clear",
+            "effect @p slowness 30 6 true",
+            "playanimation @p animation.player.sholat.subuh",
+            "title @p actionbar Sholat 2 rakaat"
+          ]
+        }
+      },
+      "aerell:animation_sholat_3_rakaat": {
+        "set_block_property": {
+          "block:anim": 5
+        },
+        "run_command": {
+          "command": [
+            "effect @p clear",
+            "effect @p slowness 39 6 true",
+            "playanimation @p animation.player.sholat.magrib",
+            "title @p actionbar Sholat 3 rakaat"
+          ]
+        }
+      },
+      "aerell:animation_sholat_4_rakaat": {
+        "set_block_property": {
+          "block:anim": 0
+        },
+        "run_command": {
+          "command": [
+            "effect @p clear",
+            "effect @p slowness 47 6 true",
+            "playanimation @p animation.player.sholat.empat",
+            "title @p actionbar Sholat 4 rakaat"
+          ]
+        }
+      }
+    }
+  }
+}

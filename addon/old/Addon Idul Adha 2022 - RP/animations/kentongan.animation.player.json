@@ -1,0 +1,244 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.kentongan.fp": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"root": {
+					"rotation": [0, 180, 0]
+				},
+				"body": {
+					"rotation": [0, -5, 12.5],
+					"position": [-1, 0, 6]
+				},
+				"leftArm": {
+					"rotation": [-92.87643, 7.18771, -14.19291],
+					"position": [-1, -5.5, -6]
+				},
+				"rightArm": {
+					"rotation": [-93.15104, 5.60713, -6.24378],
+					"position": [-3.7, 0.6, -9.5]
+				},
+				"bone4": {
+					"position": [-4, 20, -25],
+					"scale": 0.7
+				},
+				"bone5": {
+					"rotation": [42.5, 0, 0],
+					"position": [8, 0, -25],
+					"scale": 0
+				},
+				"spirtus": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.kentongan.tp": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": [-2.91103, -0.19761, -4.28153],
+					"position": [0, 0, 0]
+				},
+				"rightArm": {
+					"rotation": [-36.99214, -0.73704, 2.38318],
+					"position": [0, 0, 0]
+				},
+				"bone5": {
+					"rotation": [42.5, 0, 0],
+					"position": [8, 0, -25],
+					"scale": 0
+				},
+				"spirtus": {
+					"scale": 0
+				},
+				"bone4": {
+					"position": [-1, 22, -15],
+					"scale": 0.4
+				}
+			}
+		},
+		"animation.kentongan.kayu.fp.pukul": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.29167,
+			"bones": {
+				"root": {
+					"rotation": [0, 180, 0]
+				},
+				"body": {
+					"rotation": [0, -5, 12.5],
+					"position": [-1, 0, 6]
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [-92.87643, 7.18771, -14.19291],
+						"0.1667": [-93.28441, 29.65617, -15.45917],
+						"0.2917": [-92.87643, 7.18771, -14.19291]
+					},
+					"position": [-1, -5.5, -6]
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [-93.15104, 5.60713, -6.24378],
+						"0.125": [-92.86323, 0.22198, -13.45204],
+						"0.25": [-93.15104, 5.60713, -6.24378]
+					},
+					"position": [-3.7, 0.6, -9.5]
+				},
+				"bone4": {
+					"position": [-4, 20, -25],
+					"scale": 0.7
+				},
+				"bone5": {
+					"rotation": [42.5, 0, 0],
+					"position": [8, 0, -25],
+					"scale": 0
+				},
+				"spirtus": {
+					"scale": 0
+				}
+			},
+			"sound_effects": {
+				"0.125": {
+					"effect": "kentongan_kayu"
+				}
+			}
+		},
+		"animation.kentongan.kayu.tp.pukul": {
+			"animation_length": 0.45833,
+			"bones": {
+				"leftArm": {
+					"rotation": {
+						"0.0": [-2.91103, -0.19761, -4.28153],
+						"0.1667": [-49.83683, -20.88191, -18.89954],
+						"0.2917": [-22.72924, 41.58465, -5.5175],
+						"0.4583": [-2.91103, -0.19761, -4.28153]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.4583": [0, 0, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [-36.99214, -0.73704, 2.38318],
+						"0.2917": [-98.9857, -3.15883, -12.42975],
+						"0.4583": [-36.99214, -0.73704, 2.38318]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.4583": [0, 0, 0]
+					}
+				},
+				"bone5": {
+					"rotation": [42.5, 0, 0],
+					"position": [8, 0, -25],
+					"scale": 0
+				},
+				"spirtus": {
+					"scale": 0
+				},
+				"bone4": {
+					"position": [-1, 22, -15],
+					"scale": 0.4
+				}
+			},
+			"sound_effects": {
+				"0.2917": {
+					"effect": "kentongan_kayu"
+				}
+			}
+		},
+		"animation.kentongan.bambu.fp.pukul": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.29167,
+			"bones": {
+				"root": {
+					"rotation": [0, 180, 0]
+				},
+				"body": {
+					"rotation": [0, -5, 12.5],
+					"position": [-1, 0, 6]
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [-92.87643, 7.18771, -14.19291],
+						"0.1667": [-93.28441, 29.65617, -15.45917],
+						"0.2917": [-92.87643, 7.18771, -14.19291]
+					},
+					"position": [-1, -5.5, -6]
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [-93.15104, 5.60713, -6.24378],
+						"0.125": [-92.86323, 0.22198, -13.45204],
+						"0.25": [-93.15104, 5.60713, -6.24378]
+					},
+					"position": [-3.7, 0.6, -9.5]
+				},
+				"bone4": {
+					"position": [-4, 20, -25],
+					"scale": 0.7
+				},
+				"bone5": {
+					"rotation": [42.5, 0, 0],
+					"position": [8, 0, -25],
+					"scale": 0
+				},
+				"spirtus": {
+					"scale": 0
+				}
+			},
+			"sound_effects": {
+				"0.125": {
+					"effect": "kentongan_bambu"
+				}
+			}
+		},
+		"animation.kentongan.bambu.tp.pukul": {
+			"animation_length": 0.45833,
+			"bones": {
+				"leftArm": {
+					"rotation": {
+						"0.0": [-2.91103, -0.19761, -4.28153],
+						"0.1667": [-49.83683, -20.88191, -18.89954],
+						"0.2917": [-22.72924, 41.58465, -5.5175],
+						"0.4583": [-2.91103, -0.19761, -4.28153]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.4583": [0, 0, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [-36.99214, -0.73704, 2.38318],
+						"0.2917": [-98.9857, -3.15883, -12.42975],
+						"0.4583": [-36.99214, -0.73704, 2.38318]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.4583": [0, 0, 0]
+					}
+				},
+				"bone5": {
+					"rotation": [42.5, 0, 0],
+					"position": [8, 0, -25],
+					"scale": 0
+				},
+				"spirtus": {
+					"scale": 0
+				},
+				"bone4": {
+					"position": [-1, 22, -15],
+					"scale": 0.4
+				}
+			},
+			"sound_effects": {
+				"0.0417": {
+					"effect": "kentongan_bambu"
+				}
+			}
+		}
+	}
+}

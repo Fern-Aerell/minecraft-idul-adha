@@ -1,0 +1,64 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "aerell:bubur_kacang_ijo",
+            "category": "Equipment"
+        },
+        "components": {
+            "minecraft:max_stack_size": 1,
+            "minecraft:use_duration": 1.7,
+            "minecraft:food": {
+                "nutrition": 8,
+                "saturation_modifier": "low",
+                "can_always_eat": true,
+                "on_consume": {
+                    "event": "on_consume",
+                    "target": "self"
+                }
+            },
+            "minecraft:use_animation": "drink",
+            "minecraft:icon": {
+                "texture": "bubur_kacang_ijo"
+            },
+            "minecraft:block_placer": {
+                "block": "aerell:bubur_kacang_ijo_block"
+            },
+            "minecraft:display_name": {},
+            "minecraft:render_offsets": {
+                "main_hand": {
+                  "first_person": {
+                    "scale": [
+                      0.0085,
+                      0.0085,
+                      0.0085
+                    ]
+                  },
+                  "third_person": {
+                    "position": [
+                        0.0085,
+                        0.80,
+                        -0.0085
+                    ],
+                    "scale": [
+                      0.02,
+                      0.02,
+                      0.02
+                    ]
+                  }
+                }
+            }
+        },
+        "events": {
+            "on_consume": {
+                "sequence": [
+                    {
+                        "transform_item": {
+                            "transform": "minecraft:bowl"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

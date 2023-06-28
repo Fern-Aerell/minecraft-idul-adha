@@ -1,0 +1,35 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.stepe_ramadhan": {
+      "arrays": {
+        "textures": {
+          "Array.skins": [
+            "Texture.stepe",
+            "Texture.aerell",
+            "Texture.bocil_dua_ramadhan",
+            "Texture.bocil_empat_ramadhan",
+            "Texture.bocil_ramadhan",
+            "Texture.bocil_tiga_ramadhan",
+            "Texture.dikmar_ramadhan",
+            "Texture.erpan_ramadhan",
+            "Texture.nevin_ramadhan",
+            "Texture.ofthelrz_ramadhan",
+            "Texture.ralcraft_ramadhan",
+            "Texture.romansyah_ramadhan",
+            "Texture.zanki_ramadhan"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.skins[query.variant]"
+      ]
+    }
+  }
+}

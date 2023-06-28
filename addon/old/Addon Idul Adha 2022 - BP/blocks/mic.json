@@ -1,0 +1,242 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "aerell:mic",
+      "properties": {
+        "block:adzan": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "block:rotasi": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    },
+    "components": {
+      "minecraft:loot": "loot_tables/blocks/mic.json",
+      "minecraft:destroy_time": 0.25,
+      "minecraft:map_color": "#2e2e2e",
+      "minecraft:explosion_resistance": 0.9,
+      "minecraft:block_light_absorption": 0,
+      "minecraft:on_player_placing": {
+        "event": "rotasi_block"
+      },
+      "minecraft:on_player_destroyed": {
+        "event": "aerell:hancur"
+      },
+      "minecraft:on_interact": {
+        "event": "aerell:adzan"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "mic",
+          "render_method": "alpha_test"
+        }
+      },
+      "minecraft:ticking": {
+        "looping": false,
+        "range": [
+          0,
+          0
+        ],
+        "on_tick": {
+          "event": "mic"
+        }
+      },
+      "minecraft:geometry": "geometry.mic",
+      "minecraft:pick_collision": {
+        "origin": [
+          -5,
+          0,
+          -5
+        ],
+        "size": [
+          10,
+          27,
+          10
+        ]
+      },
+      "minecraft:entity_collision": {
+        "origin": [
+          -5,
+          0,
+          -5
+        ],
+        "size": [
+          10,
+          27,
+          10
+        ]
+      },
+      "minecraft:creative_category": {
+				"group": "itemGroup.name.ramadhan",
+				"category": "construction"
+			},
+      "minecraft:breathability": "air",
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "allowed_faces": ["up"]
+          }
+        ]
+      }
+    },
+    "permutations": [
+      {
+        "condition": "query.block_property('block:rotasi') == 2",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('block:rotasi') == 3",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            180,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('block:rotasi') == 4",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            -90,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('block:rotasi') == 5",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            90,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('block:adzan') == 0",
+        "components": {
+          "minecraft:on_interact": {
+            "event": "aerell:mic_off"
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('block:adzan') == 1",
+			  "components": {
+				  "minecraft:on_interact": {
+					  "event": "aerell:adzan"
+				  }
+			  }
+      },
+      {
+        "condition": "query.block_property('block:adzan') == 2",
+			  "components": {
+				  "minecraft:on_interact": {
+					  "event": "aerell:adzan_subuh"
+				  }
+			  }
+      },
+      {
+        "condition": "query.block_property('block:adzan') == 3",
+			  "components": {
+				  "minecraft:on_interact": {
+					  "event": "aerell:takbiran"
+				  }
+			  }
+      }
+    ],
+    "events": {
+      "rotasi_block": {
+        "set_block_property": {
+          "block:rotasi": "query.cardinal_facing_2d"
+        }
+      },
+      "mic": {
+        "run_command": {
+          "command": [
+            "summon aerell:mic_pak_ustad"
+          ]
+        }
+      },
+      "aerell:adzan": {
+        "set_block_property": {
+          "block:adzan": 2
+        },
+        "run_command": {
+          "command": [
+            "playsound aerell.adzan @a ~~~ 1 1",
+            "stopsound @a aerell.adzan_subuh",
+            "stopsound @a aerell.takbiran",
+            "title @p actionbar Adzan"
+          ]
+        }
+      },
+      "aerell:adzan_subuh": {
+        "set_block_property": {
+          "block:adzan": 3
+        },
+        "run_command": {
+          "command": [
+            "playsound aerell.adzan_subuh @a ~~~ 1 1",
+            "stopsound @a aerell.adzan",
+            "stopsound @a aerell.takbiran",
+            "title @p actionbar Adzan subuh"
+          ]
+        }
+      },
+      "aerell:takbiran": {
+        "set_block_property": {
+          "block:adzan": 0
+        },
+        "run_command": {
+          "command": [
+            "playsound aerell.takbiran @a ~~~ 1 1",
+            "stopsound @a aerell.adzan",
+            "stopsound @a aerell.adzan_subuh",
+            "title @p actionbar Takbiran"
+          ]
+        }
+      },
+      "aerell:mic_off": {
+        "set_block_property": {
+          "block:adzan": 1
+        },
+        "run_command": {
+          "command": [
+            "stopsound @a aerell.adzan",
+            "stopsound @a aerell.adzan_subuh",
+            "stopsound @a aerell.takbiran"
+          ]
+        }
+      },
+      "aerell:hancur": {
+        "run_command": {
+          "command": [
+            "stopsound @a aerell.adzan",
+            "stopsound @a aerell.adzan_subuh",
+            "stopsound @a aerell.takbiran"
+          ]
+        }
+      }
+    }
+  }
+}

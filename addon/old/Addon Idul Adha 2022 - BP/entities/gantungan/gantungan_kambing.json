@@ -1,0 +1,325 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "aerell:gantungan_kambing",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "aerell:gantungan": {
+        "minecraft:variant": {
+          "value": 0
+        },
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "other",
+                      "domain": "hand",
+                      "value": "aerell:kambing_lead"
+                    },
+                    {
+                      "test": "is_family",
+                      "subject": "other",
+                      "value": "player"
+                    }
+                  ]
+                },
+                "event": "aerell:kambing",
+                "target": "self"
+              },
+              "use_item": true,
+              "interact_text": "action.interact.gantung",
+              "swing": true
+            }
+          ]
+        }
+      },
+      "aerell:kambing": {
+        "minecraft:variant": {
+          "value": 1
+        },
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "other",
+                      "domain": "hand",
+                      "value": "shears"
+                    },
+                    {
+                      "test": "is_family",
+                      "subject": "other",
+                      "value": "player"
+                    }
+                  ]
+                },
+                "event": "aerell:kulitin2",
+                "target": "self"
+              },
+              "hurt_item": 2,
+              "interact_text": "action.interact.kulitin",
+              "play_sounds": "shear",
+              "swing": true
+            }
+          ]
+        }
+      },
+      "aerell:kulitin": {
+        "minecraft:variant": {
+          "value": 2
+        },
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "is_family",
+                      "subject": "other",
+                      "value": "player"
+                    }
+                  ],
+                  "any_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "other",
+                      "domain": "hand",
+                      "value": "wooden_sword"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "subject": "other",
+                      "domain": "hand",
+                      "value": "stone_sword"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "subject": "other",
+                      "domain": "hand",
+                      "value": "iron_sword"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "subject": "other",
+                      "domain": "hand",
+                      "value": "golden_sword"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "subject": "other",
+                      "domain": "hand",
+                      "value": "diamond_sword"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "subject": "other",
+                      "domain": "hand",
+                      "value": "netherite_sword"
+                    }
+                  ]
+                },
+                "event": "aerell:keluarindaging",
+                "target": "self"
+              },
+              "hurt_item": 1,
+              "interact_text": "action.interact.keluarindaging",
+              "swing": true
+            }
+          ]
+        }
+      },
+      "aerell:keluarindaging": {
+        "minecraft:variant": {
+          "value": 2
+        },
+        "minecraft:spawn_entity": {
+          "entities": {
+            "min_wait_time": 1,
+            "max_wait_time": 1,
+            "spawn_item": "aerell:daging_kambing_mentah"
+          }
+        },
+        "minecraft:timer": {
+          "time": [
+            4,
+            5
+          ],
+          "looping": false,
+          "time_down_event": {
+            "event": "minecraft:entity_spawned",
+            "target": "self"
+          }
+        }
+      },
+      "aerell:kulitdrop": {
+        "minecraft:variant": {
+          "value": 1
+        },
+        "minecraft:spawn_entity": {
+          "entities": {
+            "min_wait_time": 1,
+            "max_wait_time": 1,
+            "spawn_item": "wool"
+          }
+        },
+        "minecraft:timer": {
+          "time": [
+            3,
+            4
+          ],
+          "looping": false,
+          "time_down_event": {
+            "event": "aerell:kulitin",
+            "target": "self"
+          }
+        }
+      },
+      "instant_despawn": {
+        "minecraft:instant_despawn": {}
+      },
+      "aerell:damage_sensor": {
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "all",
+            "deals_damage": false
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "block",
+          "block_entity"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.5,
+        "height": 0.9
+      },
+      "minecraft:health": {
+        "value": 1,
+        "max": 1
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:fire_immune": {},
+      "minecraft:damage_sensor": {},
+      "minecraft:inside_block_notifier": {
+        "block_list": [
+          {
+            "block": "aerell:gantungan_sapi",
+            "exited_block_event": {
+              "event": "block_hancur",
+              "target": "self"
+            }
+          }
+        ]
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/blocks/gantungan_kambing.json"
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "remove": {
+          "component_groups": [
+            "aerell:keluarindaging",
+            "aerell:damage_sensor"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "aerell:gantungan"
+          ]
+        }
+      },
+      "aerell:kambing": {
+        "remove": {
+          "component_groups": [
+            "aerell:gantungan"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "aerell:kambing",
+            "aerell:damage_sensor"
+          ]
+        }
+      },
+      "aerell:kulitin": {
+        "run_command": {
+          "command": [
+            "xp 100 @p"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "aerell:kulitdrop"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "aerell:kulitin"
+          ]
+        }
+      },
+      "aerell:kulitin2": {
+        "run_command": {
+          "command": [
+            "xp 100 @p"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "aerell:kambing"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "aerell:kulitdrop"
+          ]
+        }
+      },
+      "aerell:keluarindaging": {
+        "run_command": {
+          "command": [
+            "xp 100 @p"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "aerell:kulitin"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "aerell:keluarindaging"
+          ]
+        }
+      },
+      "block_hancur": {
+        "add": {
+          "component_groups": [
+            "instant_despawn"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "aerell:sheep_tidur_hidup",
+      "is_spawnable": false,
+      "is_summonable": false,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "minecraft:sheep_adult": {
+        "minecraft:experience_reward": {
+          "on_bred": "Math.Random(1,7)",
+          "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+        },
+        "minecraft:behavior.breed": {
+          "priority": 3,
+          "speed_multiplier": 1.0
+        },
+        "minecraft:breedable": {
+          "require_tame": false,
+          "breed_items": "wheat",
+          "breeds_with": {
+            "mate_type": "minecraft:sheep",
+            "baby_type": "minecraft:sheep",
+            "breed_event": {
+              "event": "minecraft:entity_born",
+              "target": "baby"
+            }
+          }
+        },
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "is_sneaking",
+                      "subject": "other",
+                      "operator": "\u003d\u003d",
+                      "value": true
+                    },
+                    {
+                      "test": "is_family",
+                      "subject": "other",
+                      "value": "player"
+                    }
+                  ],
+                  "any_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "other",
+                      "domain": "hand",
+                      "operator": "\u003d\u003d",
+                      "value": "iron_sword"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "subject": "other",
+                      "domain": "hand",
+                      "operator": "\u003d\u003d",
+                      "value": "diamond_sword"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "subject": "other",
+                      "domain": "hand",
+                      "operator": "\u003d\u003d",
+                      "value": "netherite_sword"
+                    }
+                  ]
+                },
+                "event": "aerell:mati",
+                "target": "self"
+              },
+              "hurt_item": 1,
+              "interact_text": "action.interact.sembelih"
+            }
+          ]
+        },
+        "minecraft:timer": {
+          "time": [2, 4],
+          "looping": true,
+          "time_down_event": {
+            "event": "become_bangun",
+            "target": "self"
+          }
+        }
+      },
+      "become_mati": {
+        "minecraft:transformation": {
+          "into": "aerell:sheep_tidur_mati"
+        }
+      },
+      "become_bangun": {
+        "minecraft:transformation": {
+          "into": "minecraft:sheep"
+        }
+      }
+    },
+    "components": {
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:type_family": {
+        "family": [
+          "sheep",
+          "mob"
+        ]
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "avoid_water": true,
+        "avoid_damage_blocks": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:collision_box": {
+        "width": 0.9,
+        "height": 1.3
+      },
+      "minecraft:nameable": {
+        "default_trigger": {
+          "event": "aerell:nama_normal",
+          "target": "self"
+        },
+        "name_actions": [
+          {
+            "name_filter": "Stepe",
+            "on_named": {
+              "event": "aerell:easteregg_stepe",
+              "target": "self"
+            }
+          },
+          {
+            "name_filter": "MoenD",
+            "on_named": {
+              "event": "aerell:easteregg_moend",
+              "target": "self"
+            }
+          }
+        ]
+      },
+      "minecraft:health": {
+        "value": 10,
+        "max": 10
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "\u003d\u003d",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:movement": {
+        "value": 0
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:behavior.panic": {
+        "priority": 1,
+        "speed_multiplier": 1.25
+      },
+      "minecraft:behavior.mount_pathing": {
+        "priority": 2,
+        "speed_multiplier": 1.5,
+        "target_dist": 0.0,
+        "track_target": true
+      },
+      "minecraft:behavior.breed": {
+        "priority": 3,
+        "speed_multiplier": 1.0
+      },
+      "minecraft:behavior.tempt": {
+        "priority": 4,
+        "speed_multiplier": 1.25,
+        "items": [
+          "wheat"
+        ]
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 6,
+        "speed_multiplier": 0.8
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 7,
+        "look_distance": 6.0,
+        "probability": 0.02
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 9
+      },
+      "minecraft:balloonable": {},
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "randomize": [
+          {
+            "trigger": "minecraft:spawn_adult"
+          }
+        ]
+      },
+      "aerell:mati": {
+        "randomize": [
+          {
+            "trigger": "aerell:sembelih"
+          },
+          {
+            "trigger": "become_bangun"
+          }
+        ]
+      },
+      "become_bangun": {
+        "add": {
+          "component_groups": [
+            "become_bangun"
+          ]
+        }
+      },
+      "aerell:sembelih": {
+        "run_command": {
+          "command": [
+            "title @p actionbar Bismillahirrahmanirrahim"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "become_mati"
+          ]
+        }
+      },
+      "minecraft:entity_transformed": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "minecraft:sheep_adult"
+              ]
+            }
+          }
+        ]
+      },
+      "minecraft:spawn_adult": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "minecraft:sheep_adult"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

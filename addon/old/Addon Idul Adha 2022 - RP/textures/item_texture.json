@@ -1,0 +1,606 @@
+{
+  "resource_pack_name": "ADD-ON IDUL ADHA 2021",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "kantong_plastik": {
+      "textures": [
+        "textures/items/kantong_plastik"
+      ]
+    },
+    "gantungan": {
+      "textures": [
+        "textures/items/gantungan"
+      ]
+    },
+    "iga_sapi_mentah": {
+      "textures": [
+        "textures/items/iga_sapi_mentah"
+      ]
+    },
+    "iga_sapi_masak": {
+      "textures": [
+        "textures/items/iga_sapi_masak"
+      ]
+    },
+    "sate_kambing_mentah": {
+      "textures": [
+        "textures/items/sate_kambing_mentah"
+      ]
+    },
+    "sate_sapi_mentah": {
+      "textures": [
+        "textures/items/sate_sapi_mentah"
+      ]
+    },
+    "sate_kambing_masak": {
+      "textures": [
+        "textures/items/sate_kambing_masak"
+      ]
+    },
+    "sate_sapi_masak": {
+      "textures": [
+        "textures/items/sate_sapi_masak"
+      ]
+    },
+    "kambing_lead": {
+      "textures": [
+        "textures/items/kambing_lead"
+      ]
+    },
+    "sapi_lead": {
+      "textures": [
+        "textures/items/sapi_lead"
+      ]
+    },
+    "abuabu_lead": {
+      "textures": [
+        "textures/items/abuabu_lead"
+      ]
+    },
+    "coklat_lead": {
+      "textures": [
+        "textures/items/coklat_lead"
+      ]
+    },
+    "putih_lead": {
+      "textures": [
+        "textures/items/putih_lead"
+      ]
+    },
+    "moend_lead": {
+      "textures": [
+        "textures/items/moend_lead"
+      ]
+    },
+    "stepe_lead": {
+      "textures": [
+        "textures/items/stepe_lead"
+      ]
+    },
+    "sheep_lead": {
+      "textures": [
+        "textures/items/sheep_lead"
+      ]
+    },
+    "daging_sapi_mentah": {
+      "textures": [
+        "textures/items/daging_sapi_mentah"
+      ]
+    },
+    "daging_domba_mentah": {
+      "textures": [
+        "textures/items/daging_domba_mentah"
+      ]
+    },
+    "daging_kambing_mentah": {
+      "textures": [
+        "textures/items/daging_kambing_mentah"
+      ]
+    },
+    "daging_sheep_mentah": {
+      "textures": [
+        "textures/items/daging_sheep_mentah"
+      ]
+    },
+    "daging_sapi_masak": {
+      "textures": [
+        "textures/items/daging_sapi_masak"
+      ]
+    },
+    "daging_domba_masak": {
+      "textures": [
+        "textures/items/daging_domba_masak"
+      ]
+    },
+    "daging_sheep_masak": {
+      "textures": [
+        "textures/items/daging_sheep_masak"
+      ]
+    },
+    "daging_kambing_masak": {
+      "textures": [
+        "textures/items/daging_kambing_masak"
+      ]
+    },
+    "daging_sapi_qurban": {
+      "textures": [
+        "textures/items/daging_sapi_qurban"
+      ]
+    },
+    "daging_domba_qurban": {
+      "textures": [
+        "textures/items/daging_domba_qurban"
+      ]
+    },
+    "daging_kambing_qurban": {
+      "textures": [
+        "textures/items/daging_kambing_qurban"
+      ]
+    },
+    "daging_sheep_qurban": {
+      "textures": [
+        "textures/items/daging_sheep_qurban"
+      ]
+    },
+    "kerudung_putih": {
+      "textures": [
+        "textures/items/kerudung_putih"
+      ]
+    },
+    "kerudung_kuning": {
+      "textures": [
+        "textures/items/kerudung_kuning"
+      ]
+    },
+    "kerudung_hitam": {
+      "textures": [
+        "textures/items/kerudung_hitam"
+      ]
+    },
+    "baju_muslimah1": {
+      "textures": [
+        "textures/items/baju_muslimah1"
+      ]
+    },
+    "baju_muslimah2": {
+      "textures": [
+        "textures/items/baju_muslimah2"
+      ]
+    },
+    "baju_muslimah3": {
+      "textures": [
+        "textures/items/baju_muslimah3"
+      ]
+    },
+    "leggings_muslimah1": {
+      "textures": [
+        "textures/items/leggings_muslimah1"
+      ]
+    },
+    "leggings_muslimah2": {
+      "textures": [
+        "textures/items/leggings_muslimah2"
+      ]
+    },
+    "leggings_muslimah3": {
+      "textures": [
+        "textures/items/leggings_muslimah3"
+      ]
+    },
+    "boots_muslimah1": {
+      "textures": [
+        "textures/items/boots_muslimah1"
+      ]
+    },
+    "boots_muslimah2": {
+      "textures": [
+        "textures/items/boots_muslimah2"
+      ]
+    },
+    "boots_muslimah3": {
+      "textures": [
+        "textures/items/boots_muslimah3"
+      ]
+    },
+    "peci": {
+      "textures": [
+        "textures/items/peci"
+      ]
+    },
+    "bajukoko": {
+      "textures": [
+        "textures/items/baju_koko"
+      ]
+    },
+    "bajukoko_merah": {
+      "textures": [
+        "textures/items/bajukoko_merah"
+      ]
+    },
+    "celana": {
+      "textures": [
+        "textures/items/celana"
+      ]
+    },
+    "mukena_putih": {
+      "textures": [
+        "textures/items/mukena_putih"
+      ]
+    },
+    "mukena_putih_leggings": {
+      "textures": [
+        "textures/items/mukena_putih_leggings"
+      ]
+    },
+    "sarung_hitam": {
+      "textures": [
+        "textures/items/sarung_hitam"
+      ]
+    },
+    "sarung_hitam_b": {
+      "textures": [
+        "textures/items/sarung_hitam_b"
+      ]
+    },
+    "sarung_hitam_m": {
+      "textures": [
+        "textures/items/sarung_hitam_m"
+      ]
+    },
+    "sarung_merah": {
+      "textures": [
+        "textures/items/sarung_merah"
+      ]
+    },
+    "sarung_merah_b": {
+      "textures": [
+        "textures/items/sarung_merah_b"
+      ]
+    },
+    "sarung_merah_m": {
+      "textures": [
+        "textures/items/sarung_merah_m"
+      ]
+    },
+    "sarung_biru": {
+      "textures": [
+        "textures/items/sarung_biru"
+      ]
+    },
+    "sarung_biru_b": {
+      "textures": [
+        "textures/items/sarung_biru_b"
+      ]
+    },
+    "sarung_biru_m": {
+      "textures": [
+        "textures/items/sarung_biru_m"
+      ]
+    },
+    "sarung_hijau": {
+      "textures": [
+        "textures/items/sarung_hijau"
+      ]
+    },
+    "sarung_hijau_b": {
+      "textures": [
+        "textures/items/sarung_hijau_b"
+      ]
+    },
+    "sarung_hijau_m": {
+      "textures": [
+        "textures/items/sarung_hijau_m"
+      ]
+    },
+    "sarung_oren": {
+      "textures": [
+        "textures/items/sarung_oren"
+      ]
+    },
+    "sarung_oren_b": {
+      "textures": [
+        "textures/items/sarung_oren_b"
+      ]
+    },
+    "sarung_oren_m": {
+      "textures": [
+        "textures/items/sarung_oren_m"
+      ]
+    },
+    "sendal": {
+      "textures": [
+        "textures/items/sendal"
+      ]
+    },
+    "leather_hitam": {
+      "textures": [
+        "textures/items/leather_hitam"
+      ]
+    },
+    "leather_putih": {
+      "textures": [
+        "textures/items/leather_putih"
+      ]
+    },
+    "kurma": {
+      "textures": [
+        "textures/items/kurma"
+      ]
+    },
+    "kolak": {
+      "textures": [
+        "textures/items/kolak"
+      ]
+    },
+    "es_buah": {
+      "textures":[
+        "textures/items/es_buah"
+      ]
+    },
+    "bubur_kacang_ijo": {
+      "textures": [
+        "textures/items/bubur_kacang_ijo"
+      ]
+    },
+    "donat": {
+      "textures": [
+        "textures/items/donat"
+      ]
+    },
+    "bakwan": {
+      "textures": [
+        "textures/items/bakwan"
+      ]
+    },
+    "risoles": {
+      "textures": [
+        "textures/items/risoles"
+      ]
+    },
+    "tahu_goreng": {
+      "textures": [
+        "textures/items/tahu_goreng"
+      ]
+    },
+    "tempe_goreng": {
+      "textures": [
+        "textures/items/tempe_goreng"
+      ]
+    },
+    "es_kelapa": {
+      "textures": [
+        "textures/items/es_kelapa"
+      ]
+    },
+    "mercon_spritus": {
+      "textures": [
+        "textures/items/mercon_spritus"
+      ]
+    },
+    "mercon_spritus_kaleng": {
+      "textures": [
+        "textures/items/mercon_spritus_kaleng"
+      ]
+    },
+    "mercon_spritus_petasan_korek": {
+      "textures": [
+        "textures/items/mercon_spritus_petasan_korek"
+      ]
+    },
+    "kaleng": {
+      "textures": [
+        "textures/items/kaleng"
+      ]
+    },
+    "petasan": {
+      "textures": [
+        "textures/items/petasan"
+      ]
+    },
+    "sosis_goreng": {
+      "textures": [
+        "textures/items/sosis_goreng"
+      ]
+    },
+    "telur_gulung": {
+      "textures": [
+        "textures/items/telur_gulung"
+      ]
+    },
+    "gelas": {
+      "textures": [
+        "textures/items/gelas"
+      ]
+    },
+    "gelas_marjan_coco_pandan": {
+      "textures": [
+        "textures/items/gelas_coco_pandan"
+      ]
+    },
+    "gelas_marjan_melon": {
+      "textures": [
+        "textures/items/gelas_melon"
+      ]
+    },
+    "gelas_marjan_moca": {
+      "textures": [
+        "textures/items/gelas_moca"
+      ]
+    },
+    "kentongan_kayu": {
+      "textures": [
+        "textures/items/kentongan_kayu"
+      ]
+    },
+    "kentongan_bambu": {
+      "textures": [
+        "textures/items/kentongan_bambu"
+      ]
+    },
+    "tempat_wudu": {
+      "textures": [
+        "textures/items/tempat_wudu"
+      ]
+    },
+    "uang_1rb": {
+      "textures": [
+        "textures/items/uang/1rb"
+      ]
+    },
+    "uang_2rb": {
+      "textures": [
+        "textures/items/uang/2rb"
+      ]
+    },
+    "uang_5rb": {
+      "textures": [
+        "textures/items/uang/5rb"
+      ]
+    },
+    "uang_10rb": {
+      "textures": [
+        "textures/items/uang/10rb"
+      ]
+    },
+    "uang_20rb": {
+      "textures": [
+        "textures/items/uang/20rb"
+      ]
+    },
+    "uang_50rb": {
+      "textures": [
+        "textures/items/uang/50rb"
+      ]
+    },
+    "uang_100rb": {
+      "textures": [
+        "textures/items/uang/100rb"
+      ]
+    },
+    "amplop_thr": {
+      "textures": [
+        "textures/items/amplop"
+      ]
+    },
+    "ketupat": {
+      "textures": [
+        "textures/items/ketupat"
+      ]
+    },
+    "ketupat_masak": {
+      "textures": [
+        "textures/items/ketupat_masak"
+      ]
+    },
+    "beras": {
+      "textures": [
+        "textures/items/beras"
+      ]
+    },
+    "sate_kambing": {
+      "textures": [
+        "textures/items/sate_kambing_mentah"
+      ]
+    },
+    "sate_sapi": {
+      "textures": [
+        "textures/items/sate_sapi_mentah"
+      ]
+    },
+    "kue_sagu": {
+      "textures": [
+        "textures/items/kue_sagu"
+      ]
+    },
+    "kue_nastar": {
+      "textures": [
+        "textures/items/kue_nastar"
+      ]
+    },
+    "kue_kastengel": {
+      "textures": [
+        "textures/items/kue_kastengel"
+      ]
+    },
+    "kue_putri_salju": {
+      "textures": [
+        "textures/items/kue_putri_salju"
+      ]
+    },
+    "kue_kacang_tanah": {
+      "textures": [
+        "textures/items/kue_kacang_tanah"
+      ]
+    },
+    "astor": {
+      "textures": [
+        "textures/items/astor"
+      ]
+    },
+    "rengginang": {
+      "textures": [
+        "textures/items/rengginang"
+      ]
+    },
+    "kacang_banpol": {
+      "textures": [
+        "textures/items/kacang_banpol"
+      ]
+    },
+    "kacang_bandung": {
+      "textures": [
+        "textures/items/kacang_bandung"
+      ]
+    },
+    "opor_ayam": {
+      "textures": [
+        "textures/items/opor_ayam"
+      ]
+    },
+    "lontong_sayur": {
+      "textures": [
+        "textures/items/lontong_sayur"
+      ]
+    },
+    "sayur_lodeh": {
+      "textures": [
+        "textures/items/sayur_lodeh"
+      ]
+    },
+    "semur_daging": {
+      "textures": [
+        "textures/items/semur_daging"
+      ]
+    },
+    "sambal_ati_goreng": {
+      "textures": [
+        "textures/items/sambal_ati_goreng"
+      ]
+    },
+    "rendang": {
+      "textures": [
+        "textures/items/rendang"
+      ]
+    },
+    "lontong": {
+      "textures": [
+        "textures/items/lontong"
+      ]
+    },
+    "baju_lebaran1": {
+      "textures": [
+        "textures/items/baju_lebaran1"
+      ]
+    },
+    "baju_lebaran2": {
+      "textures": [
+        "textures/items/baju_lebaran2"
+      ]
+    },
+    "baju_lebaran3": {
+      "textures": [
+        "textures/items/baju_lebaran3"
+      ]
+    }
+  }
+}

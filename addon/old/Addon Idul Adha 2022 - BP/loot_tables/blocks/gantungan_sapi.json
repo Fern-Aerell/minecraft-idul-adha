@@ -1,0 +1,14 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "aerell:gantungan_sapi_spawn_egg",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

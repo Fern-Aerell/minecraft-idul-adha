@@ -1,0 +1,41 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "aerell:beras",
+            "category": "Equipment"
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "beras"
+            },
+            "minecraft:display_name": {
+            },
+            "minecraft:render_offsets": {
+                "main_hand": {
+                  "first_person": {
+                    "scale": [
+                      0.0085,
+                      0.0085,
+                      0.0085
+                    ]
+                  },
+                  "third_person": {
+                    "position": [
+                        0.0085,
+                        0.80,
+                        -0.0085
+                    ],
+                    "scale": [
+                      0.02,
+                      0.02,
+                      0.02
+                    ]
+                  }
+                }
+            }
+        },
+        "events": {
+        }
+    }
+}

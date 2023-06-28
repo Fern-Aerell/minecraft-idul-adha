@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "aerell:tempat_bayar_zakat",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/tempat_bayar_zakat"
+      },
+      "geometry": {
+        "default": "geometry.tempat_bayar_zakat"
+      },
+      "animations": {
+        "root": "controller.animation.tempat_bayar_zakat.root",
+        "look_at_target": "controller.animation.humanoid.look_at_target"
+      },
+      "scripts": {
+        "animate": [
+          "root"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.tempat_bayar_zakat"
+      ]
+    }
+  }
+}

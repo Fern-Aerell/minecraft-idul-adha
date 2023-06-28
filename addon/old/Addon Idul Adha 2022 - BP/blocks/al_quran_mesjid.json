@@ -1,0 +1,194 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "aerell:al_quran_mesjid",
+      "properties": {
+        "block:surah": [
+          0,
+          1,
+          2
+        ],
+        "block:rotasi": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    },
+    "components": {
+      "minecraft:loot": "loot_tables/blocks/al_quran_mesjid.json",
+      "minecraft:destroy_time": 0.17,
+      "minecraft:map_color": "#c5c2bc",
+      "minecraft:explosion_resistance": 0.9,
+      "minecraft:block_light_absorption": 0,
+      "minecraft:on_player_placing": {
+        "event": "rotasi_block"
+      },
+      "minecraft:on_placed": {
+        "event": "collision",
+        "target": "self"
+      },
+      "minecraft:on_player_destroyed": {
+        "event": "aerell:hancur"
+      },
+      "minecraft:on_interact": {
+        "event": "aerell:baca_surah"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "al_quran_mesjid",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:creative_category": {
+				"group": "itemGroup.name.ramadhan",
+				"category": "construction"
+			},
+      "minecraft:geometry": "geometry.al_quran_mesjid",
+      "minecraft:pick_collision": {
+        "origin": [
+          -7,
+          0,
+          -5
+        ],
+        "size": [
+          14,
+          6,
+          9
+        ]
+      },
+      "minecraft:entity_collision": {
+        "origin": [
+          -7,
+          0,
+          -5
+        ],
+        "size": [
+          14,
+          6,
+          9
+        ]
+      },
+      "minecraft:breathability": "air",
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "allowed_faces": ["up"]
+          }
+        ]
+      }
+    },
+    "permutations": [
+      {
+        "condition": "query.block_property(\u0027block:rotasi\u0027) \u003d\u003d 2",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            -180,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property(\u0027block:rotasi\u0027) \u003d\u003d 3",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property(\u0027block:rotasi\u0027) \u003d\u003d 4",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            -90,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property(\u0027block:rotasi\u0027) \u003d\u003d 5",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            90,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('block:surah') == 1",
+			  "components": {
+				  "minecraft:on_interact": {
+					  "event": "aerell:baca_surah"
+				  }
+			  }
+      },
+      {
+        "condition": "query.block_property('block:surah') == 2",
+			  "components": {
+				  "minecraft:on_interact": {
+					  "event": "aerell:surah_off"
+				  }
+			  }
+      }
+    ],
+    "events": {
+      "collision": {
+        "run_command": {
+          "command": ["setblock ~~1~ barrier"]
+        }
+      },
+      "rotasi_block": {
+        "set_block_property": {
+          "block:rotasi": "query.cardinal_facing_2d"
+        }
+      },
+      "aerell:baca_surah": {
+        "set_block_property": {
+          "block:surah": 2
+        },
+				"run_command": {
+					"command": [
+            "effect @p clear",
+            "effect @p slowness 999 6 true",
+            "playanimation @p animation.player.duduk",
+            "playsound aerell.surah.alfatihah @a",
+            "title @p actionbar Surah Al-Fatihah"
+          ]
+				}
+			},
+      "aerell:surah_off": {
+        "set_block_property": {
+          "block:surah": 1
+        },
+        "run_command": {
+          "command": [
+            "stopsound @a aerell.surah.alfatihah",
+            "effect @p clear",
+            "playanimation @p animation.player.stop",
+            "title @p actionbar Selesai"
+          ]
+        }
+      },
+      "aerell:hancur": {
+        "run_command": {
+          "command": [
+            "stopsound @a aerell.surah.alfatihah",
+            "setblock ~~1~ air",
+            "effect @p clear",
+            "playanimation @p animation.player.stop"
+          ]
+        }
+      }
+    }
+  }
+}

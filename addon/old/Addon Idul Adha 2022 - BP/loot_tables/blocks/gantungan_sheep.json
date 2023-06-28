@@ -1,0 +1,14 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "aerell:gantungan_sheep_spawn_egg",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

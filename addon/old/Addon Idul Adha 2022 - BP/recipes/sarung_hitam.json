@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "aerell:sarung_hitam"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "XAX",
+      "XAX",
+      "XAX"
+    ],
+    "key": {
+      "X": {
+        "item": "aerell:leather_hitam"
+      },
+      "A": {
+        "item": "aerell:leather_putih"
+      }
+    },
+    "result": {
+      "item": "aerell:sarung_hitam"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "aerell:daging_domba_masak",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "daging_domba_masak",
+      "minecraft:use_animation": "eat",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

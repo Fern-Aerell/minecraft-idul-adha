@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "aerell:sate_sapi_masak",
+      "category": "items"
+    },
+    "components": {
+      "minecraft:hand_equipped": false,
+      "minecraft:max_stack_size": 64,
+      "minecraft:foil": false,
+      "minecraft:stack_by_data": true,
+      "minecraft:food": {
+        "saturation_modifier": "normal",
+        "nutrition": 5,
+        "can_always_eat": true,
+        "effects": [],
+        "remove_effects": [],
+        "using_converts_to": "stick"
+      },
+      "minecraft:use_duration": 5
+    }
+  }
+}

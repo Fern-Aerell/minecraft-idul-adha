@@ -1,0 +1,314 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        //Rare
+        {
+          "type": "item",
+          "name": "minecraft:enchanted_golden_apple",
+          "weight": 1,
+          "count": 1
+        },
+        {
+          "type": "item",
+          "name": "minecraft:totem_of_undying",
+          "weight": 1,
+          "count": 1
+        },
+        {
+          "type": "item",
+          "name": "minecraft:beacon",
+          "weight": 1,
+          "count": 1
+        },
+        {
+          "type": "item",
+          "name": "minecraft:end_crystal",
+          "weight": 1,
+          "count": 1
+        },
+        {
+          "type": "item",
+          "name": "minecraft:book",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_with_levels",
+              "levels": 30,
+              "treasure": true
+            }
+          ]
+        },
+        //Spesial
+        {
+          "type": "item",
+          "name": "minecraft:music_disc_pigstep",
+          "count": 1,
+          "weight": 2
+        },
+        {
+          "type": "item",
+          "name": "minecraft:globe_banner_pattern",
+          "weight": 2,
+          "count": 1
+        },
+        {
+          "type": "item",
+          "name": "nether_star",
+          "weight": 2,
+          "count": 1
+        },
+        {
+          "type": "item",
+          "name": "minecraft:trident",
+          "weight": 2,
+          "count": 1
+        },
+        {
+          "type": "item",
+          "name": "minecraft:heart_of_the_sea",
+          "weight": 2,
+          "count": 1
+        },
+        {
+          "type": "item",
+          "name": "minecraft:netherite_ingot",
+          "weight": 2,
+          "count": 1
+        },
+        {
+          "type": "item",
+          "name": "minecraft:diamond_block",
+          "weight": 2,
+          "count": 1
+        },
+        {
+          "type": "item",
+          "name": "minecraft:emerald",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "max": 5,
+                "min": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:gold_block",
+          "count": 1,
+          "weight": 2
+        },
+        {
+          "type": "item",
+          "name": "minecraft:iron_block",
+          "weight": 2,
+          "count": 1
+        },
+        //Common
+        {
+          "type": "item",
+          "name": "aerell:boots_muslimah1",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:boots_muslimah2",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:boots_muslimah3",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:leggings_muslimah1",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:leggings_muslimah2",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:leggings_muslimah3",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:baju_muslimah1",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:baju_muslimah2",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:baju_muslimah3",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:kerudung_hitam",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:kerudung_kuning",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:kerudung_putih",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:peci",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:bajukoko",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:sarung_hitam",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:sendal",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:celana",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:es_kelapa",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:kurma",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "max": 64,
+                "min": 32
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:es_buah",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:bakwan",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "max": 2,
+                "min": 3
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:tahu_goreng",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "max": 2,
+                "min": 3
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:tempe_goreng",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "max": 2,
+                "min": 2
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:risoles",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "max": 2,
+                "min": 3
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:donat",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "max": 3,
+                "min": 2
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:kolak",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "max": 2,
+                "min": 1
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "aerell:bubur_kacang_ijo",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

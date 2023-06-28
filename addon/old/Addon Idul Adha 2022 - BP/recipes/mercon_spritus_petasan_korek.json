@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "aerell:mercon_spritus_petasan_korek"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "XA"
+    ],
+    "key": {
+      "X": {
+        "item": "aerell:petasan"
+      },
+      "A": {
+        "item": "aerell:mercon_spritus"
+      }
+    },
+    "result": {
+      "item": "aerell:mercon_spritus_petasan_korek"
+    }
+  }
+}

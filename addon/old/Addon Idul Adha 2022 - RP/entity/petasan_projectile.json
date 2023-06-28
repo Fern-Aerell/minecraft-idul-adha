@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "aerell:petasan_projectile",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "mati": "textures/blocks/petasan",
+        "nyala": "textures/blocks/petasan_nyala"
+      },
+      "sound_effects": {
+        "ledakan": "aerell.petasan.ledakan",
+        "fuse": "random.fuse"
+      },
+      "particle_effects": {
+        "api": "minecraft:lava_particle",
+        "asap": "minecraft:basic_smoke_particle",
+        "ledakan": "minecraft:camera_shoot_explosion"
+      },
+      "geometry": {
+        "default": "geometry.petasan"
+      },
+      "render_controllers": [ "controller.render.petasan" ],
+      "spawn_egg": {
+        "texture": "petasan",
+        "texture_index": 0
+      }
+    }
+  }
+}

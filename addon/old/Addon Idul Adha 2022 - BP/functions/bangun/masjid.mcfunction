@@ -1,0 +1,1 @@
+structure load mesjid1 ~-15~-1~-9

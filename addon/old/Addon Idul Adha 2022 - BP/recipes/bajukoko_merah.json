@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "aerell:bajukoko_merah"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "XA"
+    ],
+    "key": {
+      "X": {
+        "item": "aerell:bajukoko"
+      },
+      "A": {
+        "item": "minecraft:dye",
+        "data": 1
+      }
+    },
+    "result": {
+      "item": "aerell:bajukoko_merah"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "aerell:sate_kambing_mentah"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"  A",
+			" A ",
+			"B  "
+		],
+		"key": {
+			"A": {
+				"item": "aerell:daging_kambing_mentah"
+			},
+			"B": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": {
+			"item": "aerell:sate_kambing_mentah",
+			"count": 1
+		}
+	}
+}

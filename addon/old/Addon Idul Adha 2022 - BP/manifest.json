@@ -1,0 +1,36 @@
+{
+	"format_version": 2,
+	"header": {
+		"description": "§c- Created by AerellGamers -\n§fSelamat Idul Adha 1443 H.",
+		"name": "§lADD-ON IDUL ADHA 2022",
+		"uuid": "851f19c4-49c9-43df-9783-111794fbed34",
+		"version": [
+			1,
+			4,
+			0
+		],
+		"min_engine_version": [
+			1,
+			18,
+			0
+		]
+	},
+	"modules": [
+		{
+			"description": "",
+			"type": "data",
+			"uuid": "1f7c49d3-3ba6-4921-8e08-49728008861b",
+			"version": [
+				1,
+				4,
+				0
+			]
+		}
+	],
+	"metadata": {
+		"authors": [
+			"Fern Aerell"
+		],
+		"license": "https://www.youtube.com/AerellGamers"
+	}
+}

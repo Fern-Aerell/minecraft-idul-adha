@@ -1,0 +1,24 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "aerell:mukena_putih"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "XXX",
+      "X X",
+      "XXX"
+    ],
+    "key": {
+      "X": {
+        "item": "aerell:leather_putih"
+      }
+    },
+    "result": {
+      "item": "aerell:mukena_putih"
+    }
+  }
+}

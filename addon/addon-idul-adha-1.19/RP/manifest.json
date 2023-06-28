@@ -1,0 +1,31 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": ["AerellDev"],
+		"generated_with": {
+			"bridge": ["2.6.0"],
+			"dash": ["0.10.8"],
+			"blockbench_block_wizard": ["1.1.2"]
+		}
+	},
+	"header": {
+		"name": "§lADD-ON IDUL ADHA 2023",
+		"description": "§c- Created by AerellGamers -\\n§fSelamat Idul Adha 1444 H.",
+		"min_engine_version": [1, 19, 60],
+		"uuid": "bcd7ba28-62cd-4135-bf10-379528dda387",
+		"version": [3, 0, 0]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "0286a0d4-1cc5-4982-80e0-96e677093a78",
+			"version": [3, 0, 0]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "93ba83fc-6a8f-4352-b0bc-d6aef3e5e21f",
+			"version": [3, 0, 0]
+		}
+	]
+}

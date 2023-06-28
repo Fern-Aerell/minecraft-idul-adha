@@ -1,0 +1,44 @@
+{
+	"resource_pack_name": "§lADD-ON IDUL ADHA 2023",
+	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
+	"texture_data": {
+		"breeder_block": {
+			"textures": "textures/blocks/breeder_block"
+		},
+		"gantungan": {
+			"textures": "textures/entity/gantungan/gantungan"
+		},
+		"gantungan_kambing": {
+			"textures": "textures/entity/gantungan/gantungan_kambing"
+		},
+		"gantungan_kambing_kulitin": {
+			"textures": "textures/entity/gantungan/gantungan_kambing_kulitin"
+		},
+		"gantungan_sheep": {
+			"textures": "textures/entity/gantungan/gantungan_sheep"
+		},
+		"gantungan_sapi_kulitin": {
+			"textures": "textures/entity/gantungan/gantungan_sapi_kulitin"
+		},
+		"gantungan_sapi_abuabu": {
+			"textures": "textures/entity/gantungan/gantungan_sapi_abuabu"
+		},
+		"gantungan_sapi_coklat": {
+			"textures": "textures/entity/gantungan/gantungan_sapi_coklat"
+		},
+		"gantungan_sapi_default": {
+			"textures": "textures/entity/gantungan/gantungan_sapi_default"
+		},
+		"gantungan_sapi_stepe": {
+			"textures": "textures/entity/gantungan/gantungan_sapi_stepe"
+		},
+		"gantungan_sapi_moend": {
+			"textures": "textures/entity/gantungan/gantungan_sapi_moend"
+		},
+		"gantungan_sapi_putih": {
+			"textures": "textures/entity/gantungan/gantungan_sapi_putih"
+		}
+	}
+}

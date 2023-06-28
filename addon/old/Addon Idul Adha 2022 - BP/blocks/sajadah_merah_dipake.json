@@ -1,0 +1,127 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "aerell:sajadah_merah_dipake",
+      "properties": {
+        "block:rotasi": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    },
+    "components": {
+      "minecraft:loot": "loot_tables/blocks/sajadah_merah.json",
+      "minecraft:destroy_time": 1.0,
+      "minecraft:map_color": "#aa1313",
+      "minecraft:explosion_resistance": 0.7,
+      "minecraft:block_light_absorption": 0,
+      "minecraft:on_player_placing": {
+        "event": "rotasi_block"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "sajadah_merah",
+          "render_method": "blend"
+        }
+      },
+      "minecraft:geometry": "geometry.sajadah",
+      "minecraft:pick_collision": {
+        "origin": [
+          -8.0,
+          0,
+          -8.0
+        ],
+        "size": [
+          16,
+          0.1,
+          16
+        ]
+      },
+      "minecraft:entity_collision": {
+        "origin": [
+          -8.0,
+          0,
+          -8.0
+        ],
+        "size": [
+          16,
+          0.1,
+          16
+        ]
+      },
+      "minecraft:breathability": "air",
+      "minecraft:ticking": {
+        "looping": false,
+        "range": [
+          0,
+          0
+        ],
+        "on_tick": {
+          "event": "sajadah"
+        }
+      },
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "allowed_faces": ["up"]
+          }
+        ]
+      }
+    },
+    "permutations": [
+      {
+        "condition": "query.block_property('block:rotasi') == 2",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            -90,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('block:rotasi') == 3",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            90,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('block:rotasi') == 4",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('block:rotasi') == 5",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            -180,
+            0
+          ]
+        }
+      }
+    ],
+    "events": {
+      "rotasi_block": {
+        "set_block_property": {
+          "block:rotasi": "query.cardinal_facing_2d"
+        }
+      }
+    }
+  }
+}

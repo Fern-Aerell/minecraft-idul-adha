@@ -1,0 +1,139 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "aerell:toa_mesjid",
+      "category": "gakada",
+      "properties": {
+        "block:rotasi": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    },
+    "components": {
+      "minecraft:loot": "loot_tables/blocks/toa_mesjid.json",
+      "minecraft:destroy_time": 1.5,
+      "minecraft:map_color": "#cfcfcf",
+      "minecraft:explosion_resistance": 0.9,
+      "minecraft:block_light_absorption": 0,
+      "minecraft:on_player_placing": {
+        "event": "rotasi_block"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "toa_mesjid",
+          "render_method": "alpha_test"
+        }
+      },
+      "minecraft:geometry": "geometry.toa_mesjid",
+      "minecraft:pick_collision": {
+        "origin": [
+          -5,
+          0,
+          -13
+        ],
+        "size": [
+          9,
+          9,
+          12
+        ]
+      },
+      "minecraft:entity_collision": {
+        "origin": [
+          -5,
+          0,
+          -13
+        ],
+        "size": [
+          9,
+          9,
+          12
+        ]
+      },
+      "minecraft:creative_category": {
+				"group": "itemGroup.name.ramadhan",
+				"category": "construction"
+			},
+      "minecraft:breathability": "air",
+      "minecraft:ticking": {
+        "looping": false,
+        "range": [
+          0,
+          0
+        ],
+        "on_tick": {
+          "event": "toa_entity"
+        }
+      },
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "allowed_faces": ["up"]
+          }
+        ]
+      }
+    },
+    "permutations": [
+      {
+        "condition": "query.block_property('block:rotasi') == 2",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('block:rotasi') == 3",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            180,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('block:rotasi') == 4",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            90,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('block:rotasi') == 5",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            -90,
+            0
+          ]
+        }
+      }
+    ],
+    "events": {
+      "rotasi_block": {
+        "set_block_property": {
+          "block:rotasi": "query.cardinal_facing_2d"
+        }
+      },
+      "toa_entity": {
+        "run_command": {
+          "command": [
+            "summon aerell:toa_mesjid"
+          ]
+        }
+      }
+    }
+  }
+}

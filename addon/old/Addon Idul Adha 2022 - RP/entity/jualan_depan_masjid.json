@@ -1,0 +1,50 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "xaerell:jualan_depan_masjid",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "gorengan": "textures/entity/jualan_gorengan",
+        "es_kelapa": "textures/entity/jualan_es_kelapa",
+        "es_buah_kolak": "textures/entity/jualan_es_buah_kolak",
+        "telur_gulung_dan_sosis" : "textures/entity/jualan_telur_gulung_dan_sosis",
+        "tanpa_gerobak": "textures/entity/jualan_tanpa_gerobak"
+      },
+      "sound_effects": {
+        "idle": "mob.villager.idle",
+        "haggle": "mob.villager.haggle",
+        "no": "mob.villager.no",
+        "yes": "mob.villager.yes"
+      },
+      "geometry": {
+        "gorengan": "geometry.jualan_gorengan",
+        "es_kelapa": "geometry.jualan_es_kelapa",
+        "es_buah_kolak": "geometry.jualan_es_buah_kolak",
+        "telur_gulung_dan_sosis" : "geometry.jualan_telur_gulung_dan_sosis",
+        "jualan_depan_mesjid": "geometry.jualan_depan_masjid"
+      },
+      "animations": {
+        "anim": "animation.jualan_depan_masjid",
+        "anim_controller": "controller.animation.jualan_depan_masjid"
+      },
+      "scripts": {
+        "scale": "0.9375",
+        "pre_animation": [
+          "variable.num_professions = 15;",
+          "variable.num_tiers = 3;",
+          "variable.profession_index = (query.variant < variable.num_professions ? query.variant : 0);",
+          "variable.level_index = query.trade_tier;"
+        ],
+        "animate": [
+          "anim_controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.jualan_depan_mesjid"
+      ]
+    }
+  }
+}

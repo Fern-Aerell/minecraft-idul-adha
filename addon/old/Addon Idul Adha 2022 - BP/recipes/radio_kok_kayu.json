@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "aerell:radio_kok_kayu"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "  O",
+      "XAX"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:planks"
+      },
+      "A": {
+        "item": "minecraft:redstone"
+      },
+      "O": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "result": {
+      "item": "aerell:radio_kok_kayu"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "aerell:kentongan_kayu",
+      "category": "equipment"
+    },
+    "components": {
+      "minecraft:icon": {
+        "texture": "kentongan_kayu"
+      },
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.ramadhan"
+      },
+      "minecraft:display_name": {
+      },
+      "minecraft:on_use": {
+        "on_use": {
+          "event": "pukul",
+          "target": "self"
+        }
+      },
+      "minecraft:cooldown": {
+        "category": "ender_pearl",
+        "duration": 1
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:durability": {
+        "max_durability": 1500,
+        "damage_chance": {
+          "min": 5,
+          "max": 10
+        }
+      },
+      "minecraft:render_offsets": {
+        "main_hand": {
+          "first_person": {
+            "position": [ 1, 1, 1 ],
+            "rotation": [ 1, 1, 1 ],
+            "scale": [ 0, 0, 0 ]
+          },
+          "third_person": {
+            "position": [ 1, 1, 1 ],
+            "rotation": [ 1, 1, 1 ],
+            "scale": [ 0, 0, 0 ]
+          }
+        },
+        "off_hand": {
+          "first_person": {
+            "position": [ 1, 1, 1 ],
+            "rotation": [ 1, 1, 1 ],
+            "scale": [ 0, 0, 0 ]
+          },
+          "third_person": {
+            "position": [ 1, 1, 1 ],
+            "rotation": [ 1, 1, 1 ],
+            "scale": [ 0, 0, 0 ]
+          }
+        }
+      }
+    },
+    "events": {
+      "pukul": {
+        "randomize": [
+          {
+            "damage": {
+              "type": "durability",
+              "amount": 5,
+              "target": "self"
+            },
+            "run_command": {
+              "command": [
+                "playanimation @p animation.kentongan.kayu.tp.pukul"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

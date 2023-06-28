@@ -1,0 +1,170 @@
+{
+  "format_version": "1.18.10",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "aerell:petasan",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "petasan_mati": {
+        "minecraft:variant": {
+          "value": 0
+        }
+      },
+      "petasan_nyala": {
+        "minecraft:type_family": {
+          "family": [ "petasan_nyala" ]
+        },
+        "minecraft:variant": {
+          "value": 1
+        },
+        "minecraft:area_attack" : {
+          "damage_range": 0.2,
+          "damage_per_tick": 1,
+          "cause": "contact",
+          "entity_filter": {
+            "any_of": [
+              { "test": "is_family", "subject": "other", "value": "player" },
+              { "test": "is_family", "subject": "other", "value": "mob" }
+            ]
+          }
+        },
+        "minecraft:timer": {
+          "time": 1,
+          "looping": false,
+          "time_down_event": {
+            "event": "instant_damage",
+            "target": "self"
+          }
+        },
+        "minecraft:explode": {
+          "fuse_length": 1,
+          "fuse_lit": true,
+          "power": 0,
+          "causes_fire": false,
+          "destroy_affected_by_griefing": false
+        }
+      },
+      "petasan_behavior": {
+        "minecraft:interact": {
+          "interactions": {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  { "test": "is_family", "subject": "other", "value": "player" },
+                  { "test": "has_equipment", "domain": "hand", "subject": "other", "value": "flint_and_steel" },
+                  { "test": "has_component", "operator": "!=", "value": "minecraft:explode" }
+                ]
+              },
+            "event": "aerell:petasan_nyala",
+            "target": "self"
+            },
+            "hurt_item": 2,
+            "play_sounds": "ignite",
+            "interact_text": "Nyalain petasan"
+          }
+        }
+      },
+      "hilang": {
+        "minecraft:instant_despawn": {
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [ "petasan" ]
+      },
+      "minecraft:is_hidden_when_invisible": {
+      },
+      "minecraft:health": {
+        "value": 1,
+        "max": 1
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "on_damage": {
+              "filters": {
+                "any_of": [
+                  {
+                    "test": "has_damage",
+                    "subject": "self",
+                    "value": "entity_explosion"
+                  },
+                  {
+                    "test": "has_damage",
+                    "subject": "self",
+                    "value": "block_explosion"
+                  },
+                  {
+                    "test": "has_damage",
+                    "subject": "self",
+                    "value": "fire"
+                  }
+                ]
+              },
+              "event": "aerell:petasan_nyala"
+            },
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/petasan.json"
+      },
+      "minecraft:collision_box": {
+        "width": 0.3,
+        "height": 0.3
+      },
+      "minecraft:nameable": {
+        "always_show": false,
+        "allow_name_tag_renaming": false
+      },
+      "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "petasan_behavior",
+            "petasan_mati"
+          ]
+        }
+      },
+      "aerell:petasan_nyala": {
+        "run_command": {
+          "command": [
+            "playanimation @s animation.petasan.nyala"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "petasan_nyala"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "petasan_mati",
+            "petasan_behavior"
+          ]
+        }
+      },
+      "instant_damage": {
+        "add": {
+          "component_groups": [
+            "hilang"
+          ]
+        }
+      }
+    }
+  }
+}

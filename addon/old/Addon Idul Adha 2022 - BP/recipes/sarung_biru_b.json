@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "aerell:sarung_biru_b"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "X"
+    ],
+    "key": {
+      "X": {
+        "item": "aerell:sarung_biru"
+      }
+    },
+    "result": {
+      "item": "aerell:sarung_biru_b"
+    }
+  }
+}

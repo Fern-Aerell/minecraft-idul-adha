@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "aerell:daging_kambing_masak",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "daging_kambing_masak",
+      "minecraft:use_animation": "eat",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

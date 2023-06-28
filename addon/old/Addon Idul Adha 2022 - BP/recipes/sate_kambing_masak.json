@@ -1,0 +1,13 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "aerell:sate_kambing_masak"
+    },
+    "tags": [
+      "campfire"
+    ],
+    "input": "aerell:sate_kambing_mentah",
+    "output": "aerell:sate_kambing_masak"
+  }
+}

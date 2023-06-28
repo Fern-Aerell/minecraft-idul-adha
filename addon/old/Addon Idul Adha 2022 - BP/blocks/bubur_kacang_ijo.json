@@ -1,0 +1,130 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "aerell:bubur_kacang_ijo_block",
+      "properties": {
+        "block:rotasi": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    },
+    "components": {
+      "minecraft:loot": "loot_tables/blocks/bubur_kacang_ijo.json",
+      "minecraft:destroy_time": 0.10,
+      "minecraft:map_color": "#7c9249",
+      "minecraft:explosion_resistance": 0.9,
+      "minecraft:block_light_absorption": 0,
+      "minecraft:on_player_placing": {
+        "event": "rotasi_block"
+      },
+      "minecraft:on_interact": {
+        "event": "makan"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "bubur_kacang_ijo_block",
+          "render_method": "alpha_test"
+        }
+      },
+      "minecraft:geometry": "geometry.bubur_kacang_ijo",
+      "minecraft:pick_collision": {
+        "origin": [
+          -5,
+          0,
+          -5
+        ],
+        "size": [
+          10,
+          4,
+          10
+        ]
+      },
+      "minecraft:entity_collision": {
+        "origin": [
+          -5,
+          0,
+          -5
+        ],
+        "size": [
+          10,
+          4,
+          10
+        ]
+      },
+      "minecraft:breathability": "air",
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "allowed_faces": ["up"]
+          }
+        ]
+      }
+    },
+    "permutations": [
+      {
+        "condition": "query.block_property('block:rotasi') == 2",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('block:rotasi') == 3",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            180,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('block:rotasi') == 4",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            -90,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('block:rotasi') == 5",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            90,
+            0
+          ]
+        }
+      }
+    ],
+    "events": {
+      "rotasi_block": {
+        "set_block_property": {
+          "block:rotasi": "query.cardinal_facing_2d"
+        }
+      },
+      "makan": {
+        "run_command": {
+          "command": [
+            "playsound random.eat @p",
+            "effect @p saturation 2 8 true",
+            "give @p bowl",
+            "setblock ~~~ minecraft:air"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "aerell:daging_domba_masak"
+		},
+		"tags": [
+			"furnace",
+			"smoker",
+			"campfire"
+		],
+		"input": "aerell:daging_domba_mentah",
+		"output": "aerell:daging_domba_masak"
+	}
+}

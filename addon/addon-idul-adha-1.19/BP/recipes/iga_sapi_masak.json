@@ -1,0 +1,14 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "aerell:iga_sapi_masak"
+		},
+		"tags": [
+			"campfire",
+			"furnace"
+		],
+		"input": "aerell:iga_sapi_mentah",
+		"output": "aerell:iga_sapi_masak"
+	}
+}

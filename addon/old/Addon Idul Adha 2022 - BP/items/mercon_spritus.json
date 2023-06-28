@@ -1,0 +1,98 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "aerell:mercon_spritus",
+      "category": "equipment"
+    },
+    "components": {
+      "minecraft:icon": {
+        "texture": "mercon_spritus"
+      },
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.mercon"
+      },
+      "minecraft:display_name": {
+      },
+      "minecraft:on_use": {
+        "on_use": {
+          "event": "shot",
+          "target": "self"
+        }
+      },
+      "minecraft:cooldown": {
+        "category": "ender_pearl",
+        "duration": 3
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:durability": {
+        "max_durability": 1500,
+        "damage_chance": {
+          "min": 5,
+          "max": 10
+        }
+      },
+      "minecraft:render_offsets": {
+        "main_hand": {
+          "first_person": {
+            "position": [ 1, 1, 1 ],
+            "rotation": [ 1, 1, 1 ],
+            "scale": [ 0, 0, 0 ]
+          },
+          "third_person": {
+            "position": [ 1, 1, 1 ],
+            "rotation": [ 1, 1, 1 ],
+            "scale": [ 0, 0, 0 ]
+          }
+        },
+        "off_hand": {
+          "first_person": {
+            "position": [ 1, 1, 1 ],
+            "rotation": [ 1, 1, 1 ],
+            "scale": [ 0, 0, 0 ]
+          },
+          "third_person": {
+            "position": [ 1, 1, 1 ],
+            "rotation": [ 1, 1, 1 ],
+            "scale": [ 0, 0, 0 ]
+          }
+        }
+      }
+    },
+    "events": {
+      "shot": {
+        "randomize": [
+          {
+            "damage": {
+              "type": "durability",
+              "amount": 15,
+              "target": "self"
+            },
+            "run_command": {
+              "command": [
+                "playanimation @p animation.player.mercon.spritus.fire"
+              ]
+            }
+          },
+          {
+            "run_command": {
+              "command": [
+                "execute @p[hasitem={item=aerell:kaleng}] ~~~ replaceitem entity @p slot.weapon.mainhand 0 aerell:mercon_spritus_kaleng 1 0",
+                "clear @p aerell:kaleng 0 1"
+              ]
+            }
+          },
+          {
+            "run_command": {
+              "command": [
+                "execute @p[hasitem={item=aerell:petasan}] ~~~ replaceitem entity @p slot.weapon.mainhand 0 aerell:mercon_spritus_petasan_korek 1 0",
+                "clear @p aerell:petasan 0 1"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

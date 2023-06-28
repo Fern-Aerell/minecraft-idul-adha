@@ -1,0 +1,40 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "aerell:opor_ayam"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "LSC",
+      " X "
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:mushroom_stew"
+      },
+      "L": {
+        "item": "aerell:lontong"
+      },
+      "C": {
+        "item": "minecraft:cooked_chicken"
+      },
+      "S": {
+        "item": "minecraft:bucket",
+        "data": 1
+      }
+    },
+    "result": [
+      {
+        "item": "aerell:opor_ayam"
+      },
+      {
+        "item": "minecraft:bucket",
+        "count": 1,
+        "data": 0
+      }
+    ]
+  }
+}

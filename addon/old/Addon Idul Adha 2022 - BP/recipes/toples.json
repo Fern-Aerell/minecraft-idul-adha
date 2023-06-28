@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "aerell:toples"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " A ",
+      "X X",
+      "XXX"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:glass"
+      },
+      "A": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "result": {
+      "item": "aerell:toples"
+    }
+  }
+}

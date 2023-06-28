@@ -1,0 +1,15 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "aerell:radio_kok_kayu",
+          "weight": 1,
+          "count": 1
+        }
+      ]
+    }
+  ]
+}

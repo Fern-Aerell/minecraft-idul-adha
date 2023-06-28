@@ -1,0 +1,16 @@
+{
+	"format_version": "1.18.30",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "aerell:rumah_pht"
+		},
+		"structure_name": "mystructure:rumah_pht1",
+		"adjustment_radius": 0,
+		"facing_direction": "random",
+		"constraints": {
+			"grounded": {},
+			"unburied": {}
+		}
+		
+	}
+}

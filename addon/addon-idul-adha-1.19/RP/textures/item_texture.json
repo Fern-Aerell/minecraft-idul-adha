@@ -1,0 +1,156 @@
+{
+  "resource_pack_name": "ADD-ON IDUL ADHA 2021",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "kantong_plastik": {
+      "textures": [
+        "textures/items/kantong_plastik"
+      ]
+    },
+    "gantungan": {
+      "textures": [
+        "textures/items/gantungan"
+      ]
+    },
+    "iga_sapi_mentah": {
+      "textures": [
+        "textures/items/iga_sapi_mentah"
+      ]
+    },
+    "iga_sapi_masak": {
+      "textures": [
+        "textures/items/iga_sapi_masak"
+      ]
+    },
+    "sate_kambing_mentah": {
+      "textures": [
+        "textures/items/sate_kambing_mentah"
+      ]
+    },
+    "sate_sapi_mentah": {
+      "textures": [
+        "textures/items/sate_sapi_mentah"
+      ]
+    },
+    "sate_kambing_masak": {
+      "textures": [
+        "textures/items/sate_kambing_masak"
+      ]
+    },
+    "sate_sapi_masak": {
+      "textures": [
+        "textures/items/sate_sapi_masak"
+      ]
+    },
+    "kambing_lead": {
+      "textures": [
+        "textures/items/kambing_lead"
+      ]
+    },
+    "sapi_lead": {
+      "textures": [
+        "textures/items/sapi_lead"
+      ]
+    },
+    "abuabu_lead": {
+      "textures": [
+        "textures/items/abuabu_lead"
+      ]
+    },
+    "coklat_lead": {
+      "textures": [
+        "textures/items/coklat_lead"
+      ]
+    },
+    "putih_lead": {
+      "textures": [
+        "textures/items/putih_lead"
+      ]
+    },
+    "moend_lead": {
+      "textures": [
+        "textures/items/moend_lead"
+      ]
+    },
+    "stepe_lead": {
+      "textures": [
+        "textures/items/stepe_lead"
+      ]
+    },
+    "sheep_lead": {
+      "textures": [
+        "textures/items/sheep_lead"
+      ]
+    },
+    "daging_sapi_mentah": {
+      "textures": [
+        "textures/items/daging_sapi_mentah"
+      ]
+    },
+    "daging_domba_mentah": {
+      "textures": [
+        "textures/items/daging_domba_mentah"
+      ]
+    },
+    "daging_kambing_mentah": {
+      "textures": [
+        "textures/items/daging_kambing_mentah"
+      ]
+    },
+    "daging_sheep_mentah": {
+      "textures": [
+        "textures/items/daging_sheep_mentah"
+      ]
+    },
+    "daging_sapi_masak": {
+      "textures": [
+        "textures/items/daging_sapi_masak"
+      ]
+    },
+    "daging_domba_masak": {
+      "textures": [
+        "textures/items/daging_domba_masak"
+      ]
+    },
+    "daging_sheep_masak": {
+      "textures": [
+        "textures/items/daging_sheep_masak"
+      ]
+    },
+    "daging_kambing_masak": {
+      "textures": [
+        "textures/items/daging_kambing_masak"
+      ]
+    },
+    "daging_sapi_qurban": {
+      "textures": [
+        "textures/items/daging_sapi_qurban"
+      ]
+    },
+    "daging_domba_qurban": {
+      "textures": [
+        "textures/items/daging_domba_qurban"
+      ]
+    },
+    "daging_kambing_qurban": {
+      "textures": [
+        "textures/items/daging_kambing_qurban"
+      ]
+    },
+    "daging_sheep_qurban": {
+      "textures": [
+        "textures/items/daging_sheep_qurban"
+      ]
+    },
+    "sate_kambing": {
+      "textures": [
+        "textures/items/sate_kambing_mentah"
+      ]
+    },
+    "sate_sapi": {
+      "textures": [
+        "textures/items/sate_sapi_mentah"
+      ]
+    }
+  }
+}

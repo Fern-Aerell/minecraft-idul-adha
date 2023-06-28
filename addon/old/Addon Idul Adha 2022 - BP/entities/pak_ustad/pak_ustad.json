@@ -1,0 +1,1971 @@
+{
+  "format_version": "1.18.10",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "aerell:pak_ustad",
+      "is_spawnable": true,
+      "is_summonable": false,
+      "is_experimental": false
+    },
+    "component_groups": {
+
+      //Fitur Minta Maaf
+      // "aerell:minta_maaf": {
+      //   "minecraft:interact": {
+      //     "interactions": [
+      //       {
+      //         "on_interact": {
+      //           "filters": [
+      //             {
+      //               "all_of": [
+      //                 {
+      //                   "test": "is_sneaking",
+      //                   "subject": "other",
+      //                   "operator": "==",
+      //                   "value": true
+      //                 },
+      //                 {
+      //                   "test": "is_family",
+      //                   "subject": "other",
+      //                   "value": "player"
+      //                 }
+      //               ]
+      //             }
+      //           ],
+      //           "target": "self",
+      //           "event": "aerell:minta_maaf"
+      //         },
+      //         "interact_text": "Minta maaf"
+      //       }
+      //     ]
+      //   }
+      // },
+      // "aerell:minta_maaf_villager": {
+      //   "minecraft:timer": {
+      //     "time": 2,
+      //     "looping": false,
+      //     "time_down_event": {
+      //       "event": "aerell:minta_maaf_villager",
+      //       "target": "self"
+      //     }
+      //   }
+      // },
+      // "aerell:kasih_thr_ke_player": {
+      //   "minecraft:timer": {
+      //     "time": 2,
+      //     "looping": false,
+      //     "time_down_event": {
+      //       "event": "aerell:kasih_thr_ke_player",
+      //       "target": "self"
+      //     }
+      //   }
+      // },
+      "pak_ustad_schedule": {
+        "minecraft:scheduler": {
+          "min_delay_secs": 0,
+          "max_delay_secs": 10,
+          "scheduled_events" : [
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "hourly_clock_time", "operator": ">=", "value": 0 },
+                  { "test": "hourly_clock_time", "operator": "<", "value": 6000 }
+                ]
+              },
+              "event": "minecraft:schedule_work_pro_villager"
+            },
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "hourly_clock_time", "operator": ">=", "value": 6000 },
+                  { "test": "hourly_clock_time", "operator": "<", "value": 6100 }
+                ]
+              },
+              "event": "aerell:adzan"
+            },
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "hourly_clock_time", "operator": ">=", "value": 6100 },
+                  { "test": "hourly_clock_time", "operator": "<", "value": 7000 }
+                ]
+              },
+              "event": "aerell:sholat_empat" //Zuhur
+            },
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "hourly_clock_time", "operator": ">=", "value": 7000 },
+                  { "test": "hourly_clock_time", "operator": "<", "value": 9000 }
+                ]
+              },
+              "event": "minecraft:schedule_gather_villager"
+            },
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "hourly_clock_time", "operator": ">=", "value": 9000 },
+                  { "test": "hourly_clock_time", "operator": "<", "value": 9100 }
+                ]
+              },
+              "event": "aerell:adzan"
+            },
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "hourly_clock_time", "operator": ">=", "value": 9100 },
+                  { "test": "hourly_clock_time", "operator": "<", "value": 10000 }
+                ]
+              },
+              "event": "aerell:sholat_empat" //Ashar
+            },
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "hourly_clock_time", "operator": ">=", "value": 10000 },
+                  { "test": "hourly_clock_time", "operator": "<", "value": 12800 }
+                ]
+              },
+              "event": "minecraft:schedule_work_pro_villager"
+            },
+            //{
+            //  "filters": {
+            //    "all_of": [
+            //      { "test": "hourly_clock_time", "operator": ">=", "value": 12800 },
+            //      { "test": "hourly_clock_time", "operator": "<", "value": 12900 }
+            //    ]
+            //  },
+            //  "event": "aerell:pukul_bedug" //Pukul Bedug
+            //},
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "hourly_clock_time", "operator": ">=", "value": 12900 },
+                  { "test": "hourly_clock_time", "operator": "<", "value": 13000 }
+                ]
+              },
+              "event": "aerell:adzan"
+            },
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "hourly_clock_time", "operator": ">=", "value": 13000 },
+                  { "test": "hourly_clock_time", "operator": "<", "value": 14000 }
+                ]
+              },
+              "event": "aerell:sholat_magrib" //Magrib
+            },
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "hourly_clock_time", "operator": ">=", "value": 14000 },
+                  { "test": "hourly_clock_time", "operator": "<", "value": 14100 }
+                ]
+              },
+              "event": "aerell:adzan"
+            },
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "hourly_clock_time", "operator": ">=", "value": 14100 },
+                  { "test": "hourly_clock_time", "operator": "<", "value": 15000 }
+                ]
+              },
+              "event": "aerell:sholat_empat" //Isya
+            },
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "hourly_clock_time", "operator": ">=", "value": 15000 },
+                  { "test": "hourly_clock_time", "operator": "<", "value": 16000 }
+                ]
+              },
+              "event": "aerell:takbiran"
+            },
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "hourly_clock_time", "operator": ">=", "value": 16000 },
+                  { "test": "hourly_clock_time", "operator": "<", "value": 21000 }
+                ]
+              },
+              "event": "minecraft:schedule_bed_villager"
+            },
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "hourly_clock_time", "operator": ">=", "value": 21000 },
+                  { "test": "hourly_clock_time", "operator": "<", "value": 22000 }
+                ]
+              },
+              "event": "minecraft:schedule_gather_villager"
+            },
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "hourly_clock_time", "operator": ">=", "value": 22000 },
+                  { "test": "hourly_clock_time", "operator": "<", "value": 22500 }
+                ]
+              },
+              "event": "aerell:adzan_subuh"
+            },
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "hourly_clock_time", "operator": ">=", "value": 22500 },
+                  { "test": "hourly_clock_time", "operator": "<", "value": 23000 }
+                ]
+              },
+              "event": "aerell:sholat_subuh" //Subuh
+            }
+          ]
+        }
+      },
+      "mau_takbiran": {
+        "minecraft:target_nearby_sensor": {
+          "inside_range": 1.0,
+          "outside_range": 1.0,
+          "must_see": false,
+          "on_inside_range": {
+              "event": "aerell:mode_takbiran"
+          },
+          "on_outside_range": {
+              "event": "aerell:takbiran"
+          }
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 0,
+          "must_see": false,
+          "reselect_targets": true,
+          "within_radius": 1024,
+          "must_see_forget_duration": 32767.0,
+          "target_search_height": -1,
+          "entity_types": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "mic_pak_ustad"
+                  }
+                ]
+              },
+              "max_dist": 1024,
+              "must_see": false
+            }
+          ]
+        },
+        "minecraft:attack": {
+          "damage": 0
+        },
+        "minecraft:behavior.melee_attack": {
+            "priority": 1
+        },
+        "minecraft:follow_range": {
+            "value": 1000,
+            "max": 1000
+        },
+        "minecraft:behavior.move_to_block": {
+          "priority": 10,
+          "tick_interval": 1,
+          "start_chance": 0.5,
+          "search_range": 64,
+          "search_height": 5,
+          "goal_radius": 1.0,
+          "stay_duration": 1,
+          "target_selection_method": "random",
+          "target_offset": [
+            0,
+            0,
+            0
+          ],
+          "target_blocks": [
+            "aerell:mic"
+          ],
+          "on_stay_completed": [
+            {
+              "event": "aerell:mode_takbiran",
+              "target": "self"
+            }
+          ]
+        }
+      },
+      "mau_adzan": {
+        "minecraft:target_nearby_sensor": {
+          "inside_range": 1.0,
+          "outside_range": 1.0,
+          "must_see": false,
+          "on_inside_range": {
+              "event": "aerell:mode_adzan"
+          },
+          "on_outside_range": {
+              "event": "aerell:adzan"
+          }
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 0,
+          "must_see": false,
+          "reselect_targets": true,
+          "within_radius": 1024,
+          "must_see_forget_duration": 32767.0,
+          "target_search_height": -1,
+          "entity_types": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "mic_pak_ustad"
+                  }
+                ]
+              },
+              "max_dist": 1024,
+              "must_see": false
+            }
+          ]
+        },
+        "minecraft:attack": {
+          "damage": 0
+        },
+        "minecraft:behavior.melee_attack": {
+            "priority": 1
+        },
+        "minecraft:follow_range": {
+            "value": 1000,
+            "max": 1000
+        },
+        "minecraft:behavior.move_to_block": {
+          "priority": 10,
+          "tick_interval": 1,
+          "start_chance": 0.5,
+          "search_range": 64,
+          "search_height": 5,
+          "goal_radius": 1.0,
+          "stay_duration": 1,
+          "target_selection_method": "random",
+          "target_offset": [
+            0,
+            0,
+            0
+          ],
+          "target_blocks": [
+            "aerell:mic"
+          ],
+          "on_stay_completed": [
+            {
+              "event": "aerell:mode_adzan",
+              "target": "self"
+            }
+          ]
+        }
+      },
+      "mau_adzan_subuh": {
+        "minecraft:target_nearby_sensor": {
+          "inside_range": 1.0,
+          "outside_range": 1.0,
+          "must_see": false,
+          "on_inside_range": {
+              "event": "aerell:mode_adzan_subuh"
+          },
+          "on_outside_range": {
+              "event": "aerell:adzan_subuh"
+          }
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 0,
+          "must_see": false,
+          "reselect_targets": true,
+          "within_radius": 1024,
+          "must_see_forget_duration": 32767.0,
+          "target_search_height": -1,
+          "entity_types": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "mic_pak_ustad"
+                  }
+                ]
+              },
+              "max_dist": 1024,
+              "must_see": false
+            }
+          ]
+        },
+        "minecraft:attack": {
+          "damage": 0
+        },
+        "minecraft:behavior.melee_attack": {
+            "priority": 1
+        },
+        "minecraft:follow_range": {
+            "value": 1000,
+            "max": 1000
+        },
+        "minecraft:behavior.move_to_block": {
+          "priority": 10,
+          "tick_interval": 1,
+          "start_chance": 0.5,
+          "search_range": 64,
+          "search_height": 5,
+          "goal_radius": 1.0,
+          "stay_duration": 1,
+          "target_selection_method": "random",
+          "target_offset": [
+            0,
+            0,
+            0
+          ],
+          "target_blocks": [
+            "aerell:mic"
+          ],
+          "on_stay_completed": [
+            {
+              "event": "aerell:mode_adzan_subuh",
+              "target": "self"
+            }
+          ]
+        }
+      },
+      "mau_pukul_bedug": {
+        "minecraft:target_nearby_sensor": {
+          "inside_range": 1.5,
+          "outside_range": 1.5,
+          "must_see": false,
+          "on_inside_range": {
+              "event": "aerell:mode_pukul_bedug"
+          },
+          "on_outside_range": {
+              "event": "aerell:pukul_bedug"
+          }
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 0,
+          "must_see": false,
+          "reselect_targets": true,
+          "within_radius": 1024,
+          "must_see_forget_duration": 32767.0,
+          "target_search_height": -1,
+          "entity_types": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "bedug_pak_ustad"
+                  }
+                ]
+              },
+              "max_dist": 1024,
+              "must_see": false
+            }
+          ]
+        },
+        "minecraft:attack": {
+          "damage": 0
+        },
+        "minecraft:behavior.melee_attack": {
+            "priority": 1
+        },
+        "minecraft:follow_range": {
+            "value": 1000,
+            "max": 1000
+        },
+        "minecraft:behavior.move_to_block": {
+          "priority": 10,
+          "tick_interval": 1,
+          "start_chance": 0.5,
+          "search_range": 64,
+          "search_height": 5,
+          "goal_radius": 1.0,
+          "stay_duration": 1,
+          "target_selection_method": "random",
+          "target_offset": [
+            0,
+            0,
+            0
+          ],
+          "target_blocks": [
+            "aerell:bedug"
+          ],
+          "on_stay_completed": [
+            {
+              "event": "aerell:mode_pukul_bedug",
+              "target": "self"
+            }
+          ]
+        }
+      },
+      "mau_sholat_empat": {
+        "minecraft:target_nearby_sensor": {
+          "inside_range": 0.5,
+          "outside_range": 0.5,
+          "must_see": false,
+          "on_inside_range": {
+              "event": "aerell:mode_sholat_empat"
+          },
+          "on_outside_range": {
+              "event": "aerell:cari_sajadah_empat"
+          }
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 0,
+          "must_see": false,
+          "reselect_targets": true,
+          "within_radius": 1024,
+          "must_see_forget_duration": 32767.0,
+          "target_search_height": -1,
+          "entity_types": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "sajadah_pak_ustad"
+                  }
+                ]
+              },
+              "max_dist": 1024,
+              "must_see": false
+            }
+          ]
+        },
+        "minecraft:attack": {
+          "damage": 0
+        },
+        "minecraft:behavior.melee_attack": {
+            "priority": 1
+        },
+        "minecraft:follow_range": {
+            "value": 1000,
+            "max": 1000
+        },
+        "minecraft:behavior.move_to_block": {
+          "priority": 10,
+          "tick_interval": 1,
+          "start_chance": 0.5,
+          "search_range": 64,
+          "search_height": 5,
+          "goal_radius": 1.0,
+          "stay_duration": 1,
+          "target_selection_method": "random",
+          "target_offset": [
+            0,
+            0,
+            0
+          ],
+          "target_blocks": [
+            "aerell:sajadah_biru"
+          ],
+          "on_stay_completed": [
+            {
+              "event": "aerell:mode_sholat_empat",
+              "target": "self"
+            }
+          ]
+        }
+      },
+      "mau_sholat_subuh": {
+        "minecraft:target_nearby_sensor": {
+          "inside_range": 0.5,
+          "outside_range": 0.5,
+          "must_see": false,
+          "on_inside_range": {
+              "event": "aerell:mode_sholat_subuh"
+          },
+          "on_outside_range": {
+              "event": "aerell:cari_sajadah_subuh"
+          }
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 0,
+          "must_see": false,
+          "reselect_targets": true,
+          "within_radius": 1024,
+          "must_see_forget_duration": 32767.0,
+          "target_search_height": -1,
+          "entity_types": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "sajadah_pak_ustad"
+                  }
+                ]
+              },
+              "max_dist": 1024,
+              "must_see": false
+            }
+          ]
+        },
+        "minecraft:attack": {
+          "damage": 0
+        },
+        "minecraft:behavior.melee_attack": {
+            "priority": 1
+        },
+        "minecraft:follow_range": {
+            "value": 1000,
+            "max": 1000
+        },
+        "minecraft:behavior.move_to_block": {
+          "priority": 10,
+          "tick_interval": 1,
+          "start_chance": 0.5,
+          "search_range": 64,
+          "search_height": 5,
+          "goal_radius": 1.0,
+          "stay_duration": 1,
+          "target_selection_method": "random",
+          "target_offset": [
+            0,
+            0,
+            0
+          ],
+          "target_blocks": [
+            "aerell:sajadah_biru"
+          ],
+          "on_stay_completed": [
+            {
+              "event": "aerell:mode_sholat_subuh",
+              "target": "self"
+            }
+          ]
+        }
+      },
+      "mau_sholat_magrib": {
+        "minecraft:target_nearby_sensor": {
+          "inside_range": 0.5,
+          "outside_range": 0.5,
+          "must_see": false,
+          "on_inside_range": {
+              "event": "aerell:mode_sholat_magrib"
+          },
+          "on_outside_range": {
+              "event": "aerell:cari_sajadah_magrib"
+          }
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 0,
+          "must_see": false,
+          "reselect_targets": true,
+          "within_radius": 1024,
+          "must_see_forget_duration": 32767.0,
+          "target_search_height": -1,
+          "entity_types": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "sajadah_pak_ustad"
+                  }
+                ]
+              },
+              "max_dist": 1024,
+              "must_see": false
+            }
+          ]
+        },
+        "minecraft:attack": {
+          "damage": 0
+        },
+        "minecraft:behavior.melee_attack": {
+            "priority": 1
+        },
+        "minecraft:follow_range": {
+            "value": 1000,
+            "max": 1000
+        },
+        "minecraft:behavior.move_to_block": {
+          "priority": 10,
+          "tick_interval": 1,
+          "start_chance": 0.5,
+          "search_range": 64,
+          "search_height": 5,
+          "goal_radius": 1.0,
+          "stay_duration": 1,
+          "target_selection_method": "random",
+          "target_offset": [
+            0,
+            0,
+            0
+          ],
+          "target_blocks": [
+            "aerell:sajadah_biru"
+          ],
+          "on_stay_completed": [
+            {
+              "event": "aerell:mode_sholat_magrib",
+              "target": "self"
+            }
+          ]
+        }
+      },
+      "mau_sholat_traweh": {
+        "minecraft:target_nearby_sensor": {
+          "inside_range": 0.5,
+          "outside_range": 0.5,
+          "must_see": false,
+          "on_inside_range": {
+              "event": "aerell:mode_sholat_traweh"
+          },
+          "on_outside_range": {
+              "event": "aerell:cari_sajadah_traweh"
+          }
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 0,
+          "must_see": false,
+          "reselect_targets": true,
+          "within_radius": 1024,
+          "must_see_forget_duration": 32767.0,
+          "target_search_height": -1,
+          "entity_types": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "sajadah_pak_ustad"
+                  }
+                ]
+              },
+              "max_dist": 1024,
+              "must_see": false
+            }
+          ]
+        },
+        "minecraft:attack": {
+          "damage": 0
+        },
+        "minecraft:behavior.melee_attack": {
+            "priority": 1
+        },
+        "minecraft:follow_range": {
+            "value": 1000,
+            "max": 1000
+        },
+        "minecraft:behavior.move_to_block": {
+          "priority": 10,
+          "tick_interval": 1,
+          "start_chance": 0.5,
+          "search_range": 64,
+          "search_height": 5,
+          "goal_radius": 1.0,
+          "stay_duration": 1,
+          "target_selection_method": "random",
+          "target_offset": [
+            0,
+            0,
+            0
+          ],
+          "target_blocks": [
+            "aerell:sajadah_biru"
+          ],
+          "on_stay_completed": [
+            {
+              "event": "aerell:mode_sholat_traweh",
+              "target": "self"
+            }
+          ]
+        }
+      },
+      "mau_wudu_empat": {
+        "minecraft:target_nearby_sensor": {
+          "inside_range": 2.0,
+          "outside_range": 2.0,
+          "must_see": false,
+          "on_inside_range": {
+              "event": "aerell:mode_wudu_empat"
+          },
+          "on_outside_range": {
+              "event": "aerell:sholat_empat"
+          }
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 0,
+          "must_see": false,
+          "reselect_targets": true,
+          "within_radius": 1024,
+          "must_see_forget_duration": 32767.0,
+          "target_search_height": -1,
+          "entity_types": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "keran"
+                  }
+                ]
+              },
+              "max_dist": 1024,
+              "must_see": false
+            }
+          ]
+        },
+        "minecraft:attack": {
+            "damage": 0
+        },
+        "minecraft:behavior.melee_attack": {
+            "priority": 1
+        },
+        "minecraft:follow_range": {
+            "value": 1000,
+            "max": 1000
+        },
+        "minecraft:behavior.move_to_block": {
+          "priority": 10,
+          "tick_interval": 1,
+          "start_chance": 0.5,
+          "search_range": 64,
+          "search_height": 5,
+          "goal_radius":0.80,
+          "stay_duration": 1,
+          "target_selection_method": "random",
+          "target_offset": [
+            0.9,
+            0,
+            0.9
+          ],
+          "target_blocks": [
+            "aerell:keran"
+          ],
+          "on_stay_completed": [
+            {
+              "event": "aerell:mode_wudu_empat",
+              "target": "self"
+            }
+          ]
+        }
+      },
+      "mau_wudu_subuh": {
+        "minecraft:target_nearby_sensor": {
+          "inside_range": 2.0,
+          "outside_range": 2.0,
+          "must_see": false,
+          "on_inside_range": {
+              "event": "aerell:mode_wudu_subuh"
+          },
+          "on_outside_range": {
+              "event": "aerell:sholat_subuh"
+          }
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 0,
+          "must_see": false,
+          "reselect_targets": true,
+          "within_radius": 1024,
+          "must_see_forget_duration": 32767.0,
+          "target_search_height": -1,
+          "entity_types": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "keran"
+                  }
+                ]
+              },
+              "max_dist": 1024,
+              "must_see": false
+            }
+          ]
+        },
+        "minecraft:attack": {
+            "damage": 0
+        },
+        "minecraft:behavior.melee_attack": {
+            "priority": 1
+        },
+        "minecraft:follow_range": {
+            "value": 1000,
+            "max": 1000
+        },
+        "minecraft:behavior.move_to_block": {
+          "priority": 10,
+          "tick_interval": 1,
+          "start_chance": 0.5,
+          "search_range": 64,
+          "search_height": 5,
+          "goal_radius":0.80,
+          "stay_duration": 1,
+          "target_selection_method": "random",
+          "target_offset": [
+            0.9,
+            0,
+            0.9
+          ],
+          "target_blocks": [
+            "aerell:keran"
+          ],
+          "on_stay_completed": [
+            {
+              "event": "aerell:mode_wudu_subuh",
+              "target": "self"
+            }
+          ]
+        }
+      },
+      "mau_wudu_magrib": {
+        "minecraft:target_nearby_sensor": {
+          "inside_range": 2.0,
+          "outside_range": 2.0,
+          "must_see": false,
+          "on_inside_range": {
+              "event": "aerell:mode_wudu_magrib"
+          },
+          "on_outside_range": {
+              "event": "aerell:sholat_magrib"
+          }
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 0,
+          "must_see": false,
+          "reselect_targets": true,
+          "within_radius": 1024,
+          "must_see_forget_duration": 32767.0,
+          "target_search_height": -1,
+          "entity_types": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "keran"
+                  }
+                ]
+              },
+              "max_dist": 1024,
+              "must_see": false
+            }
+          ]
+        },
+        "minecraft:attack": {
+            "damage": 0
+        },
+        "minecraft:behavior.melee_attack": {
+            "priority": 1
+        },
+        "minecraft:follow_range": {
+            "value": 1000,
+            "max": 1000
+        },
+        "minecraft:behavior.move_to_block": {
+          "priority": 10,
+          "tick_interval": 1,
+          "start_chance": 0.5,
+          "search_range": 64,
+          "search_height": 5,
+          "goal_radius":0.80,
+          "stay_duration": 1,
+          "target_selection_method": "random",
+          "target_offset": [
+            0.9,
+            0,
+            0.9
+          ],
+          "target_blocks": [
+            "aerell:keran"
+          ],
+          "on_stay_completed": [
+            {
+              "event": "aerell:mode_wudu_magrib",
+              "target": "self"
+            }
+          ]
+        }
+      },
+      "mau_wudu_traweh": {
+        "minecraft:target_nearby_sensor": {
+          "inside_range": 0.9,
+          "outside_range": 0.9,
+          "must_see": false,
+          "on_inside_range": {
+              "event": "aerell:mode_wudu_traweh"
+          },
+          "on_outside_range": {
+              "event": "aerell:sholat_traweh"
+          }
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 0,
+          "must_see": false,
+          "reselect_targets": true,
+          "within_radius": 1024,
+          "must_see_forget_duration": 32767.0,
+          "target_search_height": -1,
+          "entity_types": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "keran"
+                  }
+                ]
+              },
+              "max_dist": 1024,
+              "must_see": false
+            }
+          ]
+        },
+        "minecraft:attack": {
+            "damage": 0
+        },
+        "minecraft:behavior.melee_attack": {
+            "priority": 1
+        },
+        "minecraft:follow_range": {
+            "value": 1000,
+            "max": 1000
+        },
+        "minecraft:behavior.move_to_block": {
+          "priority": 10,
+          "tick_interval": 1,
+          "start_chance": 0.5,
+          "search_range": 64,
+          "search_height": 5,
+          "goal_radius":0.80,
+          "stay_duration": 1,
+          "target_selection_method": "random",
+          "target_offset": [
+            0.9,
+            0,
+            0.9
+          ],
+          "target_blocks": [
+            "aerell:keran"
+          ],
+          "on_stay_completed": [
+            {
+              "event": "aerell:mode_wudu_traweh",
+              "target": "self"
+            }
+          ]
+        }
+      },
+      "adult": {
+        "minecraft:behavior.make_love": {
+          "priority": 5
+        },
+        "minecraft:behavior.receive_love": {
+          "priority": 6
+        },
+        "minecraft:preferred_path" : {
+          "max_fall_blocks" : 1,
+          "jump_cost" : 20,
+          "default_block_cost" : 3,
+          "preferred_path_blocks" : [
+            { 
+              "cost" : 0,
+              "blocks" : [ 
+                "quartz_block:7",
+                "quartz_block",
+                "stone_stairs:67",
+                "andesit",
+                "grass",
+                "sand"
+              ]
+            },
+            { 
+              "cost" : 50,
+              "blocks" : [ 
+                "aerell:sajadah_biru",
+                "aerell:keran"
+              ]
+            }
+          ]
+        }
+      },
+      "mode_tidak_sholat": {
+        "minecraft:behavior.move_indoors": {
+          "priority": 6,
+          "speed_multiplier": 0.8,
+          "timeout_cooldown": 8.0
+        },
+        "minecraft:behavior.look_at_trading_player": {
+          "priority": 7
+        },
+        "minecraft:behavior.look_at_player": {
+          "priority": 8,
+          "look_distance": 8,
+          "probability": 0.02
+        },
+        "minecraft:pushable": {
+          "is_pushable": true,
+          "is_pushable_by_piston": true
+        },
+        "minecraft:mark_variant": {
+          "value": 0
+        },
+        "minecraft:behavior.random_stroll": {
+          "priority": 10,
+          "speed_multiplier": 0.6
+        },
+        "minecraft:behavior.avoid_mob_type": {
+          "priority": 3,
+          "entity_types": [
+            {
+              "filters": {
+                "any_of": [
+                  { "test" :  "is_family", "subject" : "other", "value" :  "bedug_pak_ustad"},
+                  { "test" :  "is_family", "subject" : "other", "value" :  "sajadah_pak_ustad"},
+                  { "test" :  "is_family", "subject" : "other", "value" :  "mic_pak_ustad"},
+                  { "test" :  "is_family", "subject" : "other", "value" :  "keran"}
+                ]
+              },
+              "max_dist": 2,
+              "sprint_speed_multiplier": 1.2
+            }
+          ]
+        }
+      },
+      "mode_pukul_bedug": {
+        "minecraft:pushable": {
+          "is_pushable": false,
+          "is_pushable_by_piston": false
+        },
+        "minecraft:mark_variant": {
+          "value": 1
+        },
+        "minecraft:timer": {
+          "time": 8,
+          "looping": true,
+          "time_down_event": {
+            "event": "selesai_pukul_bedug",
+            "target": "self"
+          }
+        }
+      },
+      "mode_takbiran": {
+        "minecraft:pushable": {
+          "is_pushable": false,
+          "is_pushable_by_piston": false
+        },
+        "minecraft:mark_variant": {
+          "value": 1
+        },
+        "minecraft:timer": {
+          "time": 196,
+          "looping": true,
+          "time_down_event": {
+            "event": "selesai_takbiran",
+            "target": "self"
+          }
+        }
+      },
+      "mode_adzan": {
+        "minecraft:pushable": {
+          "is_pushable": false,
+          "is_pushable_by_piston": false
+        },
+        "minecraft:mark_variant": {
+          "value": 1
+        },
+        "minecraft:timer": {
+          "time": 206,
+          "looping": true,
+          "time_down_event": {
+            "event": "selesai_adzan",
+            "target": "self"
+          }
+        }
+      },
+      "mode_adzan_subuh": {
+        "minecraft:pushable": {
+          "is_pushable": false,
+          "is_pushable_by_piston": false
+        },
+        "minecraft:mark_variant": {
+          "value": 1
+        },
+        "minecraft:timer": {
+          "time": 203,
+          "looping": true,
+          "time_down_event": {
+            "event": "selesai_adzan_subuh",
+            "target": "self"
+          }
+        }
+      },
+      "mode_sholat_empat": {
+        "minecraft:pushable": {
+          "is_pushable": false,
+          "is_pushable_by_piston": false
+        },
+        "minecraft:mark_variant": {
+          "value": 1
+        },
+        "minecraft:timer": {
+          "time": 47,
+          "looping": true,
+          "time_down_event": {
+            "event": "selesai_sholat",
+            "target": "self"
+          }
+        }
+      },
+      "mode_sholat_subuh": {
+        "minecraft:pushable": {
+          "is_pushable": false,
+          "is_pushable_by_piston": false
+        },
+        "minecraft:mark_variant": {
+          "value": 1
+        },
+        "minecraft:timer": {
+          "time": 30,
+          "looping": true,
+          "time_down_event": {
+            "event": "selesai_sholat",
+            "target": "self"
+          }
+        }
+      },
+      "mode_sholat_magrib": {
+        "minecraft:pushable": {
+          "is_pushable": false,
+          "is_pushable_by_piston": false
+        },
+        "minecraft:mark_variant": {
+          "value": 1
+        },
+        "minecraft:timer": {
+          "time": 39,
+          "looping": true,
+          "time_down_event": {
+            "event": "selesai_sholat",
+            "target": "self"
+          }
+        }
+      },
+      "mode_wudu_empat": {
+        "minecraft:pushable": {
+          "is_pushable": false,
+          "is_pushable_by_piston": false
+        },
+        "minecraft:mark_variant": {
+          "value": 1
+        },
+        "minecraft:timer": {
+          "time": 26,
+          "looping": true,
+          "time_down_event": {
+            "event": "selesai_wudu_empat",
+            "target": "self"
+          }
+        }
+      },
+      "mode_wudu_magrib": {
+        "minecraft:pushable": {
+          "is_pushable": false,
+          "is_pushable_by_piston": false
+        },
+        "minecraft:mark_variant": {
+          "value": 1
+        },
+        "minecraft:timer": {
+          "time": 26,
+          "looping": true,
+          "time_down_event": {
+            "event": "selesai_wudu_magrib",
+            "target": "self"
+          }
+        }
+      },
+      "mode_wudu_subuh": {
+        "minecraft:pushable": {
+          "is_pushable": false,
+          "is_pushable_by_piston": false
+        },
+        "minecraft:mark_variant": {
+          "value": 1
+        },
+        "minecraft:timer": {
+          "time": 26,
+          "looping": true,
+          "time_down_event": {
+            "event": "selesai_wudu_subuh",
+            "target": "self"
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:is_hidden_when_invisible": {
+      },
+      "minecraft:type_family": {
+        "family": ["villager", "mob", "ustad"]
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0
+      },
+      "minecraft:health": {
+        "value": 30,
+        "max": 30
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:hide": {
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "minecraft:nameable": {
+      },
+      "minecraft:movement": {
+        "value": 0.25
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "can_pass_doors": true,
+        "can_open_doors": true,
+        "avoid_water": true
+      },
+      "minecraft:follow_range": {
+        "value": 128
+      },
+      "minecraft:annotation.open_door": {
+      },
+      "minecraft:movement.basic": {
+      },
+      "minecraft:jump.static": {
+      },
+      "minecraft:can_climb": {
+      },
+      "minecraft:inventory": {
+        "inventory_size": 8,
+        "private": true
+      },
+      "minecraft:dweller": {
+        "dwelling_type": "village",
+        "dweller_role": "inhabitant",
+        "update_interval_base": 60,
+        "update_interval_variant": 40,
+        "can_find_poi": true,
+        "can_migrate": true,
+        "first_founding_reward": 5
+      },
+      "minecraft:persistent": {
+      },
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:behavior.hide": {
+        "priority": 0,
+        "speed_multiplier": 0.8,
+        "poi_type": "bed",
+        "duration": 30.0
+      },
+      "minecraft:behavior.trade_with_player": {
+        "priority": 2
+      },
+      "minecraft:behavior.pickup_items": {
+        "priority": 4,
+        "max_dist": 3,
+        "goal_radius": 2,
+        "speed_multiplier": 0.5,
+        "can_pickup_to_hand_or_equipment": false
+      },
+      "minecraft:behavior.share_items": {
+        "priority": 9,
+        "max_dist": 3,
+        "goal_radius":  2.0,
+        "speed_multiplier": 0.5,
+        "entity_types": [
+          {
+            "filters": { "test" :  "is_family", "subject" : "other", "value" :  "villager"}
+          }
+        ]
+      },
+      "minecraft:behavior.move_towards_dwelling_restriction": {
+        "priority": 10,
+        "speed_multiplier": 0.6
+      },
+        "minecraft:physics": {
+      }
+    },
+    "events":{
+
+      //Event Minta Maaf
+      // "aerell:minta_maaf": {
+      //   "run_command": {
+      //     "command": [
+      //       "execute @p ~~~ say Pak ustad aku minta maaf ya.."
+      //     ]
+      //   },
+      //   "remove": {
+      //     "component_groups": [
+      //       "aerell:minta_maaf"
+      //     ]
+      //   },
+      //   "add": {
+      //     "component_groups": [
+      //       "aerell:minta_maaf_villager"
+      //     ]
+      //   }
+      // },
+      // "aerell:minta_maaf_villager":{
+      //   "run_command": {
+      //     "command": [
+      //       "say Iya saya maafin kok @p"
+      //     ]
+      //   },
+      //   "remove": {
+      //     "component_groups": [
+      //       "aerell:minta_maaf_villager"
+      //     ]
+      //   },
+      //   "add": {
+      //     "component_groups": [
+      //       "aerell:kasih_thr_ke_player"
+      //     ]
+      //   }
+      // },
+      // "aerell:kasih_thr_ke_player": {
+      //   "randomize": [
+      //     {
+      //       "weight": 5,
+      //       "run_command": {
+      //         "command": [
+      //           "say Kamu kan dah gede, jadi gak dapet thr"
+      //         ]
+      //       },
+      //       "remove": {
+      //           "component_groups": [
+      //             "aerell:kasih_thr_ke_player"
+      //           ]
+      //       }
+      //     },
+      //     {
+      //       "weight": 1,
+      //       "run_command": {
+      //         "command": [
+      //           "say Ini saya ada thr buat kamu",
+      //           "give @p aerell:amplop_thr_player"
+      //         ]
+      //       },
+      //       "remove": {
+      //           "component_groups": [
+      //             "aerell:kasih_thr_ke_player"
+      //           ]
+      //       }
+      //     }
+      //   ]
+      // },
+      "aerell:pukul_bedug": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle false"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mau_pukul_bedug"
+          ]
+        }
+      },
+      "aerell:takbiran": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle false"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mau_takbiran"
+          ]
+        }
+      },
+      "aerell:adzan": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle false"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mau_adzan"
+          ]
+        }
+      },
+      "aerell:adzan_subuh": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle false"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mau_adzan_subuh"
+          ]
+        }
+      },
+      "aerell:sholat_empat": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle false"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mau_wudu_empat"
+          ]
+        }
+      },
+      "aerell:sholat_magrib": {
+        "add": {
+          "component_groups": [
+            "mau_wudu_magrib"
+          ]
+        }
+      },
+      "aerell:sholat_subuh": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle false"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mau_wudu_subuh"
+          ]
+        }
+      },
+      "aerell:cari_sajadah_empat": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle false"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mau_sholat_empat"
+          ]
+        }
+      },
+      "aerell:cari_sajadah_magrib": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle false"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mau_sholat_magrib"
+          ]
+        }
+      },
+      "aerell:cari_sajadah_subuh": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle false"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mau_sholat_subuh"
+          ]
+        }
+      },
+      "aerell:mode_pukul_bedug": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle false",
+            "effect @s slowness 47 6 true",
+            "playanimation @s animation.pak_ustad.bedug",
+            "tp @s ~ ~ ~ facing ~-1 ~ ~"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mau_pukul_bedug",
+            "mode_tidak_sholat"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mode_pukul_bedug"
+          ]
+        }
+      },
+      "aerell:mode_takbiran": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle false",
+            "effect @s slowness 196 6 true",
+            "playanimation @s animation.pak_ustad.takbiran",
+            "tp @s ~ ~ ~ facing ~-1 ~ ~"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mau_takbiran",
+            "mode_tidak_sholat"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mode_takbiran"
+          ]
+        }
+      },
+      "aerell:mode_adzan": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle false",
+            "effect @s slowness 206 6 true",
+            "playanimation @s animation.pak_ustad.adzan",
+            "tp @s ~ ~ ~ facing ~-1 ~ ~"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mau_adzan",
+            "mode_tidak_sholat"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mode_adzan"
+          ]
+        }
+      },
+      "aerell:mode_adzan_subuh": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle false",
+            "effect @s slowness 203 6 true",
+            "playanimation @s animation.pak_ustad.adzan_subuh",
+            "tp @s ~ ~ ~ facing ~-1 ~ ~"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mau_adzan_subuh",
+            "mode_tidak_sholat"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mode_adzan_subuh"
+          ]
+        }
+      },
+      "aerell:mode_sholat_empat": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle false",
+            "tp @s @e[type=aerell:sajadah_pak_ustad,r=2]",
+            "effect @s slowness 47 6 true",
+            "playanimation @s animation.player.sholat.empat",
+            "tp @s ~ ~ ~ facing ~-1 ~ ~"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mau_sholat_empat",
+            "mode_tidak_sholat"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mode_sholat_empat"
+          ]
+        }
+      },
+      "aerell:mode_sholat_magrib": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle false",
+            "tp @s @e[type=aerell:sajadah_pak_ustad,r=2]",
+            "effect @s slowness 39 6 true",
+            "playanimation @s animation.player.sholat.magrib",
+            "tp @s ~ ~ ~ facing ~-1 ~ ~"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mau_sholat_magrib",
+            "mode_tidak_sholat"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mode_sholat_magrib"
+          ]
+        }
+      },
+      "aerell:mode_sholat_subuh": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle false",
+            "tp @s @e[type=aerell:sajadah_pak_ustad,r=2]",
+            "effect @s slowness 30 6 true",
+            "playanimation @s animation.player.sholat.subuh",
+            "tp @s ~ ~ ~ facing ~-1 ~ ~"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mau_sholat_subuh",
+            "mode_tidak_sholat"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mode_sholat_subuh"
+          ]
+        }
+      },
+      "aerell:mode_wudu_empat": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle false",
+            "tp @s ~~~ facing @e[type=aerell:tempat_wudu,r=1]",
+            "fill ~-1~-1~-1 ~1~1~1 aerell:keran_nyala 0 replace aerell:keran",
+            "playanimation @s animation.player.wudu",
+            "effect @s slowness 28 6 true"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mau_wudu_empat",
+            "mode_tidak_sholat"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mode_wudu_empat"
+          ]
+        }
+      },
+      "aerell:mode_wudu_magrib": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle false",
+            "tp @s ~~~ facing @e[type=aerell:tempat_wudu,r=1]",
+            "fill ~-1~-1~-1 ~1~1~1 aerell:keran_nyala 0 replace aerell:keran",
+            "playanimation @s animation.player.wudu",
+            "effect @s slowness 28 6 true"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mau_wudu_magrib",
+            "mode_tidak_sholat"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mode_wudu_magrib"
+          ]
+        }
+      },
+      "aerell:mode_wudu_subuh": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle false",
+            "tp @s ~~~ facing @e[type=aerell:tempat_wudu,r=1]",
+            "fill ~-1~-1~-1 ~1~1~1 aerell:keran_nyala 0 replace aerell:keran",
+            "playanimation @s animation.player.wudu",
+            "effect @s slowness 28 6 true"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mau_wudu_subuh",
+            "mode_tidak_sholat"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mode_wudu_subuh"
+          ]
+        }
+      },
+      "selesai_wudu_empat": {
+        "run_command": {
+          "command": [
+            "fill ~-1~-1~-1 ~1~1~1 aerell:keran 0 replace aerell:keran_nyala",
+            "gamerule dodaylightcycle true"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mode_wudu_empat"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mode_tidak_sholat",
+            "mau_sholat_empat"
+          ]
+        }
+      },
+      "selesai_wudu_magrib": {
+        "run_command": {
+          "command": [
+            "fill ~-1~-1~-1 ~1~1~1 aerell:keran 0 replace aerell:keran_nyala",
+            "gamerule dodaylightcycle true"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mode_wudu_magrib"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mode_tidak_sholat",
+            "mau_sholat_magrib"
+          ]
+        }
+      },
+      "selesai_wudu_subuh": {
+        "run_command": {
+          "command": [
+            "fill ~-1~-1~-1 ~1~1~1 aerell:keran 0 replace aerell:keran_nyala",
+            "gamerule dodaylightcycle true"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mode_wudu_subuh"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mode_tidak_sholat",
+            "mau_sholat_subuh"
+          ]
+        }
+      },
+      "selesai_sholat": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle true"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mode_sholat_empat",
+            "mode_sholat_magrib",
+            "mode_sholat_subuh"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mode_tidak_sholat"
+          ]
+        }
+      },
+      "selesai_pukul_bedug": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle true"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mode_pukul_bedug"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mode_tidak_sholat"
+          ]
+        }
+      },
+      "selesai_takbiran": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle true"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mode_takbiran"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mode_tidak_sholat"
+          ]
+        }
+      },
+      "selesai_adzan": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle true"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mode_adzan"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mode_tidak_sholat"
+          ]
+        }
+      },
+      "selesai_adzan_subuh": {
+        "run_command": {
+          "command": [
+            "gamerule dodaylightcycle true"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mode_adzan_subuh"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "mode_tidak_sholat"
+          ]
+        }
+      },
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "mode_tidak_sholat",
+            "pak_ustad_schedule",
+            "adult",
+            "aerell:minta_maaf"
+          ]
+        }
+      }
+    }
+  }
+}

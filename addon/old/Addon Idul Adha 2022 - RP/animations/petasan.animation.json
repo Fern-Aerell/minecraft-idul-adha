@@ -1,0 +1,32 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.petasan.nyala": {
+			"animation_length": 1,
+			"sound_effects": {
+				"0.0": {
+					"effect": "fuse"
+				},
+				"0.9": {
+					"effect": "ledakan"
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "api",
+						"locator": "effect"
+					},
+					{
+						"effect": "asap",
+						"locator": "effect"
+					}
+				],
+				"0.9": {
+					"effect": "ledakan",
+					"locator": "effect"
+				}
+			}
+		}
+	}
+}

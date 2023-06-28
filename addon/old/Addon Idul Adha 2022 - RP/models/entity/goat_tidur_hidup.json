@@ -1,0 +1,97 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.goat_tidur_hidup",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.4,
+				"visible_bounds_offset": [0, 0.8, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [-10, 6, 0],
+					"rotation": [0, 0, 90]
+				},
+				{
+					"name": "head",
+					"parent": "root",
+					"pivot": [-9.5, 23, -8],
+					"cubes": [
+						{"origin": [-12, 21, -16], "size": [5, 7, 10], "pivot": [-9, 24, -8], "rotation": [55, 0, 0], "uv": [34, 46]},
+						{"origin": [-7, 25, -10], "size": [3, 2, 1], "uv": [2, 61], "mirror": true},
+						{"origin": [-15, 25, -10], "size": [3, 2, 1], "uv": [2, 61]},
+						{"origin": [-9.5, 12, -14], "size": [0, 7, 5], "uv": [23, 52]}
+					]
+				},
+				{
+					"name": "right_horn",
+					"parent": "head",
+					"pivot": [-9, 24, -8],
+					"cubes": [
+						{"origin": [-11.99, 25, -10], "size": [2, 7, 2], "uv": [12, 55]}
+					]
+				},
+				{
+					"name": "left_horn",
+					"parent": "head",
+					"pivot": [-9, 24, -8],
+					"cubes": [
+						{"origin": [-9.01, 25, -10], "size": [2, 7, 2], "uv": [12, 55]}
+					]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [-10, 6, 0],
+					"cubes": [
+						{"origin": [-14, 12, -7], "size": [9, 11, 16], "uv": [1, 1]},
+						{"origin": [-15, 10, -8], "size": [11, 14, 11], "uv": [0, 28]}
+					],
+					"locators": {
+						"lead": [-10, 26, -5]
+					}
+				},
+				{
+					"name": "left_front_leg",
+					"parent": "root",
+					"pivot": [-9, 16, -6],
+					"rotation": [0, 0, -12.5],
+					"cubes": [
+						{"origin": [-9, 6, -6], "size": [3, 10, 3], "uv": [35, 2]}
+					]
+				},
+				{
+					"name": "right_front_leg",
+					"parent": "root",
+					"pivot": [-13, 16, -6],
+					"rotation": [0, 0, -17.5],
+					"cubes": [
+						{"origin": [-13, 6, -6], "size": [3, 10, 3], "uv": [49, 2]}
+					]
+				},
+				{
+					"name": "right_back_leg",
+					"parent": "root",
+					"pivot": [-13, 16, 4],
+					"rotation": [0, 0, -17.5],
+					"cubes": [
+						{"origin": [-13, 6, 4], "size": [3, 6, 3], "uv": [49, 29]}
+					]
+				},
+				{
+					"name": "left_back_leg",
+					"parent": "root",
+					"pivot": [-9, 16, 4],
+					"rotation": [0, 0, -12.5],
+					"cubes": [
+						{"origin": [-9, 6, 4], "size": [3, 6, 3], "uv": [36, 29]}
+					]
+				}
+			]
+		}
+	]
+}

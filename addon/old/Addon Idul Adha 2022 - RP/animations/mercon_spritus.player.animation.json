@@ -1,0 +1,82 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.mercon.spritus.hold": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"mercon_spritus": {
+					"rotation": [-0.70854, 0.40022, -1.58225],
+					"position": [-5.6, 4, -8]
+				},
+				"leftArm": {
+					"rotation": [-66.37298, 15.46973, 8.28342]
+				},
+				"rightArm": {
+					"rotation": [-31.02938, -19.01795, -13.13007]
+				}
+			}
+		},
+		"animation.player.mercon.spritus.hold.first_person": {
+			"loop": true,
+			"bones": {
+				"mercon_spritus": {
+					"rotation": [-180, 0, -180],
+					"position": [0, 2, 9]
+				},
+				"leftArm": {
+					"rotation": [147.5, 0, 0],
+					"position": [-10, 0, 5]
+				},
+				"rightArm": {
+					"position": [0, -1, -6]
+				}
+			}
+		},
+		"animation.player.mercon.spritus.fire": {
+			"animation_length": 1.5,
+			"bones": {
+				"mercon_spritus": {
+					"rotation": {
+						"0.0417": [-0.709, 0.4002, -1.55133],
+						"0.125": [-5.59715, 0.4002, -2.66251],
+						"0.25": [-0.70854, 0.40022, -1.58225],
+						"0.4167": [-0.71, 0.4, -1.58],
+						"0.625": [11.93469, -9.44748, -3.31716],
+						"0.7083": [9.36018, -7.00116, -2.79644],
+						"1.2917": [9.36, -7, -2.8],
+						"1.4167": [-0.709, 0.4002, -1.55133]
+					}
+				},
+				"root": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.0833": [-2.5, 0, 0],
+						"0.25": [0, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.1667": [26.20012, -4.1007, 6.88149],
+						"0.4167": [7.15855, -2.62112, 1.938]
+					},
+					"position": [0, 0, 0]
+				}
+			},
+			"sound_effects": {
+				"0.0417": {
+					"effect": "mercon_spritus"
+				},
+				"0.625": {
+					"effect": "semprot"
+				}
+			},
+			"particle_effects": {
+				"0.0417": {
+					"effect": "mercon_spritus",
+					"locator": "effect"
+				}
+			}
+		}
+	}
+}

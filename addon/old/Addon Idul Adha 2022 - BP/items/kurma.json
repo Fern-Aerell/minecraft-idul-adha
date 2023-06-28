@@ -1,0 +1,74 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "aerell:kurma",
+            "category": "Equipment"
+        },
+        "components": {
+            "minecraft:use_duration": 0.95,
+            "minecraft:food": {
+                "nutrition": 2,
+                "saturation_modifier": "low",
+                "can_always_eat": true,
+                "on_consume": {
+                    "event": "on_consume",
+                    "target": "self"
+                }
+            },
+            "minecraft:use_animation": "eat",
+            "minecraft:icon": {
+                "texture": "kurma"
+            },
+            "minecraft:display_name": {},
+            "minecraft:render_offsets": {
+                "main_hand": {
+                  "first_person": {
+                    "scale": [
+                      0.0085,
+                      0.0085,
+                      0.0085
+                    ]
+                  },
+                  "third_person": {
+                    "position": [
+                        0.0085,
+                        0.80,
+                        -0.0085
+                    ],
+                    "scale": [
+                      0.02,
+                      0.02,
+                      0.02
+                    ]
+                  }
+                }
+            }
+        },
+        "events": {
+            "on_consume": {
+                "sequence": [
+                    {
+                        "transform_item": {
+                            "transform": "aerell:biji_kurma"
+                        }
+                    },
+                    {
+                        "remove_mob_effect": {
+                            "effect": "poison",
+                            "target": "holder"
+                        }
+                    },
+                    {
+                        "add_mob_effect": {
+                            "effect": "regeneration",
+                            "target": "holder",
+                            "duration": 2,
+                            "amplifier": 1
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

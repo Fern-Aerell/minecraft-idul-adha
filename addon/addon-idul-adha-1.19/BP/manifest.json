@@ -1,0 +1,50 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": ["AerellDev"],
+		"generated_with": {
+			"bridge": ["2.6.0"],
+			"dash": ["0.10.8"],
+			"blockbench_block_wizard": ["1.1.2"]
+		}
+	},
+	"header": {
+		"name": "§lADD-ON IDUL ADHA 2023",
+		"description": "§c- Created by AerellGamers -\\n§fSelamat Idul Adha 1444 H.",
+		"min_engine_version": [1, 19, 60],
+		"uuid": "93ba83fc-6a8f-4352-b0bc-d6aef3e5e21f",
+		"version": [3, 0, 0]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "3bef3a68-978c-46c4-9168-71ae8f15341e",
+			"version": [3, 0, 0]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "bb33f3c6-30e0-478a-afc5-37a360dfce0f",
+			"entry": "scripts/main.js",
+			"version": [1, 0, 0]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "bcd7ba28-62cd-4135-bf10-379528dda387",
+			"version": [3, 0, 0]
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "1.0.0-beta"
+		},
+		{
+			"module_name": "@minecraft/server-gametest",
+			"version": "1.0.0-beta"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "1.0.0-beta"
+		}
+	]
+}

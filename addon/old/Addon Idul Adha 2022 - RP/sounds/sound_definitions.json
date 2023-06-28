@@ -1,0 +1,135 @@
+{
+   "format_version" : "1.14.0",
+   "sound_definitions" : {
+      "pht.gacha_sound" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "record",
+         "sounds" : [
+            {
+               "load_on_low_memory" : true,
+               "name" : "sounds/GachaSound"
+            }
+         ]
+      },
+      "pht.gacha_selesai" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "record",
+         "sounds" : [
+            {
+               "load_on_low_memory" : true,
+               "name" : "sounds/GachaSelesai"
+            }
+         ]
+      },
+      "aerell.bedug": {
+         "category": "neutral",
+         "max_distance": 100.0,
+         "sounds": [
+           {
+             "name": "sounds/ramadhan/bedug",
+             "load_on_low_memory": true
+           }
+         ]
+       },
+       "aerell.surah.alfatihah": {
+         "category": "neutral",
+         "max_distance": 64.0,
+         "sounds": [
+           {
+             "name": "sounds/ramadhan/al_fatihah",
+             "load_on_low_memory": true
+           }
+         ]
+       },
+       "aerell.mercon.spritus": {
+         "category": "neutral",
+         "max_distance": 64.0,
+         "sounds": [
+           {
+             "name": "sounds/ramadhan/mercon_spritus",
+             "load_on_low_memory": true
+           }
+         ]
+       },
+       "aerell.mercon.semprot": {
+         "category": "neutral",
+         "max_distance": 64.0,
+         "sounds": [
+           {
+             "name": "sounds/ramadhan/semprot",
+             "load_on_low_memory": true
+           }
+         ]
+       },
+       "aerell.kentongan.kayu": {
+         "category": "neutral",
+         "max_distance": 64.0,
+         "sounds": [
+           {
+             "name": "sounds/ramadhan/kentongan_kayu",
+             "load_on_low_memory": true
+           }
+         ]
+       },
+       "aerell.kentongan.bambu": {
+         "category": "neutral",
+         "max_distance": 64.0,
+         "sounds": [
+           {
+             "name": "sounds/ramadhan/kentongan_bambu",
+             "load_on_low_memory": true
+           }
+         ]
+       },
+       "aerell.kaleng.hit": {
+         "category": "neutral",
+         "max_distance": 64.0,
+         "sounds": [
+           {
+             "name": "sounds/ramadhan/kaleng_hit",
+             "load_on_low_memory": true
+           }
+         ]
+       },
+       "aerell.petasan.ledakan": {
+         "category": "neutral",
+         "max_distance": 64.0,
+         "sounds": [
+           {
+             "name": "sounds/ramadhan/ledakan_petasan",
+             "load_on_low_memory": true
+           }
+         ]
+       },
+       "aerell.takbiran": {
+         "category": "neutral",
+         "max_distance": 64.0,
+         "sounds": [
+           {
+             "name": "sounds/ramadhan/takbiran",
+             "load_on_low_memory": true
+           }
+         ]
+       },
+       "aerell.adzan": {
+         "category": "neutral",
+         "max_distance": 64.0,
+         "sounds": [
+           {
+             "name": "sounds/ramadhan/adzan",
+             "load_on_low_memory": true
+           }
+         ]
+       },
+       "aerell.adzan_subuh": {
+         "category": "neutral",
+         "max_distance": 64.0,
+         "sounds": [
+           {
+             "name": "sounds/ramadhan/adzan_subuh",
+             "load_on_low_memory": true
+           }
+         ]
+       }
+   }
+}

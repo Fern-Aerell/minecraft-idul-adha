@@ -1,0 +1,1475 @@
+{
+  "format_version": "1.18.10",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "aerell:pht",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": { 
+      "skin_0": {
+        "minecraft:variant": {
+          "value": 0
+        }
+      },
+      "skin_1": {
+        "minecraft:variant": {
+          "value": 1
+        }
+      },
+      "skin_2": {
+        "minecraft:variant": {
+          "value": 2
+        }
+      },
+      "skin_3": {
+        "minecraft:variant": {
+          "value": 3
+        }
+      },
+      "skin_4": {
+        "minecraft:variant": {
+          "value": 4
+        }
+      },
+      "skin_5": {
+        "minecraft:variant": {
+          "value": 5
+        }
+      },
+      "skin_6": {
+        "minecraft:variant": {
+          "value": 6
+        }
+      },
+      "skin_7": {
+        "minecraft:variant": {
+          "value": 7
+        }
+      },
+      "skin_8": {
+        "minecraft:variant": {
+          "value": 8
+        }
+      },
+
+      "skin_9": {
+        "minecraft:variant": {
+          "value": 9
+        }
+      },
+      "skin_10": {
+        "minecraft:variant": {
+          "value": 10
+        }
+      },
+      "skin_11": {
+        "minecraft:variant": {
+          "value": 11
+        }
+      },
+      "skin_12": {
+        "minecraft:variant": {
+          "value": 12
+        }
+      },
+      "skin_13": {
+        "minecraft:variant": {
+          "value": 13
+        }
+      },
+      "skin_14": {
+        "minecraft:variant": {
+          "value": 14
+        }
+      },
+      "skin_15": {
+        "minecraft:variant": {
+          "value": 15
+        }
+      },
+      "skin_16": {
+        "minecraft:variant": {
+          "value": 16
+        }
+      },
+      "trade_resupply_component_group": {
+        "minecraft:trade_resupply": {}
+      },
+      "become_witch": {
+        "minecraft:transformation": {
+          "into": "minecraft:witch",
+          "delay": 0.5
+        }
+      },
+      "work_schedule": {
+        "minecraft:scheduler": {
+          "min_delay_secs": 0,
+          "max_delay_secs": 10,
+          "scheduled_events" : [
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "hourly_clock_time", "operator": ">=", "value": 0 },
+                  { "test": "hourly_clock_time", "operator": "<", "value": 8000 }
+                ]
+              },
+              "event": "minecraft:schedule_work_pro_villager"
+            },
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "hourly_clock_time", "operator": ">=", "value": 8000 },
+                  { "test": "hourly_clock_time", "operator": "<", "value": 10000 }
+                ]
+              },
+              "event": "minecraft:schedule_gather_villager"
+            },
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "hourly_clock_time", "operator": ">=", "value": 10000 },
+                  { "test": "hourly_clock_time", "operator": "<", "value": 11000 }
+                ]
+              },
+              "event": "minecraft:schedule_work_pro_villager"
+            },
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "hourly_clock_time", "operator": ">=", "value": 11000 },
+                  { "test": "hourly_clock_time", "operator": "<", "value": 12000 }
+                ]
+              },
+              "event": "minecraft:schedule_home_villager"
+            },
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "hourly_clock_time", "operator": ">=", "value": 12000 },
+                  { "test": "hourly_clock_time", "operator": "<", "value": 24000 }
+                ]
+              },
+              "event": "minecraft:schedule_bed_villager"
+            }
+          ]
+        }
+      },
+      "job_specific_goals": {
+        "minecraft:behavior.inspect_bookshelf": {},
+        "minecraft:behavior.harvest_farm_block": {},
+        "minecraft:behavior.explore_outskirts": {},
+        "minecraft:behavior.work": {},
+        "minecraft:behavior.work_composter": {},
+        "minecraft:behavior.mingle": {},
+        "minecraft:behavior.sleep": {}
+      },
+      "work_schedule_villager": {
+        "minecraft:behavior.work": {
+          "priority": 7,
+          "active_time": 250,
+          "speed_multiplier": 0.5,
+          "goal_cooldown": 200,
+          "sound_delay_min": 100,
+          "sound_delay_max": 200,
+          "can_work_in_rain": false,
+          "work_in_rain_tolerance": 100,
+          "on_arrival": {
+            "event": "minecraft:resupply_trades",
+            "target": "self"
+          }
+        }
+      },
+      "play_schedule_villager": {
+        "minecraft:behavior.play": {
+          "priority": 8,
+          "speed_multiplier": 0.32
+        }
+      },
+      "gather_schedule_villager": {
+        "minecraft:behavior.mingle": {
+          "priority": 7,
+          "speed_multiplier": 0.5,
+          "duration": 30,
+          "cooldown_time": 10,
+          "mingle_partner_type": "minecraft:villager_v2",
+          "mingle_distance": 2.0
+        }
+      },
+      "home_schedule_villager": {
+
+      },
+      "bed_schedule_villager": {
+        "minecraft:behavior.sleep": {
+          "priority": 3,
+          "goal_radius": 1.5,
+          "speed_multiplier": 0.6,
+          "sleep_collider_height": 0.3,
+          "sleep_collider_width": 1.0,
+          "sleep_y_offset": 0.6,
+          "timeout_cooldown": 10.0
+        }
+      },
+      "wander_schedule_villager": {
+        "minecraft:behavior.explore_outskirts": {
+          "priority": 9,
+          "next_xz": 5,
+          "next_y": 3,
+          "min_wait_time": 3.0,
+          "max_wait_time": 10.0,
+          "max_travel_time": 60.0,
+          "speed_multiplier": 0.6,
+          "explore_dist": 6.0,
+          "min_perimeter": 1.0,
+          "min_dist_from_target": 2.5,
+          "timer_ratio": 2.0,
+          "dist_from_boundary": [ 5.0, 0.0, 5.0 ]
+        }
+      },
+      "adult": {
+        "minecraft:preferred_path" : {
+          "max_fall_blocks" : 1,
+          "jump_cost" : 20,
+          "default_block_cost" : 3,
+          "preferred_path_blocks" : [
+            { 
+              "cost" : 1,
+              "blocks" : [ 
+                "cobblestone"
+               ]
+            },
+            { 
+              "cost" : 50,
+              "blocks" : [ 
+                "bed"
+              ]
+            }
+          ]
+        }
+      },
+      "gacha_button": {
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "interact_text": "Gacha",
+              "on_interact": {
+                "filters": [
+                  {
+                    "all_of": [
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                      },
+                      {
+                        "test": "has_equipment",
+                        "subject": "other",
+                        "domain": "hand",
+                        "operator": "==",
+                        "value": "diamond"
+                      }
+                    ]
+                  }
+                ],
+                "target": "self",
+                "event": "gacha1"
+              },
+              "use_item": true,
+              "swing": true
+            }
+          ]
+        }
+      },
+      "gacha1": {
+        "minecraft:timer": {
+          "time": 0,
+          "looping": false,
+          "time_down_event": {
+            "event": "gacha2",
+            "target": "self"
+          }
+        }
+      },
+      "gacha2": {
+        "minecraft:timer": {
+          "time": 0,
+          "looping": false,
+          "time_down_event": {
+            "event": "gacha3",
+            "target": "self"
+          }
+        }
+      },
+      "gacha3": {
+        "minecraft:timer": {
+          "time": 0,
+          "looping": false,
+          "time_down_event": {
+            "event": "gacha4",
+            "target": "self"
+          }
+        }
+      },
+      "gacha4": {
+        "minecraft:timer": {
+          "time": 0,
+          "looping": false,
+          "time_down_event": {
+            "event": "gacha5",
+            "target": "self"
+          }
+        }
+      },
+      "gacha5": {
+        "minecraft:timer": {
+          "time": 0,
+          "looping": false,
+          "time_down_event": {
+            "event": "gacha6",
+            "target": "self"
+          }
+        }
+      },
+      "gacha6": {
+        "minecraft:timer": {
+          "time": 0,
+          "looping": false,
+          "time_down_event": {
+            "event": "gacha7",
+            "target": "self"
+          }
+        }
+      },
+      "gacha7": {
+        "minecraft:timer": {
+          "time": 0,
+          "looping": false,
+          "time_down_event": {
+            "event": "gacha8",
+            "target": "self"
+          }
+        }
+      },
+      "gacha8": {
+        "minecraft:timer": {
+          "time": 0,
+          "looping": false,
+          "time_down_event": {
+            "event": "gacha9",
+            "target": "self"
+          }
+        }
+      },
+      "gacha9": {
+        "minecraft:timer": {
+          "time": 0,
+          "looping": false,
+          "time_down_event": {
+            "event": "gacha10",
+            "target": "self"
+          }
+        }
+      },
+      "gacha10": {
+        "minecraft:timer": {
+          "time": 0,
+          "looping": false,
+          "time_down_event": {
+            "event": "gacha11",
+            "target": "self"
+          }
+        }
+      },
+      "gacha11": {
+        "minecraft:timer": {
+          "time": 0,
+          "looping": false,
+          "time_down_event": {
+            "event": "gacha12",
+            "target": "self"
+          }
+        }
+      },
+      "gacha12": {
+        "minecraft:timer": {
+          "time": 0,
+          "looping": false,
+          "time_down_event": {
+            "event": "gacha13",
+            "target": "self"
+          }
+        }
+      },
+      "gacha13": {
+        "minecraft:timer": {
+          "time": 0,
+          "looping": false,
+          "time_down_event": {
+            "event": "gacha14",
+            "target": "self"
+          }
+        }
+      },
+      "gacha14": {
+        "minecraft:timer": {
+          "time": 0,
+          "looping": false,
+          "time_down_event": {
+            "event": "gacha15",
+            "target": "self"
+          }
+        }
+      },
+      "gacha15": {
+        "minecraft:timer": {
+          "time": 0,
+          "looping": false,
+          "time_down_event": {
+            "event": "gacha16",
+            "target": "self"
+          }
+        }
+      },
+      "gacha16": {
+        "minecraft:timer": {
+          "time": 0,
+          "looping": false,
+          "time_down_event": {
+            "event": "gacha17",
+            "target": "self"
+          }
+        }
+      },
+      "gacha17": {
+        "minecraft:timer": {
+          "time": 0,
+          "looping": false,
+          "time_down_event": {
+            "event": "gacha18",
+            "target": "self"
+          }
+        }
+      },
+      "gacha18": {
+        "minecraft:timer": {
+          "time": 0,
+          "looping": false,
+          "time_down_event": {
+            "event": "gacha19",
+            "target": "self"
+          }
+        }
+      },
+      "gacha19": {
+        "minecraft:timer": {
+          "time": 0,
+          "looping": false,
+          "time_down_event": {
+            "event": "gacha_hadiah",
+            "target": "self"
+          }
+        }
+      },
+      "gacha_hadiah9": {
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "interact_text": "action.interact.ambilhadiah",
+              "on_interact": {
+                "filters": [
+                  {
+                    "all_of": [
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                      }
+                    ]
+                  }
+                ],
+                "target": "self",
+                "event": "hadiah9"
+              }
+            }
+          ]
+        }
+      },
+      "gacha_hadiah10": {
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "interact_text": "action.interact.ambilhadiah",
+              "on_interact": {
+                "filters": [
+                  {
+                    "all_of": [
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                      }
+                    ]
+                  }
+                ],
+                "target": "self",
+                "event": "hadiah10"
+              }
+            }
+          ]
+        }
+      },
+      "gacha_hadiah11": {
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "interact_text": "action.interact.ambilhadiah",
+              "on_interact": {
+                "filters": [
+                  {
+                    "all_of": [
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                      }
+                    ]
+                  }
+                ],
+                "target": "self",
+                "event": "hadiah11"
+              }
+            }
+          ]
+        }
+      },
+      "gacha_hadiah12": {
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "interact_text": "action.interact.ambilhadiah",
+              "on_interact": {
+                "filters": [
+                  {
+                    "all_of": [
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                      }
+                    ]
+                  }
+                ],
+                "target": "self",
+                "event": "hadiah12"
+              }
+            }
+          ]
+        }
+      },
+      "gacha_hadiah13": {
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "interact_text": "action.interact.ambilhadiah",
+              "on_interact": {
+                "filters": [
+                  {
+                    "all_of": [
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                      }
+                    ]
+                  }
+                ],
+                "target": "self",
+                "event": "hadiah13"
+              }
+            }
+          ]
+        }
+      },
+      "gacha_hadiah14": {
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "interact_text": "action.interact.ambilhadiah",
+              "on_interact": {
+                "filters": [
+                  {
+                    "all_of": [
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                      }
+                    ]
+                  }
+                ],
+                "target": "self",
+                "event": "hadiah14"
+              }
+            }
+          ]
+        }
+      },
+      "gacha_hadiah15": {
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "interact_text": "action.interact.ambilhadiah",
+              "on_interact": {
+                "filters": [
+                  {
+                    "all_of": [
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                      }
+                    ]
+                  }
+                ],
+                "target": "self",
+                "event": "hadiah15"
+              }
+            }
+          ]
+        }
+      },
+      "gacha_hadiah16": {
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "interact_text": "action.interact.ambilhadiah",
+              "on_interact": {
+                "filters": [
+                  {
+                    "all_of": [
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                      }
+                    ]
+                  }
+                ],
+                "target": "self",
+                "event": "hadiah16"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "components": {
+      "minecraft:is_hidden_when_invisible": {
+      },
+      "minecraft:type_family": {
+        "family": ["villager", "mob"]
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0
+      },
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:hide": {
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "minecraft:nameable": {
+      },
+      "minecraft:movement": {
+        "value": 0.5
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "can_pass_doors": true,
+        "can_open_doors": true,
+        "avoid_water": true
+      },
+      "minecraft:follow_range": {
+        "value": 128
+      },
+      "minecraft:annotation.open_door": {
+      },
+      "minecraft:movement.basic": {
+      },
+      "minecraft:jump.static": {
+      },
+      "minecraft:can_climb": {
+      },
+      "minecraft:inventory": {
+        "inventory_size": 8,
+        "private": true
+      },
+      "minecraft:dweller": {
+        "dwelling_type": "village",
+        "dweller_role": "inhabitant",
+        "update_interval_base": 60,
+        "update_interval_variant": 40,
+        "can_find_poi": true,
+        "can_migrate": true,
+        "first_founding_reward": 5
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "on_damage": {
+              "filters": [
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "lightning"
+                },
+                {
+                  "test": "is_difficulty",
+                  "operator": "!=",
+                  "value": "peaceful"
+                }
+              ],
+              "event": "become_witch"
+            },
+            "deals_damage": false
+          },
+          {
+            "on_damage": {
+              "filters": {
+                "any_of": [
+                  {"test": "is_family", "subject": "other", "value": "zombie"},
+                  {"test": "is_family", "subject": "other", "value": "husk"}
+                ],
+                "all_of": [
+                  {"test": "has_damage", "value": "fatal"}
+                ]
+              },
+              "event": "become_zombie"
+            }
+          }
+        ]
+      },
+      "minecraft:persistent": {
+      },
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:behavior.hide": {
+        "priority": 0,
+        "speed_multiplier": 0.8,
+        "poi_type": "bed",
+        "duration": 30.0
+      },
+      "minecraft:behavior.panic": {
+        "priority": 1,
+        "speed_multiplier": 0.6
+      },
+      "minecraft:behavior.trade_with_player": {
+        "priority": 2
+      },
+      "minecraft:behavior.avoid_mob_type": {
+        "priority": 4,
+        "entity_types": [
+          {
+            "filters": { 
+                "any_of": [
+                  { "test" : "is_family", "subject" : "other", "value" : "zombie"},
+                  { "test" : "is_family", "subject" : "other", "value" : "zombie_villager"},
+                  { "test" : "is_family", "subject" : "other", "value" : "illager"},
+                  { "test" : "is_family", "subject" : "other", "value" : "vex"}
+                ]
+            },
+            "max_dist": 8,
+            "walk_speed_multiplier": 0.6,
+            "sprint_speed_multiplier": 0.6
+          }
+        ]
+      },
+      "minecraft:behavior.pickup_items": {
+        "priority": 4,
+        "max_dist": 3,
+        "goal_radius": 2,
+        "speed_multiplier": 0.5,
+        "can_pickup_to_hand_or_equipment": false
+      },
+      "minecraft:behavior.move_indoors": {
+        "priority": 6,
+        "speed_multiplier": 0.8,
+        "timeout_cooldown": 8.0
+      },
+      "minecraft:behavior.look_at_trading_player": {
+        "priority": 7
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 9,
+        "look_distance": 8,
+        "probability": 0.02
+      },
+      "minecraft:behavior.share_items": {
+        "priority": 10,
+        "max_dist": 3,
+        "goal_radius":  2.0,
+        "speed_multiplier": 0.5,
+        "entity_types": [
+          {
+            "filters": { "test" :  "is_family", "subject" : "other", "value" :  "villager"}
+          }
+        ]
+      },
+      "minecraft:behavior.move_towards_dwelling_restriction": {
+        "priority": 11,
+        "speed_multiplier": 0.6
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 11,
+        "speed_multiplier": 0.6
+      },
+      "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      }
+    },
+    "events":{
+      "become_witch": {
+        "add": {
+          "component_groups": [
+            "become_witch"
+          ]
+        }
+      },
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "adult",
+            "work_schedule",
+            "skin_0",
+            "gacha_button"
+          ]
+        }
+      },
+      
+      "minecraft:schedule_wander_villager": {
+        "remove": { "component_groups": [ "home_schedule_villager", "bed_schedule_villager", "wander_schedule_villager", "job_specific_goals", "play_schedule_villager", "trade_resupply_component_group" ] },
+        "add": { "component_groups": [ "wander_schedule_villager" ] }
+      },
+      
+      "minecraft:schedule_gather_villager": {
+        "remove": { "component_groups": [ "bed_schedule_villager", "wander_schedule_villager", "home_schedule_villager", "job_specific_goals", "play_schedule_villager", "trade_resupply_component_group" ] },
+        "add": { "component_groups": [ "gather_schedule_villager" ] }
+      },
+      
+      "minecraft:schedule_home_villager": {
+        "remove": { "component_groups": [ "bed_schedule_villager", "wander_schedule_villager", "gather_schedule_villager", "job_specific_goals", "play_schedule_villager", "trade_resupply_component_group" ] },
+        "add": { "component_groups": [ "home_schedule_villager" ] }
+      },
+      
+      "minecraft:schedule_bed_villager": {
+        "remove": { "component_groups": [ "home_schedule_villager", "gather_schedule_villager", "wander_schedule_villager", "job_specific_goals", "play_schedule_villager", "trade_resupply_component_group" ] },
+        "add": { "component_groups": [ "bed_schedule_villager" ] }
+      },
+      
+      "minecraft:schedule_play_villager": {
+        "remove": { "component_groups": [ "home_schedule_villager", "gather_schedule_villager", "wander_schedule_villager", "bed_schedule_villager", "job_specific_goals", "trade_resupply_component_group" ] },
+        "add": { "component_groups": [ "play_schedule_villager" ] }
+      },
+      
+      "minecraft:schedule_work_pro_villager": {
+        "remove": { "component_groups": [ "home_schedule_villager", "gather_schedule_villager", "wander_schedule_villager", "bed_schedule_villager", "play_schedule_villager" ] },
+        "add": { "component_groups": [ "work_schedule_villager" ] }
+      },
+      "gacha_button": {
+        "remove": {
+          "component_groups": [
+            "gacha1",
+            "gacha2",
+            "gacha3",
+            "gacha4",
+            "gacha5",
+            "gacha6",
+            "gacha7",
+            "gacha8",
+            "gacha9",
+            "gacha10",
+            "gacha11",
+            "gacha12",
+            "gacha13",
+            "gacha14",
+            "gacha15",
+            "gacha16",
+            "gacha17",
+            "gacha18",
+            "gacha19",
+            "gacha_hadiah"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha_button",
+            "skin_0"
+          ]
+        }
+      },
+      "gacha1": {
+        "run_command": {
+          "command": [
+            "playsound pht.gacha_sound @p ~~~ 9999"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "gacha_button"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha1",
+            "skin_1"
+          ]
+        }
+      },
+      "gacha2": {
+        "run_command": {
+          "command": [
+            "playsound note.pling @p"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "gacha1"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha2",
+            "skin_2"
+          ]
+        }
+      },
+      "gacha3": {
+        "run_command": {
+          "command": [
+            "playsound note.pling @p"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "gacha2"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha3",
+            "skin_3"
+          ]
+        }
+      },
+      "gacha4": {
+        "run_command": {
+          "command": [
+            "playsound note.pling @p"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "gacha3"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha4",
+            "skin_4"
+          ]
+        }
+      },
+      "gacha5": {
+        "run_command": {
+          "command": [
+            "playsound note.pling @p"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "gacha4"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha5",
+            "skin_5"
+          ]
+        }
+      },
+      "gacha6": {
+        "run_command": {
+          "command": [
+            "playsound note.pling @p"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "gacha5"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha6",
+            "skin_6"
+          ]
+        }
+      },
+      "gacha7": {
+        "run_command": {
+          "command": [
+            "playsound note.pling @p"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "gacha6"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha7",
+            "skin_7"
+          ]
+        }
+      },
+      "gacha8": {
+        "run_command": {
+          "command": [
+            "playsound note.pling @p"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "gacha7"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha8",
+            "skin_8"
+          ]
+        }
+      },
+      "gacha9": {
+        "run_command": {
+          "command": [
+            "playsound note.pling @p"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "gacha8"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha9",
+            "skin_1"
+          ]
+        }
+      },
+      "gacha10": {
+        "run_command": {
+          "command": [
+            "playsound note.pling @p"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "gacha9"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha10",
+            "skin_2"
+          ]
+        }
+      },
+      "gacha11": {
+        "run_command": {
+          "command": [
+            "playsound note.pling @p"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "gacha10"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha11",
+            "skin_3"
+          ]
+        }
+      },
+      "gacha12": {
+        "run_command": {
+          "command": [
+            "playsound note.pling @p"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "gacha11"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha12",
+            "skin_4"
+          ]
+        }
+      },
+      "gacha13": {
+        "run_command": {
+          "command": [
+            "playsound note.pling @p"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "gacha12"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha13",
+            "skin_5"
+          ]
+        }
+      },
+      "gacha14": {
+        "run_command": {
+          "command": [
+            "playsound note.pling @p"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "gacha13"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha14",
+            "skin_6"
+          ]
+        }
+      },
+      "gacha15": {
+        "run_command": {
+          "command": [
+            "playsound note.pling @p"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "gacha14"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha15",
+            "skin_7"
+          ]
+        }
+      },
+      "gacha16": {
+        "run_command": {
+          "command": [
+            "playsound note.pling @p"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "gacha15"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha16",
+            "skin_8"
+          ]
+        }
+      },
+      "gacha17": {
+        "run_command": {
+          "command": [
+            "playsound note.pling @p"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "gacha16"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha17",
+            "skin_1"
+          ]
+        }
+      },
+      "gacha18": {
+        "run_command": {
+          "command": [
+            "playsound note.pling @p"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "gacha17"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha18",
+            "skin_2"
+          ]
+        }
+      },
+      "gacha19": {
+        "run_command": {
+          "command": [
+            "playsound note.pling @p"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "gacha18"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha19",
+            "skin_3"
+          ]
+        }
+      },
+      "gacha_hadiah": {
+        "sequence": [
+          {
+            "run_command": {
+              "command": [
+                "stopsound @p pht.gacha_sound",
+                "playsound pht.gacha_selesai @s ~~~"
+              ]
+            }
+          },
+          {
+            "randomize": [
+              {
+                "weight": 3,
+                "add": {
+                  "component_groups": [
+                    "skin_9",
+                    "gacha_hadiah9"
+                  ]
+                }
+              },
+              {
+                "weight": 3,
+                "add": {
+                  "component_groups": [
+                    "skin_10",
+                    "gacha_hadiah10"
+                  ]
+                }
+              },
+              {
+                "weight": 5,
+                "add": {
+                  "component_groups": [
+                    "skin_11",
+                    "gacha_hadiah11"
+                  ]
+                }
+              },
+              {
+                "weight": 10,
+                "add": {
+                  "component_groups": [
+                    "skin_12",
+                    "gacha_hadiah12"
+                  ]
+                }
+              },
+              {
+                "weight": 5,
+                "add": {
+                  "component_groups": [
+                    "skin_13",
+                    "gacha_hadiah13"
+                  ]
+                }
+              },
+              {
+                "weight": 3,
+                "add": {
+                  "component_groups": [
+                    "skin_14",
+                    "gacha_hadiah14"
+                  ]
+                }
+              },
+              {
+                "weight": 5,
+                "add": {
+                  "component_groups": [
+                    "skin_15",
+                    "gacha_hadiah15"
+                  ]
+                }
+              },
+              {
+                "weight": 3,
+                "add": {
+                  "component_groups": [
+                    "skin_16",
+                    "gacha_hadiah16"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "hadiah9": {
+        "run_command": {
+          "command": [
+            "give @p lead",
+            "summon sheep ~~~"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha_button",
+            "skin_0"
+          ]
+        }
+      },
+      "hadiah10": {
+        "run_command": {
+          "command": [
+            "give @p lead",
+            "summon goat ~~~"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha_button",
+            "skin_0"
+          ]
+        }
+      },
+      "hadiah11": {
+        "run_command": {
+          "command": [
+            "give @p lead",
+            "summon cow ~~~ aerell:sapi_abuabu"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha_button",
+            "skin_0"
+          ]
+        }
+      },
+      "hadiah12": {
+        "run_command": {
+          "command": [
+            "give @p lead",
+            "summon cow ~~~ aerell:sapi_default"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha_button",
+            "skin_0"
+          ]
+        }
+      },
+      "hadiah13": {
+        "run_command": {
+          "command": [
+            "give @p lead",
+            "summon cow ~~~ aerell:sapi_coklat"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha_button",
+            "skin_0"
+          ]
+        }
+      },
+      "hadiah14": {
+        "run_command": {
+          "command": [
+            "give @p lead",
+            "summon cow ~~~ aerell:sapi_moend"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha_button",
+            "skin_0"
+          ]
+        }
+      },
+      "hadiah15": {
+        "run_command": {
+          "command": [
+            "give @p lead",
+            "summon cow ~~~ aerell:sapi_putih"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha_button",
+            "skin_0"
+          ]
+        }
+      },
+      "hadiah16": {
+        "run_command": {
+          "command": [
+            "give @p lead",
+            "summon cow ~~~ aerell:sapi_stepe"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "gacha_button",
+            "skin_0"
+          ]
+        }
+      }
+    }
+  }
+}

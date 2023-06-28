@@ -1,0 +1,167 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "aerell:toples_astor",
+      "properties": {
+        "block:rotasi": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    },
+    "components": {
+      "minecraft:loot": "loot_tables/blocks/toples_astor.json",
+      "minecraft:destroy_time": 0.13,
+      "minecraft:map_color": "#b94646",
+      "minecraft:explosion_resistance": 0.3,
+      "minecraft:block_light_absorption": 0,
+      "minecraft:on_player_placing": {
+        "event": "rotasi_block"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "toples_astor",
+          "render_method": "blend"
+        }
+      },
+      "minecraft:geometry": "geometry.toples_astor",
+      "minecraft:pick_collision": {
+        "origin": [
+          -4,
+          0,
+          -4
+        ],
+        "size": [
+          8,
+          10,
+          8
+        ]
+      },
+      "minecraft:entity_collision": {
+        "origin": [
+          -4,
+          0,
+          -4
+        ],
+        "size": [
+          8,
+          10,
+          8
+        ]
+      },
+      "minecraft:creative_category": {
+				"group": "itemGroup.name.ramadhan",
+				"category": "construction"
+			},
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "allowed_faces": ["up"]
+          }
+        ]
+      },
+      "minecraft:breathability": "air",
+      "minecraft:ticking": {
+        "looping": false,
+        "range": [
+          0,
+          0
+        ],
+        "on_tick": {
+          "event": "aerell:toples"
+        }
+      }
+    },
+    "permutations": [
+      {
+        "condition": "query.block_property(\u0027block:rotasi\u0027) \u003d\u003d 2",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            -90,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property(\u0027block:rotasi\u0027) \u003d\u003d 3",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            90,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property(\u0027block:rotasi\u0027) \u003d\u003d 4",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property(\u0027block:rotasi\u0027) \u003d\u003d 5",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            -180,
+            0
+          ]
+        }
+      }
+    ],
+    "events": {
+      "rotasi_block": {
+        "set_block_property": {
+          "block:rotasi": "query.cardinal_facing_2d"
+        }
+      },
+      "aerell:toples": {
+        "sequence": [
+          {
+            "condition": "query.block_property(\u0027block:rotasi\u0027) \u003d\u003d 2",
+            "run_command": {
+              "command": [
+                "summon aerell:toples"
+              ]
+            }
+          },
+          {
+            "condition": "query.block_property(\u0027block:rotasi\u0027) \u003d\u003d 3",
+            "run_command": {
+              "command": [
+                "summon aerell:toples"
+              ]
+            }
+          },
+          {
+            "condition": "query.block_property(\u0027block:rotasi\u0027) \u003d\u003d 4",
+            "run_command": {
+              "command": [
+                "summon aerell:toples"
+              ]
+            }
+          },
+          {
+            "condition": "query.block_property(\u0027block:rotasi\u0027) \u003d\u003d 5",
+            "run_command": {
+              "command": [
+                "summon aerell:toples"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

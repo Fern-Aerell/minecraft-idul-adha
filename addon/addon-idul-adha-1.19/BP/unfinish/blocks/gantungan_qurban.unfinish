@@ -1,0 +1,437 @@
+{
+	"format_version": "1.19.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "aerell:gantungan_qurban",
+			"menu_category": {
+				"category": "items"
+			},
+			"properties": {
+				"block:rotasi": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6
+				],
+				"aerell:type": [
+					"none",
+					"kambing",
+					"kambing_kulitin",
+					"sheep",
+					"sapi_kulitin",
+					"sapi_abuabu",
+					"sapi_coklat",
+					"sapi_default",
+					"sapi_stepe",
+					"sapi_moend",
+					"sapi_putih"
+				]
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.gantungan",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "gantungan",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:collision_box": {
+				"origin": [
+					8,
+					8,
+					8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:selection_box": true,
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"down"
+						]
+					}
+				]
+			},
+			"minecraft:on_interact": {
+				"condition": "query.is_item_name_any('slot.weapon.mainhand',0,'aerell:abuabu_lead') || query.is_item_name_any('slot.weapon.mainhand',0,'aerell:coklat_lead') || query.is_item_name_any('slot.weapon.mainhand',0,'aerell:kambing_lead') || query.is_item_name_any('slot.weapon.mainhand',0,'aerell:moend_lead') || query.is_item_name_any('slot.weapon.mainhand',0,'aerell:putih_lead') || query.is_item_name_any('slot.weapon.mainhand',0,'aerell:sapi_lead') || query.is_item_name_any('slot.weapon.mainhand',0,'aerell:sheep_lead') || query.is_item_name_any('slot.weapon.mainhand',0,'aerell:stepe_lead')",
+				"event": "aerell:gantung_daging",
+				"target": "self"
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('block:rotasi') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('block:rotasi') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('block:rotasi') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('block:rotasi') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						-90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('aerell:type') == 'none'",
+				"components": {
+					"minecraft:geometry": "geometry.gantungan",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "gantungan",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"condition": "query.is_item_name_any('slot.weapon.mainhand',0,'aerell:abuabu_lead') || query.is_item_name_any('slot.weapon.mainhand',0,'aerell:coklat_lead') || query.is_item_name_any('slot.weapon.mainhand',0,'aerell:kambing_lead') || query.is_item_name_any('slot.weapon.mainhand',0,'aerell:moend_lead') || query.is_item_name_any('slot.weapon.mainhand',0,'aerell:putih_lead') || query.is_item_name_any('slot.weapon.mainhand',0,'aerell:sapi_lead') || query.is_item_name_any('slot.weapon.mainhand',0,'aerell:sheep_lead') || query.is_item_name_any('slot.weapon.mainhand',0,'aerell:stepe_lead')",
+						"event": "aerell:gantung_daging",
+						"target": "self"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('aerell:type') == 'kambing'",
+				"components": {
+					"minecraft:geometry": "geometry.gantungan_kambing",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "gantungan_kambing",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "aerell:potong_kulit",
+						"target": "self"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('aerell:type') == 'kambing_kulitin'",
+				"components": {
+					"minecraft:geometry": "geometry.gantungan_kambing",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "gantungan_kambing_kulitin",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "aerell:ambil_daging_kambing",
+						"target": "self"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('aerell:type') == 'sheep'",
+				"components": {
+					"minecraft:geometry": "geometry.gantungan_sheep",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "gantungan_sheep",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "aerell:ambil_daging_sheep",
+						"target": "self"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('aerell:type') == 'sapi_default'",
+				"components": {
+					"minecraft:geometry": "geometry.gantungan_sapi",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "gantungan_sapi_default",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "aerell:potong_kulit",
+						"target": "self"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('aerell:type') == 'sapi_kulitin'",
+				"components": {
+					"minecraft:geometry": "geometry.gantungan_sapi",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "gantungan_sapi_kulitin",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "aerell:ambil_daging_sapi",
+						"target": "self"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('aerell:type') == 'sapi_abuabu'",
+				"components": {
+					"minecraft:geometry": "geometry.gantungan_sapi",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "gantungan_sapi_abuabu",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "aerell:potong_kulit",
+						"target": "self"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('aerell:type') == 'sapi_coklat'",
+				"components": {
+					"minecraft:geometry": "geometry.gantungan_sapi",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "gantungan_sapi_coklat",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "aerell:potong_kulit",
+						"target": "self"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('aerell:type') == 'sapi_stepe'",
+				"components": {
+					"minecraft:geometry": "geometry.gantungan_sapi",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "gantungan_sapi_stepe",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "aerell:potong_kulit",
+						"target": "self"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('aerell:type') == 'sapi_moend'",
+				"components": {
+					"minecraft:geometry": "geometry.gantungan_sapi",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "gantungan_sapi_moend",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "aerell:potong_kulit",
+						"target": "self"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('aerell:type') == 'sapi_putih'",
+				"components": {
+					"minecraft:geometry": "geometry.gantungan_sapi",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "gantungan_sapi_putih",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "aerell:potong_kulit",
+						"target": "self"
+					}
+				}
+			}
+		],
+		"events": {
+			"rotasi_block": {
+				"set_block_property": {
+					"aerell:type": "none",
+					"block:rotasi": "query.cardinal_facing_2d"
+				}
+			},
+			"aerell:none": {
+				"set_block_property": {
+					"aerell:type": "none"
+				}
+			},
+			"aerell:kambing": {
+				"set_block_property": {
+					"aerell:type": "kambing"
+				}
+			},
+			"aerell:kambing_kulitin": {
+				"set_block_property": {
+					"aerell:type": "kambing_kulitin"
+				}
+			},
+			"aerell:sheep": {
+				"set_block_property": {
+					"aerell:type": "sheep"
+				}
+			},
+			"aerell:sapi_kulitin": {
+				"set_block_property": {
+					"aerell:type": "sapi_kulitin"
+				}
+			},
+			"aerell:sapi_abuabu": {
+				"set_block_property": {
+					"aerell:type": "sapi_abuabu"
+				}
+			},
+			"aerell:sapi_coklat": {
+				"set_block_property": {
+					"aerell:type": "sapi_coklat"
+				}
+			},
+			"aerell:sapi_default": {
+				"set_block_property": {
+					"aerell:type": "sapi_default"
+				}
+			},
+			"aerell:sapi_stepe": {
+				"set_block_property": {
+					"aerell:type": "sapi_stepe"
+				}
+			},
+			"aerell:sapi_moend": {
+				"set_block_property": {
+					"aerell:type": "sapi_moend"
+				}
+			},
+			"aerell:sapi_putih": {
+				"set_block_property": {
+					"aerell:type": "sapi_putih"
+				}
+			},
+			"aerell:daging_sapi": {},
+			"aerell:daging_kambing": {},
+			"aerell:daging_sheep": {},
+			"aerell:gantung_daging": {
+				"sequence": [
+					{
+						"condition": "query.is_item_name_any('slot.weapon.mainhand',0,'aerell:abuabu_lead')",
+						"trigger": "aerell:sapi_abuabu"
+					},
+					{
+						"condition": "query.is_item_name_any('slot.weapon.mainhand',0,'aerell:coklat_lead')",
+						"trigger": "aerell:sapi_coklat"
+					},
+					{
+						"condition": "query.is_item_name_any('slot.weapon.mainhand',0,'aerell:kambing_lead')",
+						"trigger": "aerell:kambing"
+					},
+					{
+						"condition": "query.is_item_name_any('slot.weapon.mainhand',0,'aerell:moend_lead')",
+						"trigger": "aerell:sapi_moend"
+					},
+					{
+						"condition": "query.is_item_name_any('slot.weapon.mainhand',0,'aerell:putih_lead')",
+						"trigger": "aerell:sapi_putih"
+					},
+					{
+						"condition": "query.is_item_name_any('slot.weapon.mainhand',0,'aerell:sapi_lead')",
+						"trigger": "aerell:sapi_default"
+					},
+					{
+						"condition": "query.is_item_name_any('slot.weapon.mainhand',0,'aerell:sheep_lead')",
+						"trigger": "aerell:sheep"
+					},
+					{
+						"condition": "query.is_item_name_any('slot.weapon.mainhand',0,'aerell:stepe_lead')",
+						"trigger": "aerell:sapi_stepe"
+					}
+				]
+			},
+			"aerell:potong_kulit": {
+				"sequence": [
+					{
+						"condition": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:shears') && query.block_property('aerell:type') == 'sapi_abuabu'",
+						"trigger": "aerell:sapi_kulitin"
+					},
+					{
+						"condition": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:shears') && query.block_property('aerell:type') == 'sapi_coklat'",
+						"trigger": "aerell:sapi_kulitin"
+					},
+					{
+						"condition": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:shears') && query.block_property('aerell:type') == 'kambing'",
+						"trigger": "aerell:kambing_kulitin"
+					},
+					{
+						"condition": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:shears') && query.block_property('aerell:type') == 'sapi_moend'",
+						"trigger": "aerell:sapi_kulitin"
+					},
+					{
+						"condition": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:shears') && query.block_property('aerell:type') == 'sapi_putih'",
+						"trigger": "aerell:sapi_kulitin"
+					},
+					{
+						"condition": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:shears') && query.block_property('aerell:type') == 'sapi_default'",
+						"trigger": "aerell:sapi_kulitin"
+					},
+					{
+						"condition": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:shears') && query.block_property('aerell:type') == 'sapi_stepe'",
+						"trigger": "aerell:sapi_kulitin"
+					}
+				]
+			},
+			"aerell:ambil_daging_sapi": {
+				"condition": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:iron_sword') || query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:diamond_sword') || query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:golden_sword') || query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:netherite_sword')",
+				"trigger": "aerell:daging_sapi"
+			},
+			"aerell:ambil_daging_kambing": {
+				"condition": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:iron_sword') || query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:diamond_sword') || query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:golden_sword') || query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:netherite_sword')",
+				"trigger": "aerell:daging_kambing"
+			},
+			"aerell:ambil_daging_sheep": {
+				"condition": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:iron_sword') || query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:diamond_sword') || query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:golden_sword') || query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:netherite_sword')",
+				"trigger": "aerell:daging_sheep"
+			}
+		}
+	}
+}

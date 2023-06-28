@@ -1,0 +1,33 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "aerell:gantungan_sheep",
+			"materials": {
+				"default": "chicken_legs"
+			},
+			"textures": {
+				"gantungan1": "textures/entity/gantungan/gantungan",
+				"gantungan2": "textures/entity/gore/gantungan_sheep_gore"
+			},
+			"geometry": {
+				"default": "geometry.gantungan_sheep"
+			},
+			"animations": {
+				"idle": "animation.gantungan.idle"
+			},
+			"scripts": {
+				"animate": [
+					"idle"
+				]
+			},
+			"render_controllers": [
+				"controller.render.gantungan_sheep"
+			],
+			"spawn_egg": {
+				"texture": "gantungan",
+				"texture_index": 0
+			}
+		}
+	}
+}

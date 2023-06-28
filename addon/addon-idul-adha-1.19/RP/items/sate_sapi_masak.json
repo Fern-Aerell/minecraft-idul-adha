@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "aerell:sate_sapi_masak",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "sate_sapi_masak",
+      "minecraft:use_animation": "eat",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

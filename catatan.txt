@@ -1,0 +1,29 @@
+Fitur fitur addon/mod spesial idul adha
+
+Bedrock :
+- 5 Skin sapi
+- Structure baru rumah villager yang bisa gacha sapi, di bedrock rumah ini generate secara natural di mana2
+- Villager gacha sapi
+- Pisau sembelih
+- Hewan sapi, kambing, domba bisa di sembelih
+- Gantungan buat hewan yang sudah di sembelih
+- Hewan yang digantung bisa di kulitin
+- Setelah di kulitin daging hewan nya bisa di ambil
+- Plastik dari beedroot
+- Daging bisa di masukin plastik
+- Daging yang di masukin plastik bisa di bagikan ke villager, wandering trader
+- Makanan sate, rendang, gulai, sop daging, semur, tongseng, tengkleng, rawon, nasi kebuli, kambing oven, bakso
+
+Java : 
+- 5 Skin sapi
+- Structure baru rumah villager yang bisa gacha sapi, di java rumah ini generate secara natural di village
+- Villager gacha sapi
+- Pisau sembelih
+- Hewan sapi, kambing, domba bisa di sembelih
+- Gantungan buat hewan yang sudah di sembelih
+- Hewan yang digantung bisa di kulitin
+- Setelah di kulitin daging hewan nya bisa di ambil
+- Plastik dari beedroot
+- Daging bisa di masukin plastik
+- Daging yang di masukin plastik bisa di bagikan ke villager, wandering trader
+- Makanan sate, rendang, gulai, sop daging, semur, tongseng, tengkleng, rawon, nasi kebuli, kambing oven, bakso

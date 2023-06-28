@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "aerell:ketupat"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "XXX",
+      "XAX",
+      "XXX"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:sugar_cane"
+      },
+      "A": {
+        "item": "aerell:beras",
+        "count": 5
+      }
+    },
+    "result": {
+      "item": "aerell:ketupat"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "aerell:lontong_sayur",
+          "weight": 1,
+          "count": 1
+        }
+      ]
+    }
+  ]
+}

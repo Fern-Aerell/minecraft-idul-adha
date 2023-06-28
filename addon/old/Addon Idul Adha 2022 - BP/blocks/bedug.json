@@ -1,0 +1,165 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "aerell:bedug",
+      "properties": {
+        "block:rotasi": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    },
+    "components": {
+      "minecraft:loot": "loot_tables/blocks/bedug.json",
+      "minecraft:destroy_time": 1.5,
+      "minecraft:map_color": "#694610",
+      "minecraft:explosion_resistance": 0.9,
+      "minecraft:block_light_absorption": 0,
+      "minecraft:on_player_placing": {
+        "event": "rotasi_block"
+      },
+      "minecraft:on_interact": {
+        "event": "suara",
+        "target": "self"
+      },
+      "minecraft:on_placed": {
+        "event": "collision",
+        "target": "self"
+      },
+      "minecraft:on_player_destroyed": {
+        "event": "collision_destroy",
+        "target": "self"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "bedug",
+          "render_method": "alpha_test"
+        }
+      },
+      "minecraft:creative_category": {
+				"group": "itemGroup.name.ramadhan",
+				"category": "construction"
+			},
+      "minecraft:geometry": "geometry.bedug",
+      "minecraft:pick_collision": {
+        "origin": [
+          -8,
+          0,
+          -8
+        ],
+        "size": [
+          18,
+          30,
+          22
+        ]
+      },
+      "minecraft:entity_collision": {
+        "origin": [
+          -8,
+          0,
+          -8
+        ],
+        "size": [
+          18,
+          30,
+          22
+        ]
+      },
+      "minecraft:breathability": "air",
+      "minecraft:ticking": {
+        "looping": false,
+        "range": [
+          0,
+          0
+        ],
+        "on_tick": {
+          "event": "bedug_pak_ustad"
+        }
+      },
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "allowed_faces": ["up"]
+          }
+        ]
+      }
+    },
+    "permutations": [
+      {
+        "condition": "query.block_property('block:rotasi') == 2",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('block:rotasi') == 3",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            180,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('block:rotasi') == 4",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            90,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('block:rotasi') == 5",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            -90,
+            0
+          ]
+        }
+      }
+    ],
+    "events": {
+      "collision": {
+        "run_command": {
+          "command": ["setblock ~~1~ barrier"]
+        }
+      },
+      "collision_destroy": {
+        "run_command": {
+          "command": ["setblock ~~1~ air"]
+        }
+      },
+      "bedug_pak_ustad": {
+        "run_command": {
+          "command": [
+            "summon aerell:bedug_pak_ustad"
+          ]
+        }
+      },
+      "suara": {
+        "run_command": {
+          "command": ["playsound aerell.bedug @a[r=64]"]
+        }
+      },
+      "rotasi_block": {
+        "set_block_property": {
+          "block:rotasi": "query.cardinal_facing_2d"
+        }
+      }
+    }
+  }
+}

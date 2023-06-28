@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "aerell:sendal"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "   ",
+      "A A",
+      "X X"
+    ],
+    "key": {
+      "X": {
+        "item": "aerell:leather_putih"
+      },
+      "A": {
+        "item": "aerell:leather_hitam"
+      }
+    },
+    "result": {
+      "item": "aerell:sendal"
+    }
+  }
+}

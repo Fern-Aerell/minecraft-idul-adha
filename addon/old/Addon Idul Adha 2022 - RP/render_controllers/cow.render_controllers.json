@@ -1,0 +1,28 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.cow": {
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.default",
+            "Texture.abuabu",
+            "Texture.coklat",
+            "Texture.putih",
+            "Texture.stepe",
+            "Texture.moend"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.variants[query.variant]"
+      ]
+    }
+  }
+}

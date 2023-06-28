@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "aerell:leather_hitam"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AX"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:leather"
+      },
+      "A": {
+        "item": "minecraft:dye",
+        "data": 16
+      }
+    },
+    "result": {
+      "item": "aerell:leather_hitam"
+    }
+  }
+}

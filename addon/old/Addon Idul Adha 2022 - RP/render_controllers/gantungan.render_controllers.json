@@ -1,0 +1,69 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.gantungan_sapi": {
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.gantungan1",
+            "Texture.gantungan2",
+            "Texture.gantungan3",
+            "Texture.gantungan4",
+            "Texture.gantungan5",
+            "Texture.gantungan6",
+            "Texture.gantungan7",
+            "Texture.gantungan8"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.variants[query.variant]"
+      ]
+    },
+    "controller.render.gantungan_sheep": {
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.gantungan1",
+            "Texture.gantungan2"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.variants[query.variant]"
+      ]
+    },
+    "controller.render.gantungan_kambing": {
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.gantungan1",
+            "Texture.gantungan2",
+            "Texture.gantungan3"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.variants[query.variant]"
+      ]
+    }
+  }
+}

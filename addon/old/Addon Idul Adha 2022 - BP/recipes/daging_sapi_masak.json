@@ -1,0 +1,13 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "aerell:daging_sapi_masak"
+    },
+    
+    "tags": ["furnace", "smoker", "campfire"],
+    "input": "aerell:daging_sapi_mentah",
+    "output": "aerell:daging_sapi_masak"
+  }
+  
+}

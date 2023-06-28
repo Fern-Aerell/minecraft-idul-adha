@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "aerell:petasan"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " O ",
+      " A ",
+      " B "
+    ],
+    "key": {
+      "O": {
+        "item": "minecraft:string"
+      },
+      "A": {
+        "item": "minecraft:gunpowder"
+      },
+      "B": {
+        "item": "minecraft:wool",
+        "data": 14
+      }
+    },
+    "result": {
+      "item": "aerell:petasan"
+    }
+  }
+}

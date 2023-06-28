@@ -1,0 +1,185 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "aerell:radio_kok_kayu",
+      "properties": {
+        "block:radio":[
+          0,
+          1,
+          2
+        ],
+        "block:rotasi": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    },
+    "components": {
+      "minecraft:loot": "loot_tables/blocks/radio_kayu.json",
+      "minecraft:destroy_time": 0.17,
+      "minecraft:map_color": "#272727",
+      "minecraft:explosion_resistance": 0.9,
+      "minecraft:block_light_absorption": 0,
+      "minecraft:on_player_placing": {
+        "event": "rotasi_block"
+      },
+      "minecraft:on_interact": {
+        "event": "aerell:radio_on"
+      },
+      "minecraft:on_player_destroyed": {
+        "event": "aerell:radio_hancur"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "radio_kok_kayu",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:creative_category": {
+				"group": "itemGroup.name.ramadhan",
+				"category": "construction"
+			},
+      "minecraft:geometry": "geometry.radio_kok_kayu",
+      "minecraft:pick_collision": {
+        "origin": [
+          -8.0,
+          0,
+          -8.0
+        ],
+        "size": [
+          16,
+          9,
+          16
+        ]
+      },
+      "minecraft:entity_collision": {
+        "origin": [
+          -8.0,
+          0,
+          -8.0
+        ],
+        "size": [
+          16,
+          9,
+          16
+        ]
+      },
+      "minecraft:breathability": "air",
+      "minecraft:ticking": {
+        "looping": false,
+        "range": [
+          0,
+          0
+        ],
+        "on_tick": {
+          "event": "aerell:siaran_radio"
+        }
+      },
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "allowed_faces": ["up"]
+          }
+        ]
+      }
+    },
+    "permutations": [
+      {
+        "condition": "query.block_property(\u0027block:rotasi\u0027) \u003d\u003d 2",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            -90,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property(\u0027block:rotasi\u0027) \u003d\u003d 3",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            90,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property(\u0027block:rotasi\u0027) \u003d\u003d 4",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property(\u0027block:rotasi\u0027) \u003d\u003d 5",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            -180,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "query.block_property('block:radio') == 1",
+			  "components": {
+				  "minecraft:on_interact": {
+					  "event": "aerell:radio_on"
+				  }
+			  }
+      },
+      {
+        "condition": "query.block_property('block:radio') == 2",
+			  "components": {
+				  "minecraft:on_interact": {
+					  "event": "aerell:radio_off"
+				  }
+			  }
+      }
+    ],
+    "events": {
+      "rotasi_block": {
+        "set_block_property": {
+          "block:rotasi": "query.cardinal_facing_2d"
+        }
+      },
+      "aerell:radio_on": {
+        "set_block_property": {
+          "block:radio": 2
+        },
+        "run_command": {
+          "command": [
+            "playsound aerell.konvoi.takbiran @a ~~~ 1 1"
+          ]
+        }
+      },
+      "aerell:radio_off": {
+        "set_block_property": {
+          "block:radio": 1
+        },
+        "run_command": {
+          "command": [
+            "stopsound @a aerell.konvoi.takbiran"
+          ]
+        }
+      },
+      "aerell:radio_hancur": {
+        "run_command": {
+          "command": [
+            "stopsound @a aerell.konvoi.takbiran"
+          ]
+        }
+      }
+    }
+  }
+}

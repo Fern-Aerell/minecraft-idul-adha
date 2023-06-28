@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "aerell:daging_sapi_qurban"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AB"
+    ],
+    "key": {
+      "A": {
+        "item": "aerell:daging_sapi_mentah"
+      },
+      "B": {
+        "item": "aerell:kantong_plastik"
+      }
+    },
+    "result": {
+      "item": "aerell:daging_sapi_qurban"
+    }
+  }
+}

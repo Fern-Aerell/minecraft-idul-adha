@@ -1,0 +1,86 @@
+{
+	"file_path": "C:\\Users\\AerellGamers\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_behavior_packs\\Addon Idul Adha 2022 - BP\\features\\rumah_pht.json",
+	"file_type": "feature",
+	"format_version": 1,
+	"file_uuid": "3628f973_d353_4fe2_b34c_f5cc6a5f1f33",
+	"file_version": 2,
+	"cache_content": {
+		"children": [
+			{
+				"data": "1.18.30",
+				"key": "format_version"
+			},
+			{
+				"open": {
+					"format_version": "1.18.30",
+					"minecraft:structure_template_feature": {
+						"description": {
+							"identifier": "aerell:rumah_pht"
+						},
+						"structure_name": "mystructure:rumah_pht",
+						"adjustment_radius": 0,
+						"facing_direction": "random",
+						"constraints": {
+							"grounded": {},
+							"unburied": {}
+						}
+					}
+				},
+				"key": "minecraft:structure_template_feature",
+				"children": [
+					{
+						"open": {
+							"description": {
+								"identifier": "aerell:rumah_pht"
+							},
+							"structure_name": "mystructure:rumah_pht",
+							"adjustment_radius": 0,
+							"facing_direction": "random",
+							"constraints": {
+								"grounded": {},
+								"unburied": {}
+							}
+						},
+						"key": "description",
+						"is_minified": true,
+						"children": {
+							"identifier": "aerell:rumah_pht"
+						}
+					},
+					{
+						"data": "mystructure:rumah_pht",
+						"key": "structure_name"
+					},
+					{
+						"data": "0",
+						"key": "adjustment_radius"
+					},
+					{
+						"data": "random",
+						"key": "facing_direction"
+					},
+					{
+						"open": {
+							"description": {
+								"identifier": "aerell:rumah_pht"
+							},
+							"structure_name": "mystructure:rumah_pht",
+							"adjustment_radius": 0,
+							"facing_direction": "random",
+							"constraints": {
+								"grounded": {},
+								"unburied": {}
+							}
+						},
+						"key": "constraints",
+						"is_minified": true,
+						"children": {
+							"grounded": {},
+							"unburied": {}
+						}
+					}
+				]
+			}
+		]
+	}
+}

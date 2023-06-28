@@ -1,0 +1,10 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.tempat_bayar_zakat": {
+      "geometry": "geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "texture.default" ]
+    }
+  }
+}

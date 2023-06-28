@@ -1,0 +1,33 @@
+{
+	"format_version": "1.18.30",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "aerell:rumah_pht_feature_rule",
+			"places_feature": "aerell:rumah_pht"
+		},
+		"conditions": {
+			"placement_pass": "first_pass",
+			"minecraft:biome_filter": {
+				"test": "has_biome_tag",
+				"operator": "==",
+				"value": "overworld"
+			}
+		},
+		"distribution": {
+			"iterations": 1,
+			"x": {
+				"extent": [0, 16],
+				"distribution": "uniform"
+			},
+			"y": "query.heightmap(v.worldx, v.worldz)",
+			"z": {
+				"extent": [0, 16],
+				"distribution": "uniform"
+			},
+			"scatter_chance": {
+				"numerator": 1,
+				"denominator": 700
+			}
+		}
+	}
+}

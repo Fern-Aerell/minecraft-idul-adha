@@ -1,0 +1,105 @@
+{
+	"format_version": "1.19.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "aerell:breeder_block",
+			"menu_category": {
+				"category": "items"
+			},
+			"properties": {
+				"block:rotasi": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6
+				]
+			}
+		},
+		"components": {
+			"minecraft:collision_box": true,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 5
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 15
+			},
+			"minecraft:flammable": {
+				"destroy_chance_modifier": 20,
+				"catch_chance_modifier": 5
+			},
+			"minecraft:geometry": "geometry.breeder_block",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "breeder_block",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:loot": "loot_tables/blocks/breeder_block.json",
+			"minecraft:map_color": "#a77510",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:on_player_placing": {
+				"event": "rotasi_block"
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('block:rotasi') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('block:rotasi') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('block:rotasi') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('block:rotasi') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						-90,
+						0
+					]
+				}
+			}
+		],
+		"events": {
+			"rotasi_block": {
+				"set_block_property": {
+					"block:rotasi": "query.cardinal_facing_2d"
+				}
+			}
+		}
+	}
+}

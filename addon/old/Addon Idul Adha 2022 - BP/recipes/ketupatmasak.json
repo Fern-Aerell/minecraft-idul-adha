@@ -1,0 +1,14 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "aerell:ketupat_masak"
+    },
+    "tags": [
+      "furnace",
+      "smoker"
+    ],
+    "input": "aerell:ketupat",
+    "output": "aerell:ketupat_masak"
+  }
+}

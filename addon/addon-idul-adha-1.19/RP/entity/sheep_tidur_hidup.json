@@ -1,0 +1,36 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "aerell:sheep_tidur_hidup",
+			"materials": {
+				"default": "sheep"
+			},
+			"textures": {
+				"default": "textures/entity/sheep"
+			},
+			"geometry": {
+				"default": "geometry.sheep_tidur_hidup"
+			},
+			"animations": {
+				"walk": "animation.quadruped.walk",
+				"look_at_target": "animation.common.look_at_target"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"walk": "query.modified_move_speed"
+					},
+					"look_at_target"
+				]
+			},
+			"render_controllers": [
+				"controller.render.sheep_tidur"
+			],
+			"spawn_egg": {
+				"texture": "spawn_egg",
+				"texture_index": 3
+			}
+		}
+	}
+}

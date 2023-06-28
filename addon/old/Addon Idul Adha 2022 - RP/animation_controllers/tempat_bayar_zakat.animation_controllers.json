@@ -1,0 +1,17 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.tempat_bayar_zakat.root" : {
+			"initial_state" : "third_person",
+			"states" : {
+				"third_person" : {
+					"animations" : [
+						{
+							"look_at_target" : "!query.is_sleeping && !query.is_emoting"
+						}
+					]
+				}
+			}
+		}
+	}
+}

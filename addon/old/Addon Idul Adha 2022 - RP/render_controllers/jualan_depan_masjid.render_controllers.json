@@ -1,0 +1,36 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.jualan_depan_mesjid": {
+      "arrays": {
+        "textures": {
+          "Array.skins": [
+            "Texture.gorengan",
+            "Texture.es_kelapa",
+            "Texture.es_buah_kolak",
+            "Texture.telur_gulung_dan_sosis",
+            "Texture.tanpa_gerobak"
+          ]
+        },
+        "geometries": {
+          "Array.geo": [
+            "Geometry.gorengan",
+            "Geometry.es_kelapa",
+            "Geometry.es_buah_kolak",
+            "Geometry.telur_gulung_dan_sosis",
+            "Geometry.jualan_depan_mesjid"
+          ]
+        }
+      },
+      "geometry": "Array.geo[query.variant]",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.skins[query.variant]"
+      ]
+    }
+  }
+}

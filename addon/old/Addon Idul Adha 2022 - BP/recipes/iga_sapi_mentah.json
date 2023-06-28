@@ -1,0 +1,23 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "aerell:iga_sapi_mentah"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "A"
+    ],
+    "key": {
+      "A": {
+        "item": "aerell:daging_sapi_mentah"
+      }
+    },
+    "result": {
+      "item": "aerell:iga_sapi_mentah",
+      "count": 1
+    }
+  }
+}

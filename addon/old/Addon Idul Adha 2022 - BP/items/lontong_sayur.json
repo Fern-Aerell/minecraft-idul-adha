@@ -1,0 +1,64 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "aerell:lontong_sayur",
+            "category": "Equipment"
+        },
+        "components": {
+            "minecraft:max_stack_size": 1,
+            "minecraft:use_duration": 1.8,
+            "minecraft:food": {
+                "nutrition": 5,
+                "saturation_modifier": "good",
+                "can_always_eat": true,
+                "on_consume": {
+                    "event": "on_consume",
+                    "target": "self"
+                }
+            },
+            "minecraft:block_placer": {
+                "block": "aerell:lontong_sayur_block"
+            },
+            "minecraft:use_animation": "eat",
+            "minecraft:icon": {
+                "texture": "lontong_sayur"
+            },
+            "minecraft:display_name": {},
+            "minecraft:render_offsets": {
+                "main_hand": {
+                  "first_person": {
+                    "scale": [
+                      0.0085,
+                      0.0085,
+                      0.0085
+                    ]
+                  },
+                  "third_person": {
+                    "position": [
+                        0.0085,
+                        0.80,
+                        -0.0085
+                    ],
+                    "scale": [
+                      0.02,
+                      0.02,
+                      0.02
+                    ]
+                  }
+                }
+            }
+        },
+        "events": {
+            "on_consume": {
+                "sequence": [
+                    {
+                        "transform_item": {
+                            "transform": "minecraft:bowl"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

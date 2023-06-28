@@ -1,0 +1,126 @@
+{
+    "pools": [
+        {
+            "rolls": 2,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "aerell:kurma",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 10,
+                                "min": 5
+                            }
+                        }
+                    ]
+                },
+                {
+                  "type": "item",
+                  "name": "aerell:kolak",
+                  "weight": 1,
+                  "functions": [
+                    {
+                        "count": {
+                            "max": 1,
+                            "min": 1
+                        }
+                    }
+                ]
+                },
+                {
+                    "type": "item",
+                    "name": "aerell:es_buah",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 1,
+                                "min": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "aerell:bubur_kacang_hijau",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 1,
+                                "min": 1
+                            }
+                        }
+                    ]
+                },                
+                {
+                    "type": "item",
+                    "name": "aerell:donat",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 2,
+                                "min": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "aerell:risoles",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 2,
+                                "min": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "aerell:tahu_goreng",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 1,
+                                "min": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "aerell:tempe_goreng",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 2,
+                                "min": 1
+                            }
+                        }
+                    ]
+                }, 
+                {
+                    "type": "item",
+                    "name": "aerell:es_kelapa",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 1,
+                                "min": 1
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

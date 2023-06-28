@@ -1,0 +1,16 @@
+{
+	"feature": {
+		"BP/features/rumah_pht.json": {
+			"identifiers": [
+				"aerell:rumah_pht"
+			]
+		}
+	},
+	"feature_rule": {
+		"BP/feature_rules/rumah_pht_feature_rule.json": {
+			"identifiers": [
+				"aerell:rumah_pht_feature_rule"
+			]
+		}
+	}
+}

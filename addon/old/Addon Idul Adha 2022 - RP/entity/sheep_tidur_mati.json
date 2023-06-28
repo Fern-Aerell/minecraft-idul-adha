@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "aerell:sheep_tidur_mati",
+      "materials": { "default": "sheep" },
+      "textures": {
+        "default": "textures/entity/gore/sheep_tidur_mati_gore"
+      },
+      "geometry": {
+        "default": "geometry.sheep_tidur_mati"
+      },
+      "animations": {
+        "walk": "animation.quadruped.walk"
+      },
+      "scripts": {
+        "animate": [
+          { "walk": "query.modified_move_speed" }
+        ]
+      },
+      "render_controllers": [ "controller.render.sheep_tidur" ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 3
+      }
+    }
+  }
+}

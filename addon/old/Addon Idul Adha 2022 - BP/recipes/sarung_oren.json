@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "aerell:sarung_oren"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "XA"
+    ],
+    "key": {
+      "X": {
+        "item": "aerell:sarung_hitam"
+      },
+      "A": {
+        "item": "minecraft:orange_dye"
+      }
+    },
+    "result": {
+      "item": "aerell:sarung_oren"
+    }
+  }
+}

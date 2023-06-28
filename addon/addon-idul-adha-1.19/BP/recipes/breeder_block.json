@@ -1,0 +1,37 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "aerell:breeder_block"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"# S",
+			"PPP",
+			"PBH"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:chest"
+			},
+			"S": {
+				"item": "minecraft:shears"
+			},
+			"P": {
+				"item": "minecraft:planks"
+			},
+			"B": {
+				"item": "minecraft:bucket"
+			},
+			"H": {
+				"item": "minecraft:hay_block"
+			}
+		},
+		"result": {
+			"item": "aerell:breeder_block",
+			"count": 1
+		}
+	}
+}

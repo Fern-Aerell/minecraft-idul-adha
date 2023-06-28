@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "aerell:gantungan_sapi",
+      "materials": {
+        "default": "chicken_legs"
+      },
+      "textures": {
+        "gantungan1": "textures/entity/gantungan/gantungan",
+        "gantungan2": "textures/entity/gore/gantungan_sapi_default_gore",
+        "gantungan3": "textures/entity/gore/gantungan_sapi_coklat_gore",
+        "gantungan4": "textures/entity/gore/gantungan_sapi_abuabu_gore",
+        "gantungan5": "textures/entity/gore/gantungan_sapi_putih_gore",
+        "gantungan6": "textures/entity/gore/gantungan_sapi_stepe_gore",
+        "gantungan7": "textures/entity/gore/gantungan_sapi_moend_gore",
+        "gantungan8": "textures/entity/gantungan/gantungan_sapi_kulitin"
+      },
+      "geometry": {
+        "default": "geometry.gantungan_sapi"
+      },
+      "animations": {
+        "idle": "animation.gantungan.idle"
+      },
+      "scripts": {
+        "animate": [
+          "idle"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.gantungan_sapi"
+      ],
+      "spawn_egg": {
+        "texture": "gantungan",
+        "texture_index": 0
+      }
+    }
+  }
+}

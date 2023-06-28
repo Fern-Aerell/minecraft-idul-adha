@@ -1,0 +1,76 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "aerell:amplop_thr_player",
+            "category": "Items"
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "amplop_thr"
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:on_use": {
+              "on_use": {
+                "event": "uang_thr"
+              }
+            },
+            "minecraft:display_name": {
+              "value": "Amplop\n§eBisa kamu buka"
+            },
+            "minecraft:render_offsets": {
+                "main_hand": {
+                  "first_person": {
+                    "scale": [
+                      0.0085,
+                      0.0085,
+                      0.0085
+                    ]
+                  },
+                  "third_person": {
+                    "position": [
+                        0.0085,
+                        0.80,
+                        -0.0085
+                    ],
+                    "scale": [
+                      0.02,
+                      0.02,
+                      0.02
+                    ]
+                  }
+                }
+            }
+        },
+        "events": {
+          "uang_thr": {
+            "randomize": [
+              {
+                "weight": 10,
+                "transform_item": {
+                  "transform": "aerell:uang_10rb"
+                }
+              },
+              {
+                "weight": 3,
+                "transform_item": {
+                  "transform": "aerell:uang_20rb"
+                }
+              },
+              {
+                "weight": 2,
+                "transform_item": {
+                  "transform": "aerell:uang_50rb"
+                }
+              },
+              {
+                "weight": 1,
+                "transform_item": {
+                  "transform": "aerell:uang_100rb"
+                }
+              }
+            ]
+          }
+        }
+    }
+}
